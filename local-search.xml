@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>MySql基本查询语句</title>
+    <link href="/2021/04/11/MySql%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/"/>
+    <url>/2021/04/11/MySql%E5%9F%BA%E6%9C%AC%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>待更新….</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数据库</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>-导航 -分享</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MySQL数据库基础语句</title>
+    <link href="/2021/04/04/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/"/>
+    <url>/2021/04/04/MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E8%AF%AD%E5%8F%A5/</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h2 id="数据库操作语句"><a href="#数据库操作语句" class="headerlink" title="数据库操作语句"></a>数据库操作语句</h2><p><strong>创建数据库</strong>：    create database 数据库名称</p><p><strong>查看数据库</strong>：    show databases</p><p><strong>查看指定数据库的创建信息</strong>：    show create database 数据库名称</p><p><strong>选择数据</strong>库：    use 数据库名称</p><p><strong>删除数据库</strong>：    drop database 数据库名称</p><h2 id="数据表操作语句"><a href="#数据表操作语句" class="headerlink" title="数据表操作语句"></a>数据表操作语句</h2><p><strong>创建数据表</strong>：create table 数据表名称</p><p><strong>查看数据表</strong>：show tables（查看当前数据库当中的所有数据表）</p><p><strong>查看数据表的相关信息</strong>：show table status from 数据库名 like（匹配模式）</p><p><strong>修改数据表名称：</strong></p><p>​                            alter table 旧表名 to 新表名</p><p>​                            rename table 旧表名 to 新表名,(可以修改多个表名，用逗号间隔)</p><p><strong>修改表选项</strong>：alter table 表名 表选项 [=] 值</p><p><strong>查看表结构：</strong></p><p>​                            desc 数据表名 字段名（查看指定字段的信息）</p><p>​                            desc 数据表名</p><p><strong>查看数据表的创建语句</strong>：show create table 表名</p><p><strong>查看数据表结构</strong>：</p><p>​                            show full columns from 数据表名 /from 数据库名</p><p>​                            show full columns from 数据库名.数据表名</p><p><strong>修改字段名</strong>：alter table 数据表名 change/column 旧字段名 新字段名 字段类型(后面跟字段属性)</p><p><strong>修改字段类型</strong>：alter table 数据表名 modify[column] 字段名 新类型(后面跟字段属性)</p><p><strong>修改字段位置</strong>：alter table 数据表名 modify[column] 字段名1 数据类型[后面跟字段属性] [first|after 字段名2]</p><p><strong>新增字段</strong>：</p><p>​                增加一个字段：alter table 数据表名 add [column] 新字段名 字段类型 [first|after 字段名]</p><p>​                        增加多个字段：alter table 数据表名 add [column] (新字段名1    字段类型1，新字段2    字段类型2)</p><p><strong>删除字段</strong>：alter table 数据表名 drop[column] 字段名</p><p><strong>删除数据表</strong>：drop [temporart] table [if exists] 数据表1，数据表2…..</p><h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><p><strong>为所有字段添加数据</strong>：</p><p>​                            insert into 数据表名 values(值1，值2，值3….)</p><p>​                            insert into 数据表名 select 值1，值2，值3….</p><p><strong>为部分字段添加数据：</strong></p><p>​                            insert into 数据表名(表中字段1，表中字段2) values(字段1的值，字段2的值)</p><p>​                            insert into 数据表名 set 字段1=值，字段2=值，字段3=值…..</p><p><strong>一次添加多行数据：</strong>insert into 数据表名 [(字段列表)] values (第一行数据，第二行数据)</p><p><strong>查询表中全部数据</strong>：select * from 数据表名</p><p><strong>查询表中部分字段</strong>：select 字段1，字段2，字段3…. from 数据表名</p><p><strong>简单条件查询数据</strong>：select * [字段1，字段2，字段3] from 数据表名 where 条件语句</p><p><strong>修改数据</strong>：update 数据表名 set 字段名 1 = 值1,字段名2 = 值….  where 条件表达式</p><p><strong>删除数据</strong>：delete from 数据表名 [where 条件表达式]</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数据库</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>导航</tag>
+      
+      <tag>分享</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
