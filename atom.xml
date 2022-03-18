@@ -3,11 +3,11 @@
   <title>朝辞</title>
   
   
-  <link href="http://zhaoci.top/atom.xml" rel="self"/>
+  <link href="http://zhaocil.top/atom.xml" rel="self"/>
   
-  <link href="http://zhaoci.top/"/>
+  <link href="http://zhaocil.top/"/>
   <updated>2022-03-17T03:11:33.084Z</updated>
-  <id>http://zhaoci.top/</id>
+  <id>http://zhaocil.top/</id>
   
   <author>
     <name>zhaoci</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>第一篇博客</title>
-    <link href="http://zhaoci.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://zhaoci.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
+    <link href="http://zhaocil.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://zhaocil.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
     <published>2022-03-17T03:08:50.000Z</published>
     <updated>2022-03-17T03:11:33.084Z</updated>
     
@@ -34,7 +34,7 @@
     
     
     
-    <category term="练习" scheme="http://zhaoci.top/tags/%E7%BB%83%E4%B9%A0/"/>
+    <category term="练习" scheme="http://zhaocil.top/tags/%E7%BB%83%E4%B9%A0/"/>
     
   </entry>
   
