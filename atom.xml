@@ -6,7 +6,7 @@
   <link href="http://zhaocil.top/atom.xml" rel="self"/>
   
   <link href="http://zhaocil.top/"/>
-  <updated>2022-03-19T11:11:28.413Z</updated>
+  <updated>2022-03-23T07:59:46.995Z</updated>
   <id>http://zhaocil.top/</id>
   
   <author>
@@ -17,19 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>js_es6面向对象</title>
+    <link href="http://zhaocil.top/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://zhaocil.top/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2022-03-23T07:36:50.000Z</published>
+    <updated>2022-03-23T07:59:46.995Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="es6面向对象"><a href="#es6面向对象" class="headerlink" title="es6面向对象"></a>es6面向对象</h1><p>es6的面向对象相对于传统js面向对象方便了很多</p><p>不需要用function来创建一个类</p><p>和java类似</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> 对象名&#123;</span><br><span class="line"><span class="title class_">Constructor</span>()&#123;</span><br><span class="line">这里写属性</span><br><span class="line">&#125;</span><br><span class="line">    这里写函数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;es6面向对象&quot;&gt;&lt;a href=&quot;#es6面向对象&quot; class=&quot;headerlink&quot; title=&quot;es6面向对象&quot;&gt;&lt;/a&gt;es6面向对象&lt;/h1&gt;&lt;p&gt;es6的面向对象相对于传统js面向对象方便了很多&lt;/p&gt;
+&lt;p&gt;不需要用function来创建一个类</summary>
+      
+    
+    
+    
+    
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js面向对象</title>
+    <link href="http://zhaocil.top/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://zhaocil.top/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2022-03-21T08:39:34.000Z</published>
+    <updated>2022-03-23T07:36:29.655Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="js面向对象"><a href="#js面向对象" class="headerlink" title="js面向对象"></a>js面向对象</h1><blockquote><p><a href="https://www.jianshu.com/p/f9792fdd9915">参考了该文章：JavaScript面向对象 - 简书 (jianshu.com)</a></p></blockquote><h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function createCar(color,wheel)&#123;//createCar工厂</span><br><span class="line">    var obj = new Object;//或obj = &#123;&#125; 原材料阶段</span><br><span class="line">    obj.color = color;//加工</span><br><span class="line">    obj.wheel = wheel;//加工</span><br><span class="line">    return obj;//输出产品</span><br><span class="line">&#125;</span><br><span class="line">//实例化</span><br><span class="line">var cat1 = createCar(&quot;红色&quot;,&quot;4&quot;);</span><br><span class="line">var cat2 = createCar(&quot;蓝色&quot;,&quot;4&quot;);</span><br><span class="line"></span><br><span class="line">alert(cat1.color);//红色</span><br></pre></td></tr></table></figure><p>工厂模式对传入的值进行加工，然后输出</p><h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p><strong>构造函数就是类</strong></p><p>构造函数用于写属性</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p><p>当我们new这个类的时候，这里的name和sex会作为属性一并被赋给obj3</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p><p>我这儿构造函数的命名不规范，应该首字母大写</p><h2 id="原型（prototype）"><a href="#原型（prototype）" class="headerlink" title="原型（prototype）"></a>原型（prototype）</h2><p><em>每个函数都有一个属性——</em><em><strong>prototype</strong></em><em>。这个</em><em><strong>prototype</strong></em><em>的属性值是一个对象（属性的集合），默认只有一个叫做</em><em><strong>constructor</strong></em><em>的属性，指向这个函数本身</em>*</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p><p>这里是给createPre类，添加一个showName的方法，然后后面创建实例化对象（obj3）的时候，这个obj3会有这个方法</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p><h2 id="构造函数和原型的用法"><a href="#构造函数和原型的用法" class="headerlink" title="构造函数和原型的用法"></a>构造函数和原型的用法</h2><p>构造函数里面加属性，原型里面加方法</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p><p><strong>这里再放一张容易理解对象的图</strong></p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p><p>这里的不同颜色的车和不同种类的狗，就是new出来的实例对象</p><h2 id="命令空间"><a href="#命令空间" class="headerlink" title="命令空间"></a>命令空间</h2><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p><p>不同对象，相同方法</p><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>js通过call方法来继承父元素的属性</p><p>call方法：可以改变函数执行的时候，里面的this </p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p><p>call可以传参数，这里的this就是show2这个对象</p><p>call将show2这个对象传入show</p><p>然后将show里面this指向指为show2</p><h3 id="继承的问题"><a href="#继承的问题" class="headerlink" title="继承的问题"></a>继承的问题</h3><p>这里举个栗子</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p><p>这里arr2并不是复制了一份arr1，而是将arr2也指向了arr1的空间了</p><p>他们都指向了同一块空间</p><p> <img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/14.png" alt="image"></p><p>可以看见这个arr1里面的数据也被更改了</p><p>解决这个问题的方法是，用循环将arr1里面的数据传入arr2</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p><p>对象里面，方法的继承也存在同样的问题</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p><p>这样做的话，会和上面数组的问题一样，修改show2的方法，show的方法也会被修改</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p><p>这样就不会出问题了</p><h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/15.png" alt="image"></p><p>重写就是将新的原型里面的方法，给重新写一遍</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;js面向对象&quot;&gt;&lt;a href=&quot;#js面向对象&quot; class=&quot;headerlink&quot; title=&quot;js面向对象&quot;&gt;&lt;/a&gt;js面向对象&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/f9792f</summary>
+      
+    
+    
+    
+    <category term="JS" scheme="http://zhaocil.top/categories/JS/"/>
+    
+    
+    <category term="JS" scheme="http://zhaocil.top/tags/JS/"/>
+    
+  </entry>
+  
+  <entry>
     <title>第一篇博客</title>
     <link href="http://zhaocil.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
     <id>http://zhaocil.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
     <published>2022-03-17T03:08:50.000Z</published>
     <updated>2022-03-19T11:11:28.413Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="这是h1标题"><a href="#这是h1标题" class="headerlink" title="这是h1标题"></a>这是h1标题</h2>        <div id="aplayer-tddGAUrL" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-tddGAUrL"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "她的",              author: "周杰伦",              url: "https://music.163.com/song?id=1500883818&userid=513419751",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
+    <content type="html"><![CDATA[<h2 id="这是h1标题"><a href="#这是h1标题" class="headerlink" title="这是h1标题"></a>这是h1标题</h2>        <div id="aplayer-arvsblod" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-arvsblod"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "她的",              author: "周杰伦",              url: "https://music.163.com/song?id=1500883818&userid=513419751",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
     
     
       
       
     <summary type="html">&lt;h2 id=&quot;这是h1标题&quot;&gt;&lt;a href=&quot;#这是h1标题&quot; class=&quot;headerlink&quot; title=&quot;这是h1标题&quot;&gt;&lt;/a&gt;这是h1标题&lt;/h2&gt;
-        &lt;div id=&quot;aplayer-tddGAUrL&quot; class=&quot;aplayer aplaye</summary>
+        &lt;div id=&quot;aplayer-arvsblod&quot; class=&quot;aplayer aplaye</summary>
       
     
     
