@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zhaocil.top/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>http://119.23.250.219/2022/03/25/AJAX-1/</loc>
+    
+    <lastmod>2022-03-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://119.23.250.219/2022/03/24/async-await%E6%93%8D%E4%BD%9C/</loc>
     
     <lastmod>2022-03-24</lastmod>
     
@@ -11,7 +20,16 @@
   </url>
   
   <url>
-    <loc>http://zhaocil.top/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    <loc>http://119.23.250.219/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    
+    <lastmod>2022-03-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://119.23.250.219/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
     
     <lastmod>2022-03-23</lastmod>
     
@@ -20,7 +38,7 @@
   </url>
   
   <url>
-    <loc>http://zhaocil.top/categories/index.html</loc>
+    <loc>http://119.23.250.219/categories/index.html</loc>
     
     <lastmod>2022-03-22</lastmod>
     
@@ -29,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://zhaocil.top/tags/index.html</loc>
+    <loc>http://119.23.250.219/tags/index.html</loc>
     
     <lastmod>2022-03-22</lastmod>
     
@@ -38,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://zhaocil.top/about/index.html</loc>
+    <loc>http://119.23.250.219/about/index.html</loc>
     
     <lastmod>2022-03-20</lastmod>
     
@@ -47,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://zhaocil.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</loc>
+    <loc>http://119.23.250.219/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</loc>
     
     <lastmod>2022-03-19</lastmod>
     
@@ -57,30 +75,37 @@
   
 
   <url>
-    <loc>http://zhaocil.top/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <loc>http://119.23.250.219/</loc>
+    <lastmod>2022-03-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://zhaocil.top/tags/js/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <loc>http://119.23.250.219/tags/js/</loc>
+    <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://zhaocil.top/tags/%E7%BB%83%E4%B9%A0/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <loc>http://119.23.250.219/tags/AJAX/</loc>
+    <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://zhaocil.top/tags/JS/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <loc>http://119.23.250.219/tags/%E7%BB%83%E4%B9%A0/</loc>
+    <lastmod>2022-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://119.23.250.219/tags/JS/</loc>
+    <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -88,8 +113,8 @@
 
   
   <url>
-    <loc>http://zhaocil.top/categories/JS/</loc>
-    <lastmod>2022-03-24</lastmod>
+    <loc>http://119.23.250.219/categories/JS/</loc>
+    <lastmod>2022-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

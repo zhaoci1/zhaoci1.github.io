@@ -3,11 +3,11 @@
   <title>朝辞</title>
   
   
-  <link href="http://zhaocil.top/atom.xml" rel="self"/>
+  <link href="http://119.23.250.219/atom.xml" rel="self"/>
   
-  <link href="http://zhaocil.top/"/>
-  <updated>2022-03-24T01:36:28.126Z</updated>
-  <id>http://zhaocil.top/</id>
+  <link href="http://119.23.250.219/"/>
+  <updated>2022-03-25T09:32:40.224Z</updated>
+  <id>http://119.23.250.219/</id>
   
   <author>
     <name>朝辞</name>
@@ -17,9 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AJAX_1</title>
+    <link href="http://119.23.250.219/2022/03/25/AJAX-1/"/>
+    <id>http://119.23.250.219/2022/03/25/AJAX-1/</id>
+    <published>2022-03-25T08:32:45.000Z</published>
+    <updated>2022-03-25T09:32:40.224Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ajax内部是咋写的"><a href="#ajax内部是咋写的" class="headerlink" title="ajax内部是咋写的"></a>ajax内部是咋写的</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> oBtn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;btn1&#x27;</span>);</span><br><span class="line">       oBtn.<span class="property">onclick</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">           <span class="keyword">let</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line">           </span><br><span class="line">           <span class="comment">//连接请求</span></span><br><span class="line">           xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>,<span class="string">&#x27;1.php?a=12&amp;b=5&#x27;</span>,<span class="literal">true</span>)</span><br><span class="line">           </span><br><span class="line">           </span><br><span class="line"><span class="comment">//发送请求</span></span><br><span class="line">           xhr.<span class="title function_">send</span>()</span><br><span class="line">           </span><br><span class="line">           <span class="comment">//接收请求</span></span><br><span class="line">           xhr.<span class="property">onreadystatechange</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">               <span class="comment">//readyState的值表示目前通信处于什么状态</span></span><br><span class="line">               <span class="comment">//0初始化-刚刚创建</span></span><br><span class="line">               <span class="comment">//1以连接</span></span><br><span class="line">               <span class="comment">//2已发送</span></span><br><span class="line">               <span class="comment">//3已接收-头</span></span><br><span class="line">               <span class="comment">//4已接收-主体内容</span></span><br><span class="line">               <span class="title function_">alert</span>(xhr.<span class="property">readyState</span>)</span><br><span class="line">               <span class="comment">//不管请求成果或者失败，都会执行完4的内容</span></span><br><span class="line">               <span class="comment">//这时候需要用到http状态码了</span></span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="http状态码-status"><a href="#http状态码-status" class="headerlink" title="http状态码(status)"></a>http状态码(status)</h2><p>游览器和服务器之间通过数字来表明状态,这个数字就是http状态码</p><p>1xx        消息</p><p>2xx        成功</p><p>3xx        重定向：原来的地址更改到了新的地址                        </p><p>​        301：永久重定向-游览器不会再次请求老的地址</p><p>​        302：临时重定向-游览器下次还会请求老地址</p><p>​        304：缓存</p><p>4xx        请求错误（客户端）</p><p>5xx        服务端错误</p><p>6xx        拓展</p><p>所以，想要知道是否成功，就要看状态码是否是2xx或者304</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xhr.<span class="property">onreadystatechange</span>=<span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">               <span class="keyword">if</span>(xhr.<span class="property">readyState</span>==<span class="number">4</span>)&#123;</span><br><span class="line">               <span class="keyword">if</span>((xhr.<span class="property">status</span>&gt;=<span class="number">200</span>&amp;&amp;xhr.<span class="property">status</span>&lt;=<span class="number">300</span>)||xhr.<span class="property">status</span>==<span class="number">304</span>)&#123;</span><br><span class="line">               <span class="title function_">alert</span>(<span class="string">&#x27;成功&#x27;</span>)</span><br><span class="line">               &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="title function_">alert</span>(<span class="string">&#x27;失败&#x27;</span>)</span><br><span class="line">                    &#125;</span><br><span class="line">               &#125;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure><p><img src="/../image/ajax/1.png" alt="image"></p><p>改成1.php就能成功了</p><p><img src="/../image/ajax/2.png" alt="image"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;ajax内部是咋写的&quot;&gt;&lt;a href=&quot;#ajax内部是咋写的&quot; class=&quot;headerlink&quot; title=&quot;ajax内部是咋写的&quot;&gt;&lt;/a&gt;ajax内部是咋写的&lt;/h1&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="AJAX" scheme="http://119.23.250.219/tags/AJAX/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>async/await操作</title>
+    <link href="http://119.23.250.219/2022/03/24/async-await%E6%93%8D%E4%BD%9C/"/>
+    <id>http://119.23.250.219/2022/03/24/async-await%E6%93%8D%E4%BD%9C/</id>
+    <published>2022-03-24T07:47:25.000Z</published>
+    <updated>2022-03-24T08:09:08.191Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="async-x2F-await操作"><a href="#async-x2F-await操作" class="headerlink" title="async&#x2F;await操作"></a>async&#x2F;await操作</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">let</span> 结果=<span class="keyword">await</span> 异步操作-promise，generator，另一个<span class="keyword">async</span>函数</span><br><span class="line">    <span class="keyword">let</span> 结果=<span class="keyword">await</span> 异步操作-promise，generator，另一个<span class="keyword">async</span>函数</span><br><span class="line">    <span class="keyword">let</span> 结果=<span class="keyword">await</span> 异步操作-promise，generator，另一个<span class="keyword">async</span>函数</span><br><span class="line">    <span class="comment">//和generator用法类似,可以处理多个异步请求，可以不用前面的premise.all</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;async-x2F-await操作&quot;&gt;&lt;a href=&quot;#async-x2F-await操作&quot; class=&quot;headerlink&quot; title=&quot;async&amp;#x2F;await操作&quot;&gt;&lt;/a&gt;async&amp;#x2F;await操作&lt;/h2&gt;&lt;figure cla</summary>
+      
+    
+    
+    
+    
+    <category term="js" scheme="http://119.23.250.219/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>js_es6面向对象</title>
-    <link href="http://zhaocil.top/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://zhaocil.top/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <link href="http://119.23.250.219/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://119.23.250.219/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
     <published>2022-03-23T07:36:50.000Z</published>
     <updated>2022-03-24T01:36:28.126Z</updated>
     
@@ -35,14 +79,14 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
+    <category term="js" scheme="http://119.23.250.219/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>js面向对象</title>
-    <link href="http://zhaocil.top/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://zhaocil.top/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <link href="http://119.23.250.219/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://119.23.250.219/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
     <published>2022-03-21T08:39:34.000Z</published>
     <updated>2022-03-23T07:36:29.655Z</updated>
     
@@ -57,33 +101,33 @@
     
     
     
-    <category term="JS" scheme="http://zhaocil.top/categories/JS/"/>
+    <category term="JS" scheme="http://119.23.250.219/categories/JS/"/>
     
     
-    <category term="JS" scheme="http://zhaocil.top/tags/JS/"/>
+    <category term="JS" scheme="http://119.23.250.219/tags/JS/"/>
     
   </entry>
   
   <entry>
     <title>第一篇博客</title>
-    <link href="http://zhaocil.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://zhaocil.top/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
+    <link href="http://119.23.250.219/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://119.23.250.219/2022/03/17/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</id>
     <published>2022-03-17T03:08:50.000Z</published>
     <updated>2022-03-19T11:11:28.413Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="这是h1标题"><a href="#这是h1标题" class="headerlink" title="这是h1标题"></a>这是h1标题</h2>        <div id="aplayer-oNISrmVR" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-oNISrmVR"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "她的",              author: "周杰伦",              url: "https://music.163.com/song?id=1500883818&userid=513419751",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
+    <content type="html"><![CDATA[<h2 id="这是h1标题"><a href="#这是h1标题" class="headerlink" title="这是h1标题"></a>这是h1标题</h2>        <div id="aplayer-XlMLvqLb" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-XlMLvqLb"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "她的",              author: "周杰伦",              url: "https://music.163.com/song?id=1500883818&userid=513419751",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
     
     
       
       
     <summary type="html">&lt;h2 id=&quot;这是h1标题&quot;&gt;&lt;a href=&quot;#这是h1标题&quot; class=&quot;headerlink&quot; title=&quot;这是h1标题&quot;&gt;&lt;/a&gt;这是h1标题&lt;/h2&gt;
-        &lt;div id=&quot;aplayer-oNISrmVR&quot; class=&quot;aplayer aplaye</summary>
+        &lt;div id=&quot;aplayer-XlMLvqLb&quot; class=&quot;aplayer aplaye</summary>
       
     
     
     
     
-    <category term="练习" scheme="http://zhaocil.top/tags/%E7%BB%83%E4%B9%A0/"/>
+    <category term="练习" scheme="http://119.23.250.219/tags/%E7%BB%83%E4%B9%A0/"/>
     
   </entry>
   
