@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://zhaocil.tech/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
+    
+    <lastmod>2022-04-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaocil.tech/2022/03/24/async-await%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2022-04-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://zhaocil.tech/2022/03/28/jsonp/</loc>
     
     <lastmod>2022-03-28</lastmod>
@@ -14,24 +32,6 @@
     <loc>http://zhaocil.tech/2022/03/25/AJAX-1/</loc>
     
     <lastmod>2022-03-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhaocil.tech/2022/03/24/async-await%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2022-03-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhaocil.tech/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</loc>
-    
-    <lastmod>2022-03-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,43 +85,36 @@
 
   <url>
     <loc>http://zhaocil.tech/</loc>
-    <lastmod>2022-04-04</lastmod>
+    <lastmod>2022-04-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>http://zhaocil.tech/tags/js/</loc>
-    <lastmod>2022-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://zhaocil.tech/tags/AJAX/</loc>
-    <lastmod>2022-04-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://zhaocil.tech/tags/JS/</loc>
-    <lastmod>2022-04-04</lastmod>
+    <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://zhaocil.tech/tags/%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92/</loc>
-    <lastmod>2022-04-04</lastmod>
+    <lastmod>2022-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://zhaocil.tech/tags/JS/</loc>
+    <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://zhaocil.tech/tags/%E7%BB%83%E4%B9%A0/</loc>
-    <lastmod>2022-04-04</lastmod>
+    <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -130,7 +123,7 @@
   
   <url>
     <loc>http://zhaocil.tech/categories/JS/</loc>
-    <lastmod>2022-04-04</lastmod>
+    <lastmod>2022-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

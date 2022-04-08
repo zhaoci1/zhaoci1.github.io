@@ -58,7 +58,7 @@
     <link href="http://zhaocil.tech/2022/03/24/async-await%E6%93%8D%E4%BD%9C/"/>
     <id>http://zhaocil.tech/2022/03/24/async-await%E6%93%8D%E4%BD%9C/</id>
     <published>2022-03-24T07:47:25.000Z</published>
-    <updated>2022-03-24T08:09:08.191Z</updated>
+    <updated>2022-04-08T13:11:05.244Z</updated>
     
     <content type="html"><![CDATA[<h2 id="async-x2F-await操作"><a href="#async-x2F-await操作" class="headerlink" title="async&#x2F;await操作"></a>async&#x2F;await操作</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> (<span class="params"></span>)&#123;</span><br><span class="line">    ...</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">let</span> 结果=<span class="keyword">await</span> 异步操作-promise，generator，另一个<span class="keyword">async</span>函数</span><br><span class="line">    <span class="keyword">let</span> 结果=<span class="keyword">await</span> 异步操作-promise，generator，另一个<span class="keyword">async</span>函数</span><br><span class="line">    <span class="keyword">let</span> 结果=<span class="keyword">await</span> 异步操作-promise，generator，另一个<span class="keyword">async</span>函数</span><br><span class="line">    <span class="comment">//和generator用法类似,可以处理多个异步请求，可以不用前面的premise.all</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -71,7 +71,7 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="JS" scheme="http://zhaocil.tech/tags/JS/"/>
     
   </entry>
   
@@ -80,7 +80,7 @@
     <link href="http://zhaocil.tech/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
     <id>http://zhaocil.tech/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
     <published>2022-03-23T07:36:50.000Z</published>
-    <updated>2022-03-24T01:36:28.126Z</updated>
+    <updated>2022-04-08T13:11:11.031Z</updated>
     
     <content type="html"><![CDATA[<h1 id="es6面向对象"><a href="#es6面向对象" class="headerlink" title="es6面向对象"></a>es6面向对象</h1><p>es6的面向对象相对于传统js面向对象方便了很多</p><p>不需要用function来创建一个类</p><p>和java类似</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> 对象名&#123;</span><br><span class="line"><span class="title class_">Constructor</span>()&#123;</span><br><span class="line">这里写属性</span><br><span class="line">&#125;</span><br><span class="line">    这里写函数</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p><h2 id="es6的继承"><a href="#es6的继承" class="headerlink" title="es6的继承"></a>es6的继承</h2><p>Es6通过super来继承父类的属性</p><p>父类的方法通过extends来继承</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p><h2 id="es6面向对象的this"><a href="#es6面向对象的this" class="headerlink" title="es6面向对象的this"></a>es6面向对象的this</h2><p>js的this容易被改变，这里本来应该显示blue的，但this现在指向了document</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p><p>修改的方法是在对象的方法后面，跟上一个bind（blue）</p><p>这里修改成blue.showName.bind(blue)</p><p>bind是强制改变this的指向</p><p>bind的可以修改this指向的对象</p><p>和js的call这个方法类似</p><h2 id="箭头函数和普通函数的区别"><a href="#箭头函数和普通函数的区别" class="headerlink" title="箭头函数和普通函数的区别"></a>箭头函数和普通函数的区别</h2><p>箭头函数：根据我所在的环境，环境是谁this就是谁</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p><p>这里别的实例对象用这个方法的时候，就不需要要用bind来改变指向了，这里this处在哪个环境，this就是谁</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p><p>普通函数：谁在调用this，this就是谁</p><p>上一节点击事件的错误就是因为是普通函数的缘故，this指向了document。</p><h2 id="Promise对象"><a href="#Promise对象" class="headerlink" title="Promise对象"></a>Promise对象</h2><p>拥有同步的简便，和异步的优点</p><p>有两个参数resolve和reject</p><p>resolve：成功之后调用的函数</p><p>reject：失败之后调用的函数</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p><p>promise这个对象里面能执行一些方法和语句，执行完成后，resolve和reject都会将括号里的值返回出去</p><p>promise有局限性</p><ol><li>promise有用-解除异步操作</li><li>有局限-带逻辑的异步操作很麻烦</li></ol><h3 id="promise"><a href="#promise" class="headerlink" title="promise-"></a>promise-</h3><p>promise-race(||的作用)</p><p>promise-all(&amp;&amp;的作用)</p><p>能获取多个地址的数据</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p><p>Promise.all([pro对象1，pro对象2……]).then()</p><p>all能获取promise的集合，可以用数组的形式将这三个对象存起来</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p><p>因为jQuery的Ajax返回的对象里面，带有Promise，所以这里all里面的对象可以直接用jQuery的Ajax表达式来使用</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p><h2 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h2><p>回调：有结果之后来找你</p><ol><li>不是定义的人调用</li><li>什么时候调用不知道</li></ol><p>轮询：一直询问</p><h2 id="generator函数"><a href="#generator函数" class="headerlink" title="generator函数"></a>generator函数</h2><p>Function *show(){}</p><p>函数名前面加一个*号</p><p>gen函数与普通函数的区别是能暂停</p><p>并且用yield来分块</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p><p>这儿已经被分成两块了</p><p>gen函数直接使用不会生效，而是会产生一个返回值,这里将show这个对象给了fan</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p><p>要执行show里面的语句，需要用next这个方法来驱动</p><p>next会在yield之前停下，如果要执行yield后面的语句，需要在调用一下next的方法</p><p>这样的好处是，有些异步操作需要时间，然后可以使用yield来分块，当异步操作执行完毕后，在执行后面的语句</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p>]]></content>
     
@@ -94,7 +94,7 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="JS" scheme="http://zhaocil.tech/tags/JS/"/>
     
   </entry>
   
@@ -130,13 +130,13 @@
     <published>2022-03-17T03:08:50.000Z</published>
     <updated>2022-03-19T11:11:28.413Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="这是h1标题"><a href="#这是h1标题" class="headerlink" title="这是h1标题"></a>这是h1标题</h2>        <div id="aplayer-NFqutvrt" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-NFqutvrt"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "她的",              author: "周杰伦",              url: "https://music.163.com/song?id=1500883818&userid=513419751",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
+    <content type="html"><![CDATA[<h2 id="这是h1标题"><a href="#这是h1标题" class="headerlink" title="这是h1标题"></a>这是h1标题</h2>        <div id="aplayer-MSDALIge" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-MSDALIge"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "她的",              author: "周杰伦",              url: "https://music.163.com/song?id=1500883818&userid=513419751",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
     
     
       
       
     <summary type="html">&lt;h2 id=&quot;这是h1标题&quot;&gt;&lt;a href=&quot;#这是h1标题&quot; class=&quot;headerlink&quot; title=&quot;这是h1标题&quot;&gt;&lt;/a&gt;这是h1标题&lt;/h2&gt;
-        &lt;div id=&quot;aplayer-NFqutvrt&quot; class=&quot;aplayer aplaye</summary>
+        &lt;div id=&quot;aplayer-MSDALIge&quot; class=&quot;aplayer aplaye</summary>
       
     
     
