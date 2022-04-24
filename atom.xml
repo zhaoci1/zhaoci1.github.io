@@ -6,7 +6,7 @@
   <link href="http://zhaocil.tech/atom.xml" rel="self"/>
   
   <link href="http://zhaocil.tech/"/>
-  <updated>2022-03-28T08:56:26.655Z</updated>
+  <updated>2022-04-24T05:33:08.215Z</updated>
   <id>http://zhaocil.tech/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS函数</title>
+    <link href="http://zhaocil.tech/2022/04/24/JS%E5%87%BD%E6%95%B0/"/>
+    <id>http://zhaocil.tech/2022/04/24/JS%E5%87%BD%E6%95%B0/</id>
+    <published>2022-04-24T02:07:45.000Z</published>
+    <updated>2022-04-24T05:33:08.215Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="声明函数"><a href="#声明函数" class="headerlink" title="声明函数"></a>声明函数</h2><p>可以全局使用</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">calcAge</span>(<span class="params">形参</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="函数表达式"><a href="#函数表达式" class="headerlink" title="函数表达式"></a>函数表达式</h2><p>不能全局使用，得先定义才能使用</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> calcAge = <span class="keyword">function</span> (<span class="params">形参</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>函数表达式，适合快速的单行功能，函数内只有一条表达式的情况下不需要使用 return 返回，箭头函数内的返回是隐式的</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">calcAge</span> = (<span class="params">形参</span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">//多行需要使用return</span></span><br><span class="line">  <span class="keyword">return</span> 返回值;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>函数通常以遇到的第一个 return 而结束</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;h2 id=&quot;声明函数&quot;&gt;&lt;a href=&quot;#声明函数&quot; class=&quot;headerlink&quot; title=&quot;声明函数&quot;&gt;&lt;/a&gt;声明函数&lt;/h</summary>
+      
+    
+    
+    
+    
+    <category term="JS" scheme="http://zhaocil.tech/tags/JS/"/>
+    
+  </entry>
   
   <entry>
     <title>jsonp</title>
@@ -130,13 +152,13 @@
     <published>2022-03-17T03:08:50.000Z</published>
     <updated>2022-03-19T11:11:28.413Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="这是h1标题"><a href="#这是h1标题" class="headerlink" title="这是h1标题"></a>这是h1标题</h2>        <div id="aplayer-MSDALIge" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-MSDALIge"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "她的",              author: "周杰伦",              url: "https://music.163.com/song?id=1500883818&userid=513419751",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
+    <content type="html"><![CDATA[<h2 id="这是h1标题"><a href="#这是h1标题" class="headerlink" title="这是h1标题"></a>这是h1标题</h2>        <div id="aplayer-ngUkFmOl" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-ngUkFmOl"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "她的",              author: "周杰伦",              url: "https://music.163.com/song?id=1500883818&userid=513419751",              pic: "",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script>]]></content>
     
     
       
       
     <summary type="html">&lt;h2 id=&quot;这是h1标题&quot;&gt;&lt;a href=&quot;#这是h1标题&quot; class=&quot;headerlink&quot; title=&quot;这是h1标题&quot;&gt;&lt;/a&gt;这是h1标题&lt;/h2&gt;
-        &lt;div id=&quot;aplayer-MSDALIge&quot; class=&quot;aplayer aplaye</summary>
+        &lt;div id=&quot;aplayer-ngUkFmOl&quot; class=&quot;aplayer aplaye</summary>
       
     
     
