@@ -3,11 +3,11 @@
   <title>朝辞</title>
   
   
-  <link href="http://zhaocil.tech/atom.xml" rel="self"/>
+  <link href="http://zhaocil.top/atom.xml" rel="self"/>
   
-  <link href="http://zhaocil.tech/"/>
-  <updated>2022-04-27T06:40:29.564Z</updated>
-  <id>http://zhaocil.tech/</id>
+  <link href="http://zhaocil.top/"/>
+  <updated>2022-05-08T04:45:13.944Z</updated>
+  <id>http://zhaocil.top/</id>
   
   <author>
     <name>朝辞</name>
@@ -17,9 +17,55 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>拓展运算符</title>
+    <link href="http://zhaocil.top/2022/05/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>http://zhaocil.top/2022/05/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</id>
+    <published>2022-05-08T02:05:48.000Z</published>
+    <updated>2022-05-08T04:45:13.944Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="在右边时：…变量名"><a href="#在右边时：…变量名" class="headerlink" title="在右边时：…变量名"></a>在右边时：…变量名</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, ...arr];</span><br><span class="line"><span class="comment">//arr1 = [1,2,3,1,2,3,4]</span></span><br><span class="line">...arr把整个arr的数组解构成一个个的元素，这个也可以用于解构对象</span><br><span class="line"></span><br></pre></td></tr></table></figure><h2 id="在左边时：…变量名"><a href="#在左边时：…变量名" class="headerlink" title="在左边时：…变量名"></a>在左边时：…变量名</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line"><span class="keyword">const</span> [a, b, c, ...arr2] = arr;</span><br><span class="line"><span class="comment">//arr2 = [4,5,6,7]</span></span><br><span class="line">在左边时将剩余的数组元素合并成一个数组;</span><br><span class="line">当作为函数的参数使用时，会将传递的实参全部存入，和<span class="variable language_">arguments</span>类似</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;在右边时：…变量名&quot;&gt;&lt;a href=&quot;#在右边时：…变量名&quot; class=&quot;headerlink&quot; title=&quot;在右边时：…变量名&quot;&gt;&lt;/a&gt;在右边时：…变量名&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td c</summary>
+      
+    
+    
+    
+    
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DOM</title>
+    <link href="http://zhaocil.top/2022/04/28/DOM/"/>
+    <id>http://zhaocil.top/2022/04/28/DOM/</id>
+    <published>2022-04-28T03:22:57.000Z</published>
+    <updated>2022-04-28T03:29:41.484Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p><p>DOM 允许我们操作 HTML 元素</p><p>DOm 连接 HTML 与 JS 交互</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;DOM&quot;&gt;&lt;a href=&quot;#DOM&quot; class=&quot;headerlink&quot; title=&quot;DOM&quot;&gt;&lt;/a&gt;DOM&lt;/h1&gt;&lt;p&gt;DOM 代表文档对象模型&lt;/p&gt;
+&lt;p&gt;DOM 允许我们操作 HTML 元素&lt;/p&gt;
+&lt;p&gt;DOm 连接 HTML 与 JS 交互&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>对象</title>
-    <link href="http://zhaocil.tech/2022/04/25/%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://zhaocil.tech/2022/04/25/%E5%AF%B9%E8%B1%A1/</id>
+    <link href="http://zhaocil.top/2022/04/25/%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://zhaocil.top/2022/04/25/%E5%AF%B9%E8%B1%A1/</id>
     <published>2022-04-25T08:11:43.000Z</published>
     <updated>2022-04-27T06:40:29.564Z</updated>
     
@@ -34,14 +80,14 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>数组</title>
-    <link href="http://zhaocil.tech/2022/04/25/%E6%95%B0%E7%BB%84/"/>
-    <id>http://zhaocil.tech/2022/04/25/%E6%95%B0%E7%BB%84/</id>
+    <link href="http://zhaocil.top/2022/04/25/%E6%95%B0%E7%BB%84/"/>
+    <id>http://zhaocil.top/2022/04/25/%E6%95%B0%E7%BB%84/</id>
     <published>2022-04-25T01:53:14.000Z</published>
     <updated>2022-04-27T06:40:23.242Z</updated>
     
@@ -56,14 +102,14 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>JS函数</title>
-    <link href="http://zhaocil.tech/2022/04/24/JS%E5%87%BD%E6%95%B0/"/>
-    <id>http://zhaocil.tech/2022/04/24/JS%E5%87%BD%E6%95%B0/</id>
+    <link href="http://zhaocil.top/2022/04/24/JS%E5%87%BD%E6%95%B0/"/>
+    <id>http://zhaocil.top/2022/04/24/JS%E5%87%BD%E6%95%B0/</id>
     <published>2022-04-24T02:07:45.000Z</published>
     <updated>2022-04-27T06:40:00.789Z</updated>
     
@@ -78,14 +124,14 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>jsonp</title>
-    <link href="http://zhaocil.tech/2022/03/28/jsonp/"/>
-    <id>http://zhaocil.tech/2022/03/28/jsonp/</id>
+    <link href="http://zhaocil.top/2022/03/28/jsonp/"/>
+    <id>http://zhaocil.top/2022/03/28/jsonp/</id>
     <published>2022-03-28T08:30:04.000Z</published>
     <updated>2022-04-27T06:39:52.342Z</updated>
     
@@ -93,14 +139,14 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>AJAX_1</title>
-    <link href="http://zhaocil.tech/2022/03/25/AJAX-1/"/>
-    <id>http://zhaocil.tech/2022/03/25/AJAX-1/</id>
+    <link href="http://zhaocil.top/2022/03/25/AJAX-1/"/>
+    <id>http://zhaocil.top/2022/03/25/AJAX-1/</id>
     <published>2022-03-25T08:32:45.000Z</published>
     <updated>2022-04-27T06:39:31.700Z</updated>
     
@@ -115,14 +161,14 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>async/await操作</title>
-    <link href="http://zhaocil.tech/2022/03/24/async-await%E6%93%8D%E4%BD%9C/"/>
-    <id>http://zhaocil.tech/2022/03/24/async-await%E6%93%8D%E4%BD%9C/</id>
+    <link href="http://zhaocil.top/2022/03/24/async-await%E6%93%8D%E4%BD%9C/"/>
+    <id>http://zhaocil.top/2022/03/24/async-await%E6%93%8D%E4%BD%9C/</id>
     <published>2022-03-24T07:47:25.000Z</published>
     <updated>2022-04-27T06:39:38.942Z</updated>
     
@@ -137,14 +183,14 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>js_es6面向对象</title>
-    <link href="http://zhaocil.tech/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://zhaocil.tech/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <link href="http://zhaocil.top/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://zhaocil.top/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
     <published>2022-03-23T07:36:50.000Z</published>
     <updated>2022-04-27T06:39:45.694Z</updated>
     
@@ -160,14 +206,14 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>js面向对象</title>
-    <link href="http://zhaocil.tech/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://zhaocil.tech/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <link href="http://zhaocil.top/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://zhaocil.top/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
     <published>2022-03-21T08:39:34.000Z</published>
     <updated>2022-04-27T06:40:13.202Z</updated>
     
@@ -183,7 +229,7 @@
     
     
     
-    <category term="js" scheme="http://zhaocil.tech/tags/js/"/>
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
     
   </entry>
   
