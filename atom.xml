@@ -6,7 +6,7 @@
   <link href="http://zhaocil.top/atom.xml" rel="self"/>
   
   <link href="http://zhaocil.top/"/>
-  <updated>2022-05-11T06:53:55.502Z</updated>
+  <updated>2022-05-11T07:00:13.837Z</updated>
   <id>http://zhaocil.top/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>map</title>
-    <link href="http://zhaocil.top/2022/05/11/map/"/>
-    <id>http://zhaocil.top/2022/05/11/map/</id>
-    <published>2022-05-11T06:07:13.000Z</published>
-    <updated>2022-05-11T06:53:55.502Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="map-对象"><a href="#map-对象" class="headerlink" title="map 对象"></a>map 对象</h1><h2 id="Map-对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者原始数据类型（string-number-…））都可以作为一个键或一个值。"><a href="#Map-对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者原始数据类型（string-number-…））都可以作为一个键或一个值。" class="headerlink" title="Map 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者原始数据类型（string,number,…））都可以作为一个键或一个值。"></a>Map 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者原始数据类型（string,number,…））都可以作为一个键或一个值。</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实例化一个map对象</span></span><br><span class="line"><span class="keyword">let</span> mapp = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line"><span class="comment">//map通过set方法来添加键值对</span></span><br><span class="line">mapp.<span class="title function_">set</span>(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;张三&quot;</span>);</span><br><span class="line"><span class="comment">//map通过get方法获取键对应的值</span></span><br><span class="line">mapp.<span class="title function_">get</span>(<span class="string">&quot;name&quot;</span>);</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;map-对象&quot;&gt;&lt;a href=&quot;#map-对象&quot; class=&quot;headerlink&quot; title=&quot;map 对象&quot;&gt;&lt;/a&gt;map 对象&lt;/h1&gt;&lt;h2 id=&quot;Map-对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者原始数据类型（string-</summary>
-      
-    
-    
-    
-    
-    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
-    
-  </entry>
   
   <entry>
     <title>sets和map</title>
