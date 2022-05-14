@@ -6,7 +6,7 @@
   <link href="http://zhaocil.top/atom.xml" rel="self"/>
   
   <link href="http://zhaocil.top/"/>
-  <updated>2022-05-11T08:07:30.435Z</updated>
+  <updated>2022-05-12T01:57:54.928Z</updated>
   <id>http://zhaocil.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>字符串</title>
+    <link href="http://zhaocil.top/2022/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    <id>http://zhaocil.top/2022/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2/</id>
+    <published>2022-05-12T00:45:39.000Z</published>
+    <updated>2022-05-12T01:57:54.928Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="字符串的一些方法"><a href="#字符串的一些方法" class="headerlink" title="字符串的一些方法"></a>字符串的一些方法</h1><h2 id="slice-起始位置，结束位置"><a href="#slice-起始位置，结束位置" class="headerlink" title="slice(起始位置，结束位置)"></a>slice(起始位置，结束位置)</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;HelloWorld&quot;</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str.<span class="title function_">slice</span>(<span class="number">3</span>, <span class="number">7</span>)); <span class="comment">// lowo</span></span><br></pre></td></tr></table></figure><p>语法</p><p>str.slice(beginIndex[, endIndex])</p><ul><li><p>beginIndex</p><ul><li>从该索引（以 0 为基数）处开始提取原字符串中的字符。如果值为负数，会被当做 strLength + beginIndex 看待，这里的 strLength 是字符串的长度（例如， 如果 beginIndex 是 -3 则看作是：strLength - 3）</li></ul></li><li><p>endIndex</p><ul><li>可选。在该索引（以 0 为基数）处结束提取字符串。如果省略该参数，slice() 会一直提取到字符串末尾。如果该参数为负数，则被看作是 strLength + endIndex，这里的 strLength 就是字符串的长度(例如，如果 endIndex 是 -3，则是, strLength - 3)。</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;字符串的一些方法&quot;&gt;&lt;a href=&quot;#字符串的一些方法&quot; class=&quot;headerlink&quot; title=&quot;字符串的一些方法&quot;&gt;&lt;/a&gt;字符串的一些方法&lt;/h1&gt;&lt;h2 id=&quot;slice-起始位置，结束位置&quot;&gt;&lt;a href=&quot;#slice-起始位置，结束位</summary>
+      
+    
+    
+    
+    
+    <category term="js" scheme="http://zhaocil.top/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>sets和map</title>
