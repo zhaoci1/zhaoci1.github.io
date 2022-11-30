@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://zhaocil.top/2022/05/09/遍历数组和对象/"/>
+  <link rel="canonical" href="http://zhaocil.top/2022/11/30/node/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,21 +32,20 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="朝辞" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>遍历数组和对象 - 朝辞</title>
-  <meta name="keywords" content="js,null">
+  <title>node - 朝辞</title>
+  <meta name="keywords" content="null">
   <meta desc name="description" content="zhaoci - 朝辞 - 朝辞">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="遍历数组和对象">
-<meta property="og:url" content="http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/index.html">
+<meta property="og:title" content="node">
+<meta property="og:url" content="http://zhaocil.top/2022/11/30/node/index.html">
 <meta property="og:site_name" content="朝辞">
-<meta property="og:description" content="For-of数组1234for(const 变量名||&amp;#123;变量1，变量2&amp;#125; of 数组名||数组名.entries())&amp;#123;1：下标2：下标对应的元素&amp;#125;  对象把对象先转换成数组的形式，然后进行遍历 123456Object.keys	只获取对象中属性的名称，也就是键名Object.values	把对象的格式转成数组的格式，第一层的属性名被替换成下标Object">
+<meta property="og:description" content="下载文件">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-05-09T06:53:03.000Z">
-<meta property="article:modified_time" content="2022-05-10T02:46:25.663Z">
+<meta property="article:published_time" content="2022-11-30T10:40:11.000Z">
+<meta property="article:modified_time" content="2022-11-30T10:49:06.476Z">
 <meta property="article:author" content="朝辞">
-<meta property="article:tag" content="js">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2518,7 +2517,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/">
+  <link itemprop="mainEntityOfPage" href="http://zhaocil.top/2022/11/30/node/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="朝辞">
   </span>
@@ -2539,7 +2538,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        遍历数组和对象
+        node
       </h1>
       <div class='new-meta-box'>
         
@@ -2560,10 +2559,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-05-09T14:53:03+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-11-30T18:40:11+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2022年5月9日</p>
+    <p>发布于：2022年11月30日</p>
   </a>
 </div>
 
@@ -2596,14 +2595,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <div class="story post-story"><h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">const</span> 变量名||&#123;变量<span class="number">1</span>，变量<span class="number">2</span>&#125; <span class="keyword">of</span> 数组名||数组名.<span class="title function_">entries</span>())&#123;</span><br><span class="line"><span class="number">1</span>：下标</span><br><span class="line"><span class="number">2</span>：下标对应的元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <p><a href="/download/node.zip">下载文件</a></p>
 
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="property">keys</span></span><br><span class="line">	只获取对象中属性的名称，也就是键名</span><br><span class="line"><span class="title class_">Object</span>.<span class="property">values</span></span><br><span class="line">	把对象的格式转成数组的格式，第一层的属性名被替换成下标</span><br><span class="line"><span class="title class_">Object</span>.<span class="property">entries</span></span><br><span class="line">	将全部对象全部转换成数组</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/10/HULz4.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/10/HULz4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="HULz4.png"><br><img src="https://s1.328888.xyz/2022/05/10/HUJJ3.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/10/HUJJ3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="HUJJ3.png"></p>
-
-</div>
   </div>
   
   
@@ -2618,8 +2612,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">遍历数组和对象</div>
-            <div class="license-link"><a href="http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/">http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</a>
+            <div class="license-title">node</div>
+            <div class="license-link"><a href="http://zhaocil.top/2022/11/30/node/">http://zhaocil.top/2022/11/30/node/</a>
             </div>
             <div class="license-meta">
               <div class="license-meta-item">
@@ -2628,12 +2622,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               </div>
               <div class="license-meta-item">
                 <div class="license-meta-title">发布于</div>
-                <div class="license-meta-text">2022年5月9日</div>
-              </div>
-              
-              <div class="license-meta-item">
-                <div class="license-meta-title">更新于</div>
-                <div class="license-meta-text">2022年5月10日</div>
+                <div class="license-meta-text">2022年11月30日</div>
               </div>
               
               
@@ -2658,10 +2647,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-05-10T10:46:25+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-11-30T18:49:06+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2022年5月10日</p>
+    <p>更新于：2022年11月30日</p>
   </a>
 </div>
 
@@ -2669,10 +2658,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/js/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>js</p></a></div>
-  <span hidden itemprop="keywords">js</span>
-
 
         
       
@@ -2684,7 +2669,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/&title=遍历数组和对象 - 朝辞&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://zhaocil.top/2022/11/30/node/&title=node - 朝辞&summary="
           
           >
           
@@ -2696,7 +2681,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/&title=遍历数组和对象 - 朝辞&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://zhaocil.top/2022/11/30/node/&title=node - 朝辞&summary="
           
           >
           
@@ -2708,7 +2693,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/&title=遍历数组和对象 - 朝辞&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://zhaocil.top/2022/11/30/node/&title=node - 朝辞&summary="
           
           >
           
@@ -2741,18 +2726,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/05/10/sets%E5%92%8Cmaps/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>sets和map</p>
-          <p class='content'>内置数据对象set12new Set(数据);//如果数据是一个数组，则将里面重复的部分去掉，如果是一串字符串，则分解这一段字符串
-
-size 属性set.size
-新创建的 Set 数据类型不...</p>
-        </a>
       
-      
-        <a class='next' href='/2022/05/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/'>
-          <p class='title'>拓展运算符<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>在右边时：…变量名12345const arr = [1, 2, 3, 4];const arr1 = [1, 2, 3, ...arr];//arr1 = [1,2,3,1,2,3,4]......</p>
+        <a class='next' href='/2022/05/16/%E5%87%BD%E6%95%B0/'>
+          <p class='title'>函数<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>函数函数默认值12345678// es5const show = function (one) &#123;  one = one || 5;&#125;;// es6const show =...</p>
         </a>
       
     </div>
@@ -2768,7 +2745,7 @@ size 属性set.size
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/11/30/node/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2800,19 +2777,9 @@ size 属性set.size
   
 
 
-  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#For-of"><span class="toc-text">For-of</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-text">数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-text">对象</span></a></li></ol></li></ol>
-    </div>
-  </section>
+  <div class="">
+    <!-- pjax占位 -->
+  </div>
 
   
 
@@ -3832,7 +3799,7 @@ size 属性set.size
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"朝辞","url":"http://zhaocil.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"朝辞","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://zhaocil.top/","sameAs":["https://github.com/volantis-x"],"description":"zhaoci"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://zhaocil.top/","name":"朝辞"}},{"@type":"ListItem","position":3,"item":{"@id":"http://zhaocil.top/2022/05/09/遍历数组和对象/","name":"遍历数组和对象"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"朝辞","url":"http://zhaocil.top/","keywords":null,"description":"zhaoci","author":{"@type":"Person","name":"朝辞","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://zhaocil.top/","description":"zhaoci"},"publisher":{"@type":"Organization","name":"朝辞","url":"http://zhaocil.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://zhaocil.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"遍历数组和对象","description":"zhaoci","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/"},"author":{"@type":"Person","name":"朝辞","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://zhaocil.top/"},"publisher":{"@type":"Organization","name":"朝辞","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://zhaocil.top/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/","wordCount":0,"datePublished":"2022-05-09T06:53:03.000Z","dateModified":"2022-05-10T02:46:25.663Z","keywords":"js","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"朝辞","url":"http://zhaocil.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"朝辞","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://zhaocil.top/","sameAs":["https://github.com/volantis-x"],"description":"zhaoci"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://zhaocil.top/","name":"朝辞"}},{"@type":"ListItem","position":3,"item":{"@id":"http://zhaocil.top/2022/11/30/node/","name":"node"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"朝辞","url":"http://zhaocil.top/","keywords":null,"description":"zhaoci","author":{"@type":"Person","name":"朝辞","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://zhaocil.top/","description":"zhaoci"},"publisher":{"@type":"Organization","name":"朝辞","url":"http://zhaocil.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://zhaocil.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"node","description":"zhaoci","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://zhaocil.top/2022/11/30/node/"},"author":{"@type":"Person","name":"朝辞","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://zhaocil.top/"},"publisher":{"@type":"Organization","name":"朝辞","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://zhaocil.top/2022/11/30/node/","wordCount":0,"datePublished":"2022-11-30T10:40:11.000Z","dateModified":"2022-11-30T10:49:06.476Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
