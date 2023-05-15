@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="zhaoci">
-    <meta name="author" content="Keep Team">
+    <meta name="author" content="zhaoci">
     
     <title>
         
             对象 |
         
-        Keep Theme
+        zhaoci
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="shortcut icon" href="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
     
 <link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
@@ -31,8 +31,8 @@
 
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"zhaocil.top","root":"/","language":"zh-CN"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.hexo_config = {"hostname":"zhaocil.top","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/网页图标.jpg","favicon":"/images/网页图标.jpg","avatar":"/images/网页图标.jpg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/wallhaven-yxekrx.jpg","description":"Every day, I take a step closer to my goal","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -63,11 +63,11 @@
         <div class="left">
             
                 <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
+                    <img src="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
                 </a>
             
             <a class="logo-title" href="/">
-               Keep Theme
+               zhaoci
             </a>
         </div>
 
@@ -91,10 +91,32 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -114,6 +136,16 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -142,11 +174,11 @@
             
                 <div class="article-header">
                     <div class="avatar">
-                        <img src="/images/avatar.svg">
+                        <img src="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
                     </div>
                     <div class="info">
                         <div class="author">
-                            <span class="name">Keep Team</span>
+                            <span class="name">zhaoci</span>
                             
                                 <span class="author-label">Lv2</span>
                             
@@ -164,7 +196,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-05-23 09:32:23</span>
+        <span class="pc">2022-05-23 09:32:24</span>
     </span>
     
     
@@ -183,7 +215,15 @@
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>484 字</span>
+        </span>
     
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
@@ -195,31 +235,57 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <div class="story post-story"><h2 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> 对象名 = &#123;属性<span class="number">1</span>，属性<span class="number">2</span>，属性<span class="number">3.</span>..&#125;</span><br></pre></td></tr></table></figure>
+                <h2 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> 对象名 = &#123;属性<span class="number">1</span>，属性<span class="number">2</span>，属性<span class="number">3.</span>..&#125;</span><br></pre></td></tr></table></figure>
 
 <p>数组通过下标访问数据，对象通过属性名访问数据</p>
-</div><div class="story post-story"><h2 id="访问数据的方法"><a href="#访问数据的方法" class="headerlink" title="访问数据的方法"></a>访问数据的方法</h2><ol>
+<h2 id="访问数据的方法"><a href="#访问数据的方法" class="headerlink" title="访问数据的方法"></a>访问数据的方法</h2><ol>
 <li>对象名.属性名</li>
 <li>对象名[‘属性名’] (可以用一个变量来存储属性名)</li>
 </ol>
 <p>对面里面也可以存函数，这个函数叫做这个对象的方法</p>
-</div><div class="story post-story"><h2 id="方法里面的-this-指向"><a href="#方法里面的-this-指向" class="headerlink" title="方法里面的 this 指向"></a>方法里面的 this 指向</h2><p>谁调用方法，this 就代表哪个对象</p>
+<h2 id="方法里面的-this-指向"><a href="#方法里面的-this-指向" class="headerlink" title="方法里面的 this 指向"></a>方法里面的 this 指向</h2><p>谁调用方法，this 就代表哪个对象</p>
 <p>数组实际上是一种特殊的对象，它们有自己的方法<br>例如：push,unshift</p>
 <p>一个对象的方法如果被赋值给了其他变量，则这个变量获得的值只是一个全局的函数，并不是对象的方法本身</p>
-</div><div class="story post-story"><h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><p>手动并明确的设置 this 关键字</p>
+<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><p>手动并明确的设置 this 关键字</p>
 <p>call(需要指向的 this,调用方法时的参数)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 初始化两个对象</span></span><br><span class="line"><span class="keyword">const</span> name = &#123;</span><br><span class="line">  <span class="attr">namne</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>,</span><br><span class="line">  <span class="attr">arr</span>: [],</span><br><span class="line">  <span class="title function_">show</span>(<span class="params">name, sex</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">arr</span>.<span class="title function_">push</span>(&#123; <span class="attr">name</span>: name, <span class="attr">sex</span>: sex &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> name2 = &#123;</span><br><span class="line">  <span class="attr">namne2</span>: <span class="string">&quot;小A&quot;</span>,</span><br><span class="line">  <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>,</span><br><span class="line">  <span class="attr">arr</span>: [],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 把name里面的函数提出来</span></span><br><span class="line"><span class="keyword">const</span> show2 = name.<span class="property">show</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用show2，并使用call将show方法里面的this指向name2和name</span></span><br><span class="line"><span class="comment">// 后面的参数是方法接收的参数</span></span><br><span class="line">show2.<span class="title function_">call</span>(name, <span class="string">&quot;小南&quot;</span>, <span class="string">&quot;女&quot;</span>);</span><br><span class="line"></span><br><span class="line">show2.<span class="title function_">call</span>(name2, <span class="string">&quot;小A&quot;</span>, <span class="string">&quot;男&quot;</span>);</span><br><span class="line"></span><br><span class="line">name.<span class="title function_">show</span>(<span class="string">&quot;小王&quot;</span>, <span class="string">&quot;男&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name2);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/22/dR9Jv.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/22/dR9Jv.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="dR9Jv.png"></p>
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/22/dR9Jv.png"></p>
 <p>可以看见这里 name,和 name2 对象里面 arr 数组通过 show2 的方法添加了元素</p>
 <p>通过 call，能够使用另一个对象里面的方法</p>
-</div><div class="story post-story"><h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>bind 方法创建一个新的函数</p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>bind 方法创建一个新的函数</p>
 <p>在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> show = name.<span class="property">show</span>.<span class="title function_">bind</span>(name, <span class="string">&quot;小南&quot;</span>);</span><br><span class="line"><span class="comment">//此时show等同于name对象里面的show,this会指向name对象,而后面的参数会变成新函数的参数</span></span><br></pre></td></tr></table></figure>
 
-</div>
             </div>
 
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">本文标题</span>：<span class="content">对象</span>
+        </li>
+        <li class="post-author">
+            <span class="type">本文作者</span>：<span class="content">zhaoci</span>
+        </li>
+        <li class="post-time">
+            <span class="type">创建时间</span>：<span class="content">2022-04-25 16:11:43</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">2022/04/25/对象/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
             
 
             
@@ -270,8 +336,36 @@
             
 
             
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;评论
+    </div>
+    
+        
+            
+
+
+
+        
+    
+</div>
+
+                </div>
+            
         </div>
 
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">定义对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BF%E9%97%AE%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">访问数据的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%87%8C%E9%9D%A2%E7%9A%84-this-%E6%8C%87%E5%90%91"><span class="nav-number">3.</span> <span class="nav-text">方法里面的 this 指向</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call"><span class="nav-number">4.</span> <span class="nav-text">call</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bind"><span class="nav-number">5.</span> <span class="nav-text">bind()</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
         
     </div>
 </div>
@@ -294,9 +388,20 @@
             2023
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Keep Team</a>
+                &nbsp;<a href="/">zhaoci</a>
             
         </div>
+        
+            <script async 
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
         
         <div class="theme-info info-item">
             由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
@@ -315,8 +420,17 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
 
         <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
         
     </ul>
 </div>
@@ -369,6 +483,35 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
@@ -389,8 +532,20 @@
 
 
 
+    
+<script src="/js/local-search.js"></script>
 
 
+
+
+    
+<script src="/js/code-block.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
 
 
 
@@ -400,6 +555,14 @@
 <script src="/js/post-helper.js"></script>
 
         
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
         
     
 </div>

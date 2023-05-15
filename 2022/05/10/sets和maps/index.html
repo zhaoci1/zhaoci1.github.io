@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="zhaoci">
-    <meta name="author" content="Keep Team">
+    <meta name="author" content="zhaoci">
     
     <title>
         
             sets和map |
         
-        Keep Theme
+        zhaoci
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="shortcut icon" href="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
     
 <link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
@@ -31,8 +31,8 @@
 
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"zhaocil.top","root":"/","language":"zh-CN"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.hexo_config = {"hostname":"zhaocil.top","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/网页图标.jpg","favicon":"/images/网页图标.jpg","avatar":"/images/网页图标.jpg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/wallhaven-yxekrx.jpg","description":"Every day, I take a step closer to my goal","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -63,11 +63,11 @@
         <div class="left">
             
                 <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
+                    <img src="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
                 </a>
             
             <a class="logo-title" href="/">
-               Keep Theme
+               zhaoci
             </a>
         </div>
 
@@ -91,10 +91,32 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -114,6 +136,16 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -142,11 +174,11 @@
             
                 <div class="article-header">
                     <div class="avatar">
-                        <img src="/images/avatar.svg">
+                        <img src="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
                     </div>
                     <div class="info">
                         <div class="author">
-                            <span class="name">Keep Team</span>
+                            <span class="name">zhaoci</span>
                             
                                 <span class="author-label">Lv2</span>
                             
@@ -164,7 +196,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-05-11 16:07:30</span>
+        <span class="pc">2022-05-11 16:07:32</span>
     </span>
     
     
@@ -183,7 +215,15 @@
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>549 字</span>
+        </span>
     
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
@@ -197,51 +237,77 @@
 
                 <h1 id="内置数据对象"><a href="#内置数据对象" class="headerlink" title="内置数据对象"></a>内置数据对象</h1><h1 id="set"><a href="#set" class="headerlink" title="set"></a>set</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Set</span>(数据);</span><br><span class="line"><span class="comment">//如果数据是一个数组，则将里面重复的部分去掉，如果是一串字符串，则分解这一段字符串</span></span><br></pre></td></tr></table></figure>
 
-<div class="story post-story"><h2 id="size-属性"><a href="#size-属性" class="headerlink" title="size 属性"></a>size 属性</h2><p>set.size</p>
+<h2 id="size-属性"><a href="#size-属性" class="headerlink" title="size 属性"></a>size 属性</h2><p>set.size</p>
 <p>新创建的 Set 数据类型不能使用 length 来获取长度，则使用 size 来获取长度</p>
 <p>获取调用它的对象或者数组</p>
-</div><div class="story post-story"><h2 id="has-方法"><a href="#has-方法" class="headerlink" title="has 方法"></a>has 方法</h2><p>set.has()</p>
+<h2 id="has-方法"><a href="#has-方法" class="headerlink" title="has 方法"></a>has 方法</h2><p>set.has()</p>
 <p>查询某个元素是否在 set 中</p>
-</div><div class="story post-story"><h2 id="add-方法"><a href="#add-方法" class="headerlink" title="add 方法"></a>add 方法</h2><p>set.add()</p>
+<h2 id="add-方法"><a href="#add-方法" class="headerlink" title="add 方法"></a>add 方法</h2><p>set.add()</p>
 <p>在 set 中添加一个元素</p>
-</div><div class="story post-story"><h2 id="delete-方法"><a href="#delete-方法" class="headerlink" title="delete 方法"></a>delete 方法</h2><p>set.delete(‘删除的元素值’)</p>
+<h2 id="delete-方法"><a href="#delete-方法" class="headerlink" title="delete 方法"></a>delete 方法</h2><p>set.delete(‘删除的元素值’)</p>
 <p>删除 set 中的一个元素</p>
-</div><div class="story post-story"><h2 id="clear-方法"><a href="#clear-方法" class="headerlink" title="clear 方法"></a>clear 方法</h2><p>set.clear()</p>
+<h2 id="clear-方法"><a href="#clear-方法" class="headerlink" title="clear 方法"></a>clear 方法</h2><p>set.clear()</p>
 <p>删除 set 中所有的元素</p>
-</div><div class="story post-story"><h2 id="set-不能使用下标来检索数据"><a href="#set-不能使用下标来检索数据" class="headerlink" title="set 不能使用下标来检索数据"></a>set 不能使用下标来检索数据</h2><p>如果你的需求是实际按顺序存储值，并且检索它，那么最好的用法是用数组、</p>
+<h2 id="set-不能使用下标来检索数据"><a href="#set-不能使用下标来检索数据" class="headerlink" title="set 不能使用下标来检索数据"></a>set 不能使用下标来检索数据</h2><p>如果你的需求是实际按顺序存储值，并且检索它，那么最好的用法是用数组、</p>
 <p>没有必要从 set 中获取值</p>
 <p>当然，set 也是可以用 for of 来遍历里面的元素的</p>
-<p>也可以用拓展运算符对 set 结构进行解构<br><img src="https://s1.328888.xyz/2022/05/10/H8z23.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/10/H8z23.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="H8z23.png"></p>
+<p>也可以用拓展运算符对 set 结构进行解构<br><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/10/H8z23.png"></p>
 <h1 id="map-对象"><a href="#map-对象" class="headerlink" title="map 对象"></a>map 对象</h1><p>Map 对象保存键值对，并且能够记住键的原始插入顺序。任何值（对象或者原始数据类型（string,number,…））都可以作为一个键或一个值。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//实例化一个map对象</span></span><br><span class="line"><span class="keyword">let</span> mapp = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line"><span class="comment">//map通过set方法来添加键值对</span></span><br><span class="line">mapp.<span class="title function_">set</span>(<span class="string">&quot;name&quot;</span>, <span class="string">&quot;张三&quot;</span>);</span><br><span class="line"><span class="comment">//map通过get方法获取键对应的值</span></span><br><span class="line">mapp.<span class="title function_">get</span>(<span class="string">&quot;name&quot;</span>);</span><br></pre></td></tr></table></figure>
 
 <p>同样，map 对象也能使用 set 对象的方法和属性(size,has()…)</p>
-</div><div class="story post-story"><h2 id="可以使用数组作为-map-的键名"><a href="#可以使用数组作为-map-的键名" class="headerlink" title="可以使用数组作为 map 的键名"></a>可以使用数组作为 map 的键名</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">mapp.<span class="title function_">set</span>(arr, <span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(mapp.<span class="title function_">get</span>(arr));</span><br></pre></td></tr></table></figure>
+<h2 id="可以使用数组作为-map-的键名"><a href="#可以使用数组作为-map-的键名" class="headerlink" title="可以使用数组作为 map 的键名"></a>可以使用数组作为 map 的键名</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">mapp.<span class="title function_">set</span>(arr, <span class="string">&quot;HelloWorld&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(mapp.<span class="title function_">get</span>(arr));</span><br></pre></td></tr></table></figure>
 
 <p>这里数组名仅仅只是当作键的名字而已</p>
-<p><img src="https://s1.328888.xyz/2022/05/11/HsxsO.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/11/HsxsO.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="HsxsO.png"></p>
-</div><div class="story post-story"><h2 id="甚至页面元素也可以作为键名来使用"><a href="#甚至页面元素也可以作为键名来使用" class="headerlink" title="甚至页面元素也可以作为键名来使用"></a>甚至页面元素也可以作为键名来使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rest.<span class="title function_">set</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;h1&quot;</span>), <span class="string">&quot;你好！&quot;</span>);</span><br></pre></td></tr></table></figure>
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/11/HsxsO.png"></p>
+<h2 id="甚至页面元素也可以作为键名来使用"><a href="#甚至页面元素也可以作为键名来使用" class="headerlink" title="甚至页面元素也可以作为键名来使用"></a>甚至页面元素也可以作为键名来使用</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rest.<span class="title function_">set</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&quot;h1&quot;</span>), <span class="string">&quot;你好！&quot;</span>);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/11/H7ykA.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/11/H7ykA.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="H7ykA.png"></p>
-</div><div class="story post-story"><h2 id="批量添加-map-元素"><a href="#批量添加-map-元素" class="headerlink" title="批量添加 map 元素"></a>批量添加 map 元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> end2 = <span class="keyword">new</span> <span class="title class_">Map</span>([</span><br><span class="line">  [<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;张三&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;李四&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;name3&quot;</span>, <span class="string">&quot;王五&quot;</span>],</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/11/H7ykA.png"></p>
+<h2 id="批量添加-map-元素"><a href="#批量添加-map-元素" class="headerlink" title="批量添加 map 元素"></a>批量添加 map 元素</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> end2 = <span class="keyword">new</span> <span class="title class_">Map</span>([</span><br><span class="line">  [<span class="string">&quot;name1&quot;</span>, <span class="string">&quot;张三&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;name2&quot;</span>, <span class="string">&quot;李四&quot;</span>],</span><br><span class="line">  [<span class="string">&quot;name3&quot;</span>, <span class="string">&quot;王五&quot;</span>],</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/11/H77UZ.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/11/H77UZ.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="H77UZ.png"></p>
-</div><div class="story post-story"><h2 id="object-转-map"><a href="#object-转-map" class="headerlink" title="object 转 map"></a>object 转 map</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123; <span class="attr">name</span>: <span class="string">&quot;张三&quot;</span>, <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>, <span class="attr">job</span>: <span class="string">&quot;医生&quot;</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> mpp = <span class="keyword">new</span> <span class="title class_">Map</span>(<span class="title class_">Object</span>.<span class="title function_">entries</span>(obj));</span><br></pre></td></tr></table></figure>
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/11/H77UZ.png"></p>
+<h2 id="object-转-map"><a href="#object-转-map" class="headerlink" title="object 转 map"></a>object 转 map</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123; <span class="attr">name</span>: <span class="string">&quot;张三&quot;</span>, <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>, <span class="attr">job</span>: <span class="string">&quot;医生&quot;</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> mpp = <span class="keyword">new</span> <span class="title class_">Map</span>(<span class="title class_">Object</span>.<span class="title function_">entries</span>(obj));</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/11/H7IqC.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/11/H7IqC.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="H7IqC.png"></p>
-</div><div class="story post-story"><h2 id="遍历-map"><a href="#遍历-map" class="headerlink" title="遍历 map"></a>遍历 map</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [index, value] <span class="keyword">of</span> mpp.<span class="title function_">entries</span>()) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(index, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/11/H7IqC.png"></p>
+<h2 id="遍历-map"><a href="#遍历-map" class="headerlink" title="遍历 map"></a>遍历 map</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> [index, value] <span class="keyword">of</span> mpp.<span class="title function_">entries</span>()) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(index, value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/11/H7anm.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/11/H7anm.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="H7anm.png"></p>
-</div><div class="story post-story"><h2 id="可以用拓展运算符（…）把-map-转换成数组"><a href="#可以用拓展运算符（…）把-map-转换成数组" class="headerlink" title="可以用拓展运算符（…）把 map 转换成数组"></a>可以用拓展运算符（…）把 map 转换成数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...mpp]);</span><br></pre></td></tr></table></figure>
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/11/H7anm.png"></p>
+<h2 id="可以用拓展运算符（…）把-map-转换成数组"><a href="#可以用拓展运算符（…）把-map-转换成数组" class="headerlink" title="可以用拓展运算符（…）把 map 转换成数组"></a>可以用拓展运算符（…）把 map 转换成数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...mpp]);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/11/HIt3S.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/11/HIt3S.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="HIt3S.png"></p>
-</div><div class="story post-story"><h2 id="也可以使用-keys-values-entries-方法"><a href="#也可以使用-keys-values-entries-方法" class="headerlink" title="也可以使用 keys,values,entries 方法"></a>也可以使用 keys,values,entries 方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...mpp.<span class="title function_">keys</span>()]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...mpp.<span class="title function_">values</span>()]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...mpp.<span class="title function_">entries</span>()]);</span><br></pre></td></tr></table></figure>
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/11/HIt3S.png"></p>
+<h2 id="也可以使用-keys-values-entries-方法"><a href="#也可以使用-keys-values-entries-方法" class="headerlink" title="也可以使用 keys,values,entries 方法"></a>也可以使用 keys,values,entries 方法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...mpp.<span class="title function_">keys</span>()]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...mpp.<span class="title function_">values</span>()]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>([...mpp.<span class="title function_">entries</span>()]);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/11/HI7CF.png" class="lazyload" data-srcset="https://s1.328888.xyz/2022/05/11/HI7CF.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="HI7CF.png"></p>
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/11/HI7CF.png"></p>
 
-</div>
             </div>
 
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">本文标题</span>：<span class="content">sets和map</span>
+        </li>
+        <li class="post-author">
+            <span class="type">本文作者</span>：<span class="content">zhaoci</span>
+        </li>
+        <li class="post-time">
+            <span class="type">创建时间</span>：<span class="content">2022-05-10 10:50:14</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">2022/05/10/sets和maps/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
             
 
             
@@ -292,8 +358,36 @@
             
 
             
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;评论
+    </div>
+    
+        
+            
+
+
+
+        
+    
+</div>
+
+                </div>
+            
         </div>
 
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">内置数据对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#set"><span class="nav-number">2.</span> <span class="nav-text">set</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#size-%E5%B1%9E%E6%80%A7"><span class="nav-number">2.1.</span> <span class="nav-text">size 属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#has-%E6%96%B9%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">has 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#add-%E6%96%B9%E6%B3%95"><span class="nav-number">2.3.</span> <span class="nav-text">add 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#delete-%E6%96%B9%E6%B3%95"><span class="nav-number">2.4.</span> <span class="nav-text">delete 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#clear-%E6%96%B9%E6%B3%95"><span class="nav-number">2.5.</span> <span class="nav-text">clear 方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#set-%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8%E4%B8%8B%E6%A0%87%E6%9D%A5%E6%A3%80%E7%B4%A2%E6%95%B0%E6%8D%AE"><span class="nav-number">2.6.</span> <span class="nav-text">set 不能使用下标来检索数据</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#map-%E5%AF%B9%E8%B1%A1"><span class="nav-number">3.</span> <span class="nav-text">map 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8%E6%95%B0%E7%BB%84%E4%BD%9C%E4%B8%BA-map-%E7%9A%84%E9%94%AE%E5%90%8D"><span class="nav-number">3.1.</span> <span class="nav-text">可以使用数组作为 map 的键名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%94%9A%E8%87%B3%E9%A1%B5%E9%9D%A2%E5%85%83%E7%B4%A0%E4%B9%9F%E5%8F%AF%E4%BB%A5%E4%BD%9C%E4%B8%BA%E9%94%AE%E5%90%8D%E6%9D%A5%E4%BD%BF%E7%94%A8"><span class="nav-number">3.2.</span> <span class="nav-text">甚至页面元素也可以作为键名来使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E6%B7%BB%E5%8A%A0-map-%E5%85%83%E7%B4%A0"><span class="nav-number">3.3.</span> <span class="nav-text">批量添加 map 元素</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#object-%E8%BD%AC-map"><span class="nav-number">3.4.</span> <span class="nav-text">object 转 map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%8D%E5%8E%86-map"><span class="nav-number">3.5.</span> <span class="nav-text">遍历 map</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E4%BB%A5%E7%94%A8%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6%EF%BC%88%E2%80%A6%EF%BC%89%E6%8A%8A-map-%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B0%E7%BB%84"><span class="nav-number">3.6.</span> <span class="nav-text">可以用拓展运算符（…）把 map 转换成数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9F%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8-keys-values-entries-%E6%96%B9%E6%B3%95"><span class="nav-number">3.7.</span> <span class="nav-text">也可以使用 keys,values,entries 方法</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
         
     </div>
 </div>
@@ -316,9 +410,20 @@
             2023
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Keep Team</a>
+                &nbsp;<a href="/">zhaoci</a>
             
         </div>
+        
+            <script async 
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
         
         <div class="theme-info info-item">
             由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
@@ -337,8 +442,17 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
 
         <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
         
     </ul>
 </div>
@@ -391,6 +505,35 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
@@ -411,8 +554,20 @@
 
 
 
+    
+<script src="/js/local-search.js"></script>
 
 
+
+
+    
+<script src="/js/code-block.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
 
 
 
@@ -422,6 +577,14 @@
 <script src="/js/post-helper.js"></script>
 
         
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
         
     
 </div>

@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="Hexo Theme Keep">
     <meta name="description" content="zhaoci">
-    <meta name="author" content="Keep Team">
+    <meta name="author" content="zhaoci">
     
     <title>
         
             js_es6面向对象 |
         
-        Keep Theme
+        zhaoci
     </title>
     
 <link rel="stylesheet" href="/css/style.css">
 
-    <link rel="shortcut icon" href="/images/logo.svg">
+    <link rel="shortcut icon" href="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
     
 <link rel="stylesheet" href="/font/css/fontawesome.min.css">
 
@@ -31,8 +31,8 @@
 
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"zhaocil.top","root":"/","language":"zh-CN"}
-    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.hexo_config = {"hostname":"zhaocil.top","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true},"style":{"primary_color":"#0066cc","logo":"/images/网页图标.jpg","favicon":"/images/网页图标.jpg","avatar":"/images/网页图标.jpg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":true,"header_transparent":true,"background_img":"/images/wallhaven-yxekrx.jpg","description":"Every day, I take a step closer to my goal","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":true,"preload":true},"code_copy":{},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":true},"comment":{"enable":true,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":true,"wordcount":true,"min2read":false},"img_align":"left","copyright_info":true},"version":"3.6.1"}
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
     KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
     KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
@@ -63,11 +63,11 @@
         <div class="left">
             
                 <a class="logo-image" href="/">
-                    <img src="/images/logo.svg">
+                    <img src="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
                 </a>
             
             <a class="logo-title" href="/">
-               Keep Theme
+               zhaoci
             </a>
         </div>
 
@@ -91,10 +91,32 @@
                             </a>
                         </li>
                     
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/about"
+                            >
+                                关于
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
                     
                 </ul>
             </div>
             <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
                 
                 <div class="icon-item menu-bar">
                     <div class="menu-bar-middle"></div>
@@ -114,6 +136,16 @@
                 <li class="drawer-menu-item flex-center">
                     <a class=""
                        href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -142,11 +174,11 @@
             
                 <div class="article-header">
                     <div class="avatar">
-                        <img src="/images/avatar.svg">
+                        <img src="/images/%E7%BD%91%E9%A1%B5%E5%9B%BE%E6%A0%87.jpg">
                     </div>
                     <div class="info">
                         <div class="author">
-                            <span class="name">Keep Team</span>
+                            <span class="name">zhaoci</span>
                             
                                 <span class="author-label">Lv2</span>
                             
@@ -164,7 +196,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-04-27 14:39:45</span>
+        <span class="pc">2022-04-27 14:39:46</span>
     </span>
     
     
@@ -183,7 +215,15 @@
 
     
     
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>708 字</span>
+        </span>
     
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
     
 </div>
 
@@ -200,29 +240,29 @@
 <p>和 java 类似</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> 对象名 &#123;</span><br><span class="line">  <span class="title class_">Constructor</span>() &#123;</span><br><span class="line">    这里写属性;</span><br><span class="line">  &#125;</span><br><span class="line">  这里写函数;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
-<div class="story post-story"><h2 id="es6-的继承"><a href="#es6-的继承" class="headerlink" title="es6 的继承"></a>es6 的继承</h2><p>Es6 通过 super 来继承父类的属性</p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png"></p>
+<h2 id="es6-的继承"><a href="#es6-的继承" class="headerlink" title="es6 的继承"></a>es6 的继承</h2><p>Es6 通过 super 来继承父类的属性</p>
 <p>父类的方法通过 extends 来继承</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
-</div><div class="story post-story"><h2 id="es6-面向对象的-this"><a href="#es6-面向对象的-this" class="headerlink" title="es6 面向对象的 this"></a>es6 面向对象的 this</h2><p>js 的 this 容易被改变，这里本来应该显示 blue 的，但 this 现在指向了 document</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png"></p>
+<h2 id="es6-面向对象的-this"><a href="#es6-面向对象的-this" class="headerlink" title="es6 面向对象的 this"></a>es6 面向对象的 this</h2><p>js 的 this 容易被改变，这里本来应该显示 blue 的，但 this 现在指向了 document</p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png"></p>
 <p>修改的方法是在对象的方法后面，跟上一个 bind（blue）</p>
 <p>这里修改成 blue.showName.bind(blue)</p>
 <p>bind 是强制改变 this 的指向</p>
 <p>bind 的可以修改 this 指向的对象</p>
 <p>和 js 的 call 这个方法类似</p>
-</div><div class="story post-story"><h2 id="箭头函数和普通函数的区别"><a href="#箭头函数和普通函数的区别" class="headerlink" title="箭头函数和普通函数的区别"></a>箭头函数和普通函数的区别</h2><p>箭头函数：根据我所在的环境，环境是谁 this 就是谁</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<h2 id="箭头函数和普通函数的区别"><a href="#箭头函数和普通函数的区别" class="headerlink" title="箭头函数和普通函数的区别"></a>箭头函数和普通函数的区别</h2><p>箭头函数：根据我所在的环境，环境是谁 this 就是谁</p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png"></p>
 <p>这里别的实例对象用这个方法的时候，就不需要要用 bind 来改变指向了，这里 this 处在哪个环境，this 就是谁</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png"></p>
 <p>普通函数：谁在调用 this，this 就是谁</p>
 <p>上一节点击事件的错误就是因为是普通函数的缘故，this 指向了 document。</p>
-</div><div class="story post-story"><h2 id="Promise-对象"><a href="#Promise-对象" class="headerlink" title="Promise 对象"></a>Promise 对象</h2><p>拥有同步的简便，和异步的优点</p>
+<h2 id="Promise-对象"><a href="#Promise-对象" class="headerlink" title="Promise 对象"></a>Promise 对象</h2><p>拥有同步的简便，和异步的优点</p>
 <p>有两个参数 resolve 和 reject</p>
 <p>resolve：成功之后调用的函数</p>
 <p>reject：失败之后调用的函数</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png"></p>
 <p>promise 这个对象里面能执行一些方法和语句，执行完成后，resolve 和 reject 都会将括号里的值返回出去</p>
 <p>promise 有局限性</p>
 <ol>
@@ -232,34 +272,60 @@
 <h3 id="promise"><a href="#promise" class="headerlink" title="promise-"></a>promise-</h3><p>promise-race(||的作用)</p>
 <p>promise-all(&amp;&amp;的作用)</p>
 <p>能获取多个地址的数据</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png"></p>
 <p>Promise.all([pro 对象 1，pro 对象 2……]).then()</p>
 <p>all 能获取 promise 的集合，可以用数组的形式将这三个对象存起来</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png"></p>
 <p>因为 jQuery 的 Ajax 返回的对象里面，带有 Promise，所以这里 all 里面的对象可以直接用 jQuery 的 Ajax 表达式来使用</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
-</div><div class="story post-story"><h2 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h2><p>回调：有结果之后来找你</p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png"></p>
+<h2 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h2><p>回调：有结果之后来找你</p>
 <ol>
 <li>不是定义的人调用</li>
 <li>什么时候调用不知道</li>
 </ol>
 <p>轮询：一直询问</p>
-</div><div class="story post-story"><h2 id="generator-函数"><a href="#generator-函数" class="headerlink" title="generator 函数"></a>generator 函数</h2><p>Function *show(){}</p>
+<h2 id="generator-函数"><a href="#generator-函数" class="headerlink" title="generator 函数"></a>generator 函数</h2><p>Function *show(){}</p>
 <p>函数名前面加一个*号</p>
 <p>gen 函数与普通函数的区别是能暂停</p>
 <p>并且用 yield 来分块</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png"></p>
 <p>这儿已经被分成两块了</p>
 <p>gen 函数直接使用不会生效，而是会产生一个返回值,这里将 show 这个对象给了 fan</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png"></p>
 <p>要执行 show 里面的语句，需要用 next 这个方法来驱动</p>
 <p>next 会在 yield 之前停下，如果要执行 yield 后面的语句，需要在调用一下 next 的方法</p>
 <p>这样的好处是，有些异步操作需要时间，然后可以使用 yield 来分块，当异步操作执行完毕后，在执行后面的语句</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" class="lazyload" data-srcset="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="image"></p>
+<p><img lazyload alt="image" data-src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png"></p>
 
-</div>
             </div>
 
+            
+                <div class="post-copyright-info">
+                    
+<div class="article-copyright-info-container">
+    <ul class="copyright-info-content">
+        <li class="post-title">
+            <span class="type">本文标题</span>：<span class="content">js_es6面向对象</span>
+        </li>
+        <li class="post-author">
+            <span class="type">本文作者</span>：<span class="content">zhaoci</span>
+        </li>
+        <li class="post-time">
+            <span class="type">创建时间</span>：<span class="content">2022-03-23 15:36:50</span>
+        </li>
+        <li class="post-link">
+            <span class="type">本文链接</span>：<span class="content">2022/03/23/js-es6面向对象/</span>
+        </li>
+        <li class="post-license">
+            <span class="type">版权声明</span>：<span class="content">本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！</span>
+        </li>
+    </ul>
+    <div class="copy-copyright-info flex-center tooltip" data-content="复制版权信息" data-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                </div>
             
 
             
@@ -310,8 +376,36 @@
             
 
             
+                <div class="comment-container">
+                    
+<div class="comments-container">
+    <div id="comments-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fas fa-comments"></i>&nbsp;评论
+    </div>
+    
+        
+            
+
+
+
+        
+    
+</div>
+
+                </div>
+            
         </div>
 
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#es6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">es6 面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#es6-%E7%9A%84%E7%BB%A7%E6%89%BF"><span class="nav-number">1.1.</span> <span class="nav-text">es6 的继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#es6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84-this"><span class="nav-number">1.2.</span> <span class="nav-text">es6 面向对象的 this</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%92%8C%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.3.</span> <span class="nav-text">箭头函数和普通函数的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise-%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.4.</span> <span class="nav-text">Promise 对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#promise"><span class="nav-number">1.4.1.</span> <span class="nav-text">promise-</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E8%B0%83"><span class="nav-number">1.5.</span> <span class="nav-text">回调</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#generator-%E5%87%BD%E6%95%B0"><span class="nav-number">1.6.</span> <span class="nav-text">generator 函数</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
         
     </div>
 </div>
@@ -334,9 +428,20 @@
             2023
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
-                &nbsp;<a href="/">Keep Team</a>
+                &nbsp;<a href="/">zhaoci</a>
             
         </div>
+        
+            <script async 
+                    src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                
+                
+                    总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                
+            </div>
         
         <div class="theme-info info-item">
             由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
@@ -355,8 +460,17 @@
     <ul class="tools-list">
         <!-- TOC aside toggle -->
         
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
 
         <!-- go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
         
     </ul>
 </div>
@@ -409,6 +523,35 @@
 
 
     
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
 </main>
 
@@ -429,8 +572,20 @@
 
 
 
+    
+<script src="/js/local-search.js"></script>
 
 
+
+
+    
+<script src="/js/code-block.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
 
 
 
@@ -440,6 +595,14 @@
 <script src="/js/post-helper.js"></script>
 
         
+            
+<script src="/js/libs/anime.min.js"></script>
+
+        
+        
+            
+<script src="/js/toc.js"></script>
+
         
     
 </div>
