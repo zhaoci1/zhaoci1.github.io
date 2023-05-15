@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>DOM</title>
+    <url>/2022/04/28/DOM/</url>
+    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
+<p>DOM 允许我们操作 HTML 元素</p>
+<p>DOm 连接 HTML 与 JS 交互</p>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AJAX_1</title>
     <url>/2022/03/25/AJAX-1/</url>
     <content><![CDATA[<h1 id="ajax-内部是咋写的"><a href="#ajax-内部是咋写的" class="headerlink" title="ajax 内部是咋写的"></a>ajax 内部是咋写的</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> oBtn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;btn1&quot;</span>);</span><br><span class="line">oBtn.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//连接请求</span></span><br><span class="line">  xhr.<span class="title function_">open</span>(<span class="string">&quot;GET&quot;</span>, <span class="string">&quot;1.php?a=12&amp;b=5&quot;</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//发送请求</span></span><br><span class="line">  xhr.<span class="title function_">send</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//接收请求</span></span><br><span class="line">  xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//readyState的值表示目前通信处于什么状态</span></span><br><span class="line">    <span class="comment">//0	初始化-刚刚创建</span></span><br><span class="line">    <span class="comment">//1	以连接</span></span><br><span class="line">    <span class="comment">//2	已发送</span></span><br><span class="line">    <span class="comment">//3	已接收-头</span></span><br><span class="line">    <span class="comment">//4	已接收-主体内容</span></span><br><span class="line">    <span class="title function_">alert</span>(xhr.<span class="property">readyState</span>);</span><br><span class="line">    <span class="comment">//不管请求成果或者失败，都会执行完4的内容</span></span><br><span class="line">    <span class="comment">//这时候需要用到http状态码了</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -24,17 +35,6 @@
 <p>如果使用 post 请求，则需要添加一条额外的语句</p>
 <p><img lazyload alt="image" data-src="/../image/ajax/3.png"></p>
 <p>放在 open 和 send 之间</p>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DOM</title>
-    <url>/2022/04/28/DOM/</url>
-    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
-<p>DOM 允许我们操作 HTML 元素</p>
-<p>DOm 连接 HTML 与 JS 交互</p>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -300,6 +300,35 @@
       </tags>
   </entry>
   <entry>
+    <title>对象</title>
+    <url>/2022/04/25/%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> 对象名 = &#123;属性<span class="number">1</span>，属性<span class="number">2</span>，属性<span class="number">3.</span>..&#125;</span><br></pre></td></tr></table></figure>
+
+<p>数组通过下标访问数据，对象通过属性名访问数据</p>
+<h2 id="访问数据的方法"><a href="#访问数据的方法" class="headerlink" title="访问数据的方法"></a>访问数据的方法</h2><ol>
+<li>对象名.属性名</li>
+<li>对象名[‘属性名’] (可以用一个变量来存储属性名)</li>
+</ol>
+<p>对面里面也可以存函数，这个函数叫做这个对象的方法</p>
+<h2 id="方法里面的-this-指向"><a href="#方法里面的-this-指向" class="headerlink" title="方法里面的 this 指向"></a>方法里面的 this 指向</h2><p>谁调用方法，this 就代表哪个对象</p>
+<p>数组实际上是一种特殊的对象，它们有自己的方法<br>例如：push,unshift</p>
+<p>一个对象的方法如果被赋值给了其他变量，则这个变量获得的值只是一个全局的函数，并不是对象的方法本身</p>
+<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><p>手动并明确的设置 this 关键字</p>
+<p>call(需要指向的 this,调用方法时的参数)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 初始化两个对象</span></span><br><span class="line"><span class="keyword">const</span> name = &#123;</span><br><span class="line">  <span class="attr">namne</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>,</span><br><span class="line">  <span class="attr">arr</span>: [],</span><br><span class="line">  <span class="title function_">show</span>(<span class="params">name, sex</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">arr</span>.<span class="title function_">push</span>(&#123; <span class="attr">name</span>: name, <span class="attr">sex</span>: sex &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> name2 = &#123;</span><br><span class="line">  <span class="attr">namne2</span>: <span class="string">&quot;小A&quot;</span>,</span><br><span class="line">  <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>,</span><br><span class="line">  <span class="attr">arr</span>: [],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 把name里面的函数提出来</span></span><br><span class="line"><span class="keyword">const</span> show2 = name.<span class="property">show</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用show2，并使用call将show方法里面的this指向name2和name</span></span><br><span class="line"><span class="comment">// 后面的参数是方法接收的参数</span></span><br><span class="line">show2.<span class="title function_">call</span>(name, <span class="string">&quot;小南&quot;</span>, <span class="string">&quot;女&quot;</span>);</span><br><span class="line"></span><br><span class="line">show2.<span class="title function_">call</span>(name2, <span class="string">&quot;小A&quot;</span>, <span class="string">&quot;男&quot;</span>);</span><br><span class="line"></span><br><span class="line">name.<span class="title function_">show</span>(<span class="string">&quot;小王&quot;</span>, <span class="string">&quot;男&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name2);</span><br></pre></td></tr></table></figure>
+
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/22/dR9Jv.png"></p>
+<p>可以看见这里 name,和 name2 对象里面 arr 数组通过 show2 的方法添加了元素</p>
+<p>通过 call，能够使用另一个对象里面的方法</p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>bind 方法创建一个新的函数</p>
+<p>在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> show = name.<span class="property">show</span>.<span class="title function_">bind</span>(name, <span class="string">&quot;小南&quot;</span>);</span><br><span class="line"><span class="comment">//此时show等同于name对象里面的show,this会指向name对象,而后面的参数会变成新函数的参数</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字符串</title>
     <url>/2022/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
     <content><![CDATA[<h1 id="字符串的一些方法"><a href="#字符串的一些方法" class="headerlink" title="字符串的一些方法"></a>字符串的一些方法</h1><h2 id="slice-截取"><a href="#slice-截取" class="headerlink" title="slice 截取"></a>slice 截取</h2><p>slice(起始位置，结束位置)</p>
@@ -339,40 +368,25 @@
       </tags>
   </entry>
   <entry>
-    <title>对象</title>
-    <url>/2022/04/25/%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> 对象名 = &#123;属性<span class="number">1</span>，属性<span class="number">2</span>，属性<span class="number">3.</span>..&#125;</span><br></pre></td></tr></table></figure>
+    <title>拓展运算符</title>
+    <url>/2022/05/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="在右边时：…变量名"><a href="#在右边时：…变量名" class="headerlink" title="在右边时：…变量名"></a>在右边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, ...arr];</span><br><span class="line"><span class="comment">//arr1 = [1,2,3,1,2,3,4]</span></span><br><span class="line">...arr把整个arr的数组解构成一个个的元素，这个也可以用于解构对象</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>数组通过下标访问数据，对象通过属性名访问数据</p>
-<h2 id="访问数据的方法"><a href="#访问数据的方法" class="headerlink" title="访问数据的方法"></a>访问数据的方法</h2><ol>
-<li>对象名.属性名</li>
-<li>对象名[‘属性名’] (可以用一个变量来存储属性名)</li>
-</ol>
-<p>对面里面也可以存函数，这个函数叫做这个对象的方法</p>
-<h2 id="方法里面的-this-指向"><a href="#方法里面的-this-指向" class="headerlink" title="方法里面的 this 指向"></a>方法里面的 this 指向</h2><p>谁调用方法，this 就代表哪个对象</p>
-<p>数组实际上是一种特殊的对象，它们有自己的方法<br>例如：push,unshift</p>
-<p>一个对象的方法如果被赋值给了其他变量，则这个变量获得的值只是一个全局的函数，并不是对象的方法本身</p>
-<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><p>手动并明确的设置 this 关键字</p>
-<p>call(需要指向的 this,调用方法时的参数)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 初始化两个对象</span></span><br><span class="line"><span class="keyword">const</span> name = &#123;</span><br><span class="line">  <span class="attr">namne</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">  <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>,</span><br><span class="line">  <span class="attr">arr</span>: [],</span><br><span class="line">  <span class="title function_">show</span>(<span class="params">name, sex</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">arr</span>.<span class="title function_">push</span>(&#123; <span class="attr">name</span>: name, <span class="attr">sex</span>: sex &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> name2 = &#123;</span><br><span class="line">  <span class="attr">namne2</span>: <span class="string">&quot;小A&quot;</span>,</span><br><span class="line">  <span class="attr">sex</span>: <span class="string">&quot;男&quot;</span>,</span><br><span class="line">  <span class="attr">arr</span>: [],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 把name里面的函数提出来</span></span><br><span class="line"><span class="keyword">const</span> show2 = name.<span class="property">show</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//调用show2，并使用call将show方法里面的this指向name2和name</span></span><br><span class="line"><span class="comment">// 后面的参数是方法接收的参数</span></span><br><span class="line">show2.<span class="title function_">call</span>(name, <span class="string">&quot;小南&quot;</span>, <span class="string">&quot;女&quot;</span>);</span><br><span class="line"></span><br><span class="line">show2.<span class="title function_">call</span>(name2, <span class="string">&quot;小A&quot;</span>, <span class="string">&quot;男&quot;</span>);</span><br><span class="line"></span><br><span class="line">name.<span class="title function_">show</span>(<span class="string">&quot;小王&quot;</span>, <span class="string">&quot;男&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(name2);</span><br></pre></td></tr></table></figure>
-
-<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/22/dR9Jv.png"></p>
-<p>可以看见这里 name,和 name2 对象里面 arr 数组通过 show2 的方法添加了元素</p>
-<p>通过 call，能够使用另一个对象里面的方法</p>
-<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>bind 方法创建一个新的函数</p>
-<p>在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> show = name.<span class="property">show</span>.<span class="title function_">bind</span>(name, <span class="string">&quot;小南&quot;</span>);</span><br><span class="line"><span class="comment">//此时show等同于name对象里面的show,this会指向name对象,而后面的参数会变成新函数的参数</span></span><br></pre></td></tr></table></figure>
+<h2 id="在左边时：…变量名"><a href="#在左边时：…变量名" class="headerlink" title="在左边时：…变量名"></a>在左边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line"><span class="keyword">const</span> [a, b, c, ...arr2] = arr;</span><br><span class="line"><span class="comment">//arr2 = [4,5,6,7]</span></span><br><span class="line">在左边时将剩余的数组元素合并成一个数组;</span><br><span class="line">当作为函数的参数使用时，会将传递的实参全部存入，和<span class="variable language_">arguments</span>类似</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>js</tag>
       </tags>
   </entry>
   <entry>
-    <title>拓展运算符</title>
-    <url>/2022/05/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="在右边时：…变量名"><a href="#在右边时：…变量名" class="headerlink" title="在右边时：…变量名"></a>在右边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, ...arr];</span><br><span class="line"><span class="comment">//arr1 = [1,2,3,1,2,3,4]</span></span><br><span class="line">...arr把整个arr的数组解构成一个个的元素，这个也可以用于解构对象</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>遍历数组和对象</title>
+    <url>/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">const</span> 变量名||&#123;变量<span class="number">1</span>，变量<span class="number">2</span>&#125; <span class="keyword">of</span> 数组名||数组名.<span class="title function_">entries</span>())&#123;</span><br><span class="line"><span class="number">1</span>：下标</span><br><span class="line"><span class="number">2</span>：下标对应的元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="在左边时：…变量名"><a href="#在左边时：…变量名" class="headerlink" title="在左边时：…变量名"></a>在左边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>];</span><br><span class="line"><span class="keyword">const</span> [a, b, c, ...arr2] = arr;</span><br><span class="line"><span class="comment">//arr2 = [4,5,6,7]</span></span><br><span class="line">在左边时将剩余的数组元素合并成一个数组;</span><br><span class="line">当作为函数的参数使用时，会将传递的实参全部存入，和<span class="variable language_">arguments</span>类似</span><br></pre></td></tr></table></figure>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="property">keys</span></span><br><span class="line">	只获取对象中属性的名称，也就是键名</span><br><span class="line"><span class="title class_">Object</span>.<span class="property">values</span></span><br><span class="line">	把对象的格式转成数组的格式，第一层的属性名被替换成下标</span><br><span class="line"><span class="title class_">Object</span>.<span class="property">entries</span></span><br><span class="line">	将全部对象全部转换成数组</span><br></pre></td></tr></table></figure>
+
+<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/10/HULz4.png"><br><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/10/HUJJ3.png"></p>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -408,20 +422,6 @@
 
 <p>有则返回 true,<br>无则返回 false</p>
 <h2 id="数组进阶"><a href="#数组进阶" class="headerlink" title="数组进阶"></a>数组进阶</h2>]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>遍历数组和对象</title>
-    <url>/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">const</span> 变量名||&#123;变量<span class="number">1</span>，变量<span class="number">2</span>&#125; <span class="keyword">of</span> 数组名||数组名.<span class="title function_">entries</span>())&#123;</span><br><span class="line"><span class="number">1</span>：下标</span><br><span class="line"><span class="number">2</span>：下标对应的元素</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Object</span>.<span class="property">keys</span></span><br><span class="line">	只获取对象中属性的名称，也就是键名</span><br><span class="line"><span class="title class_">Object</span>.<span class="property">values</span></span><br><span class="line">	把对象的格式转成数组的格式，第一层的属性名被替换成下标</span><br><span class="line"><span class="title class_">Object</span>.<span class="property">entries</span></span><br><span class="line">	将全部对象全部转换成数组</span><br></pre></td></tr></table></figure>
-
-<p><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/10/HULz4.png"><br><img lazyload alt="image" data-src="https://s1.328888.xyz/2022/05/10/HUJJ3.png"></p>
-]]></content>
       <tags>
         <tag>js</tag>
       </tags>
