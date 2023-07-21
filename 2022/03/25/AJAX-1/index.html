@@ -210,11 +210,11 @@
 <p>所以，想要知道是否成功，就要看状态码是否是 2xx 或者 304</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (xhr.<span class="property">readyState</span> == <span class="number">4</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> ((xhr.<span class="property">status</span> &gt;= <span class="number">200</span> &amp;&amp; xhr.<span class="property">status</span> &lt;= <span class="number">300</span>) || xhr.<span class="property">status</span> == <span class="number">304</span>) &#123;</span><br><span class="line">      <span class="title function_">alert</span>(<span class="string">&quot;成功&quot;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="title function_">alert</span>(<span class="string">&quot;失败&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<p><img lazyload alt="image" data-src="/../image/ajax/1.png"></p>
+<p><img src="/.io//image/ajax/1.png" alt="image"></p>
 <p>改成 1.php 就能成功了</p>
-<p><img lazyload alt="image" data-src="/../image/ajax/2.png"></p>
+<p><img src="/.io//image/ajax/2.png" alt="image"></p>
 <p>如果使用 post 请求，则需要添加一条额外的语句</p>
-<p><img lazyload alt="image" data-src="/../image/ajax/3.png"></p>
+<p><img src="/.io//image/ajax/3.png" alt="image"></p>
 <p>放在 open 和 send 之间</p>
 
             </div>

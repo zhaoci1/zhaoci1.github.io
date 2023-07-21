@@ -203,42 +203,42 @@
 <p>工厂模式对传入的值进行加工，然后输出</p>
 <h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p><strong>构造函数就是类</strong></p>
 <p>构造函数用于写属性</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p>
 <p>当我们 new 这个类的时候，这里的 name 和 sex 会作为属性一并被赋给 obj3</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p>
 <p>我这儿构造函数的命名不规范，应该首字母大写</p>
 <h2 id="原型（prototype）"><a href="#原型（prototype）" class="headerlink" title="原型（prototype）"></a>原型（prototype）</h2><p>*每个函数都有一个属性——****prototype**<strong>。这个*</strong>*prototype**<strong>的属性值是一个对象（属性的集合），默认只有一个叫做*</strong>*constructor****的属性，指向这个函数本身**</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p>
 <p>这里是给 createPre 类，添加一个 showName 的方法，然后后面创建实例化对象（obj3）的时候，这个 obj3 会有这个方法</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p>
 <h2 id="构造函数和原型的用法"><a href="#构造函数和原型的用法" class="headerlink" title="构造函数和原型的用法"></a>构造函数和原型的用法</h2><p>构造函数里面加属性，原型里面加方法</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p>
 <p><strong>这里再放一张容易理解对象的图</strong></p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png"></p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p>
 <p>这里的不同颜色的车和不同种类的狗，就是 new 出来的实例对象</p>
-<h2 id="命令空间"><a href="#命令空间" class="headerlink" title="命令空间"></a>命令空间</h2><p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png"></p>
+<h2 id="命令空间"><a href="#命令空间" class="headerlink" title="命令空间"></a>命令空间</h2><p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p>
 <p>不同对象，相同方法</p>
 <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>js 通过 call 方法来继承父元素的属性</p>
 <p>call 方法：可以改变函数执行的时候，里面的 this</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p>
 <p>call 可以传参数，这里的 this 就是 show2 这个对象</p>
 <p>call 将 show2 这个对象传入 show</p>
 <p>然后将 show 里面 this 指向指为 show2</p>
 <h3 id="继承的问题"><a href="#继承的问题" class="headerlink" title="继承的问题"></a>继承的问题</h3><p>这里举个栗子</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p>
 <p>这里 arr2 并不是复制了一份 arr1，而是将 arr2 也指向了 arr1 的空间了</p>
 <p>他们都指向了同一块空间</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/14.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/14.png" alt="image"></p>
 <p>可以看见这个 arr1 里面的数据也被更改了</p>
 <p>解决这个问题的方法是，用循环将 arr1 里面的数据传入 arr2</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p>
 <p>对象里面，方法的继承也存在同样的问题</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p>
 <p>这样做的话，会和上面数组的问题一样，修改 show2 的方法，show 的方法也会被修改</p>
-<p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p>
 <p>这样就不会出问题了</p>
-<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p><img lazyload alt="image" data-src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/15.png"></p>
+<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/15.png" alt="image"></p>
 <p>重写就是将新的原型里面的方法，给重新写一遍</p>
 
             </div>
