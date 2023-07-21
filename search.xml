@@ -68,14 +68,6 @@
       </tags>
   </entry>
   <entry>
-    <title>jsonp</title>
-    <url>/2022/03/28/jsonp/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js_es6面向对象</title>
     <url>/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="es6-面向对象"><a href="#es6-面向对象" class="headerlink" title="es6 面向对象"></a>es6 面向对象</h1><p>es6 的面向对象相对于传统 js 面向对象方便了很多</p>
@@ -140,6 +132,14 @@
 <p>这样的好处是，有些异步操作需要时间，然后可以使用 yield 来分块，当异步操作执行完毕后，在执行后面的语句</p>
 <p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p>
 ]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jsonp</title>
+    <url>/2022/03/28/jsonp/</url>
+    <content><![CDATA[]]></content>
       <tags>
         <tag>js</tag>
       </tags>
