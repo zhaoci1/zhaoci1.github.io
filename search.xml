@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>DOM</title>
+    <url>/2022/04/28/DOM/</url>
+    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
+<p>DOM 允许我们操作 HTML 元素</p>
+<p>DOm 连接 HTML 与 JS 交互</p>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>AJAX_1</title>
     <url>/2022/03/25/AJAX-1/</url>
     <content><![CDATA[<h1 id="ajax-内部是咋写的"><a href="#ajax-内部是咋写的" class="headerlink" title="ajax 内部是咋写的"></a>ajax 内部是咋写的</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> oBtn = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;btn1&quot;</span>);</span><br><span class="line">oBtn.<span class="property">onclick</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//连接请求</span></span><br><span class="line">  xhr.<span class="title function_">open</span>(<span class="string">&quot;GET&quot;</span>, <span class="string">&quot;1.php?a=12&amp;b=5&quot;</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//发送请求</span></span><br><span class="line">  xhr.<span class="title function_">send</span>();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//接收请求</span></span><br><span class="line">  xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">//readyState的值表示目前通信处于什么状态</span></span><br><span class="line">    <span class="comment">//0	初始化-刚刚创建</span></span><br><span class="line">    <span class="comment">//1	以连接</span></span><br><span class="line">    <span class="comment">//2	已发送</span></span><br><span class="line">    <span class="comment">//3	已接收-头</span></span><br><span class="line">    <span class="comment">//4	已接收-主体内容</span></span><br><span class="line">    <span class="title function_">alert</span>(xhr.<span class="property">readyState</span>);</span><br><span class="line">    <span class="comment">//不管请求成果或者失败，都会执行完4的内容</span></span><br><span class="line">    <span class="comment">//这时候需要用到http状态码了</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <h2 id="http-状态码-status"><a href="#http-状态码-status" class="headerlink" title="http 状态码(status)"></a>http 状态码(status)</h2><p>游览器和服务器之间通过数字来表明状态,这个数字就是 http 状态码</p>
-<p>1xx 消息</p>
+<p>1xx 消息 111111</p>
 <p>2xx 成功</p>
 <p>3xx 重定向：原来的地址更改到了新的地址</p>
 <p>​ 301：永久重定向-游览器不会再次请求老的地址</p>
@@ -24,17 +35,6 @@
 <p>如果使用 post 请求，则需要添加一条额外的语句</p>
 <p><img src="/.io//image/ajax/3.png" alt="image"></p>
 <p>放在 open 和 send 之间</p>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DOM</title>
-    <url>/2022/04/28/DOM/</url>
-    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
-<p>DOM 允许我们操作 HTML 元素</p>
-<p>DOm 连接 HTML 与 JS 交互</p>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -198,12 +198,6 @@
       </tags>
   </entry>
   <entry>
-    <title>node</title>
-    <url>/2022/11/30/node/</url>
-    <content><![CDATA[<p><a href="/download/node.zip">下载文件</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>sets和map</title>
     <url>/2022/05/10/sets%E5%92%8Cmaps/</url>
     <content><![CDATA[<h1 id="内置数据对象"><a href="#内置数据对象" class="headerlink" title="内置数据对象"></a>内置数据对象</h1><h1 id="set"><a href="#set" class="headerlink" title="set"></a>set</h1><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Set</span>(数据);</span><br><span class="line"><span class="comment">//如果数据是一个数组，则将里面重复的部分去掉，如果是一串字符串，则分解这一段字符串</span></span><br></pre></td></tr></table></figure>
@@ -253,6 +247,12 @@
       <tags>
         <tag>js</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>node</title>
+    <url>/2022/11/30/node/</url>
+    <content><![CDATA[<p><a href="/download/node.zip">下载文件</a></p>
+]]></content>
   </entry>
   <entry>
     <title>函数</title>

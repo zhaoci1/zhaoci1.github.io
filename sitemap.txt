@@ -1,3 +1,5 @@
+https://zhaoci1.github.io/2022/03/25/AJAX-1/
+https://zhaoci1.github.io/about/index.html
 https://zhaoci1.github.io/2022/11/30/node/
 https://zhaoci1.github.io/2022/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2/
 https://zhaoci1.github.io/2022/04/25/%E6%95%B0%E7%BB%84/
@@ -12,9 +14,7 @@ https://zhaoci1.github.io/2022/04/24/JS%E5%87%BD%E6%95%B0/
 https://zhaoci1.github.io/2022/03/28/jsonp/
 https://zhaoci1.github.io/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/
 https://zhaoci1.github.io/2022/03/24/async-await%E6%93%8D%E4%BD%9C/
-https://zhaoci1.github.io/2022/03/25/AJAX-1/
 https://zhaoci1.github.io/categories/index.html
 https://zhaoci1.github.io/tags/index.html
-https://zhaoci1.github.io/about/index.html
 https://zhaoci1.github.io/
 https://zhaoci1.github.io/tags/js/
