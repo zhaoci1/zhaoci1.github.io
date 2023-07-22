@@ -1,5 +1,6 @@
-https://zhaoci1.github.io/2022/03/25/AJAX-1/
+https://zhaoci1.github.io/2023/07/21/java-%E6%96%B9%E6%B3%95/
 https://zhaoci1.github.io/about/index.html
+https://zhaoci1.github.io/2022/03/25/AJAX-1/
 https://zhaoci1.github.io/2022/11/30/node/
 https://zhaoci1.github.io/2022/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2/
 https://zhaoci1.github.io/2022/04/25/%E6%95%B0%E7%BB%84/
@@ -18,3 +19,5 @@ https://zhaoci1.github.io/categories/index.html
 https://zhaoci1.github.io/tags/index.html
 https://zhaoci1.github.io/
 https://zhaoci1.github.io/tags/js/
+https://zhaoci1.github.io/tags/java/
+https://zhaoci1.github.io/categories/java/

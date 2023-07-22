@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://zhaoci1.github.io/2022/03/25/AJAX-1/</loc>
+    <loc>https://zhaoci1.github.io/2023/07/21/java-%E6%96%B9%E6%B3%95/</loc>
     
     <lastmod>2023-07-21</lastmod>
     
@@ -12,6 +12,15 @@
   
   <url>
     <loc>https://zhaoci1.github.io/about/index.html</loc>
+    
+    <lastmod>2023-07-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhaoci1.github.io/2022/03/25/AJAX-1/</loc>
     
     <lastmod>2023-07-21</lastmod>
     
@@ -166,7 +175,7 @@
 
   <url>
     <loc>https://zhaoci1.github.io/</loc>
-    <lastmod>2023-07-21</lastmod>
+    <lastmod>2023-07-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -174,11 +183,25 @@
   
   <url>
     <loc>https://zhaoci1.github.io/tags/js/</loc>
-    <lastmod>2023-07-21</lastmod>
+    <lastmod>2023-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://zhaoci1.github.io/tags/java/</loc>
+    <lastmod>2023-07-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
+  
+  <url>
+    <loc>https://zhaoci1.github.io/categories/java/</loc>
+    <lastmod>2023-07-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
