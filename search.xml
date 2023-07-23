@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>DOM</title>
-    <url>/2022/04/28/DOM/</url>
-    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
-<p>DOM 允许我们操作 HTML 元素</p>
-<p>DOm 连接 HTML 与 JS 交互</p>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>AJAX_1</title>
     <url>/2022/03/25/AJAX-1/</url>
     <content><![CDATA[<h1 id="ajax-内部是咋写的"><a href="#ajax-内部是咋写的" class="headerlink" title="ajax 内部是咋写的"></a>ajax 内部是咋写的</h1><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> oBtn = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;btn1&quot;</span>);<br>oBtn.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br><br>  <span class="hljs-comment">//连接请求</span><br>  xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;GET&quot;</span>, <span class="hljs-string">&quot;1.php?a=12&amp;b=5&quot;</span>, <span class="hljs-literal">true</span>);<br><br>  <span class="hljs-comment">//发送请求</span><br>  xhr.<span class="hljs-title function_">send</span>();<br><br>  <span class="hljs-comment">//接收请求</span><br>  xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">//readyState的值表示目前通信处于什么状态</span><br>    <span class="hljs-comment">//0	初始化-刚刚创建</span><br>    <span class="hljs-comment">//1	以连接</span><br>    <span class="hljs-comment">//2	已发送</span><br>    <span class="hljs-comment">//3	已接收-头</span><br>    <span class="hljs-comment">//4	已接收-主体内容</span><br>    <span class="hljs-title function_">alert</span>(xhr.<span class="hljs-property">readyState</span>);<br>    <span class="hljs-comment">//不管请求成果或者失败，都会执行完4的内容</span><br>    <span class="hljs-comment">//这时候需要用到http状态码了</span><br>  &#125;;<br>&#125;;<br></code></pre></td></tr></table></figure>
@@ -35,6 +24,17 @@
 <p>如果使用 post 请求，则需要添加一条额外的语句</p>
 <p><img src="/.io//image/ajax/3.png" alt="image"></p>
 <p>放在 open 和 send 之间</p>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DOM</title>
+    <url>/2022/04/28/DOM/</url>
+    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
+<p>DOM 允许我们操作 HTML 元素</p>
+<p>DOm 连接 HTML 与 JS 交互</p>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -68,13 +68,27 @@
       </tags>
   </entry>
   <entry>
-    <title>java_方法</title>
+    <title>java方法</title>
     <url>/2023/07/21/java-%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="java-方法"><a href="#java-方法" class="headerlink" title="java 方法"></a>java 方法</h1><h2 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h2><figure class="highlight kotlin"><table><tr><td class="code"><pre><code class="hljs kotlin">修饰符 方法返回类型 方法名(参数列表&#125;&#123;<br>    代码块<br>    <span class="hljs-keyword">return</span> 返回值<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>如果没有返回值，返回值类型可以设置为 void</p>
 <h2 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h2><p>在类中定义一个和类名一致的方法名，不需要写返回类型</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><code class="hljs csharp"><span class="hljs-keyword">class</span> <span class="hljs-title">Preson</span>&#123;<br>   <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">preson</span>()</span>&#123;&#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<ul>
+<li><p>无参构造方法，每个类中都会默认存在一个，当你定义了一个构造方法时，这个默认的就会失效</p>
+<p>class Preson(){​</p>
+<p>​    public Preeson(){}</p>
+<p>}</p>
+</li>
+<li><p>有参构造方法</p>
+<p>class Preson(参数1，参数2….){</p>
+<p>​    public Preeson(){}</p>
+<p>}</p>
+<p>构造方法一般用于实例化对象的初始化</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>      <span class="hljs-keyword">public</span> <span class="hljs-title function_">Person</span><span class="hljs-params">()</span>&#123;&#125;<br>      <span class="hljs-keyword">public</span> <span class="hljs-title function_">Person</span><span class="hljs-params">(<span class="hljs-type">int</span> a,<span class="hljs-type">double</span> b)</span>&#123;&#125;<br>  &#125;<br>  <br>  <span class="hljs-type">Person</span> <span class="hljs-variable">n</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person</span>(<span class="hljs-number">50</span>,<span class="hljs-number">25.3</span>)<br>      <span class="hljs-comment">//因为我们定义一个无参和一个有参的构造方法，所以实例化的时候写参数和不写参数都可以</span><br></code></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>java</category>
@@ -153,14 +167,6 @@
       </tags>
   </entry>
   <entry>
-    <title>jsonp</title>
-    <url>/2022/03/28/jsonp/</url>
-    <content><![CDATA[]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js面向对象</title>
     <url>/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="js-面向对象"><a href="#js-面向对象" class="headerlink" title="js 面向对象"></a>js 面向对象</h1><blockquote>
@@ -209,6 +215,14 @@
 <h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/15.png" alt="image"></p>
 <p>重写就是将新的原型里面的方法，给重新写一遍</p>
 ]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jsonp</title>
+    <url>/2022/03/28/jsonp/</url>
+    <content><![CDATA[]]></content>
       <tags>
         <tag>js</tag>
       </tags>
@@ -316,6 +330,35 @@
       </tags>
   </entry>
   <entry>
+    <title>对象</title>
+    <url>/2022/04/25/%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> 对象名 = &#123;属性<span class="hljs-number">1</span>，属性<span class="hljs-number">2</span>，属性<span class="hljs-number">3.</span>..&#125;<br></code></pre></td></tr></table></figure>
+
+<p>数组通过下标访问数据，对象通过属性名访问数据</p>
+<h2 id="访问数据的方法"><a href="#访问数据的方法" class="headerlink" title="访问数据的方法"></a>访问数据的方法</h2><ol>
+<li>对象名.属性名</li>
+<li>对象名[‘属性名’] (可以用一个变量来存储属性名)</li>
+</ol>
+<p>对面里面也可以存函数，这个函数叫做这个对象的方法</p>
+<h2 id="方法里面的-this-指向"><a href="#方法里面的-this-指向" class="headerlink" title="方法里面的 this 指向"></a>方法里面的 this 指向</h2><p>谁调用方法，this 就代表哪个对象</p>
+<p>数组实际上是一种特殊的对象，它们有自己的方法<br>例如：push,unshift</p>
+<p>一个对象的方法如果被赋值给了其他变量，则这个变量获得的值只是一个全局的函数，并不是对象的方法本身</p>
+<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><p>手动并明确的设置 this 关键字</p>
+<p>call(需要指向的 this,调用方法时的参数)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 初始化两个对象</span><br><span class="hljs-keyword">const</span> name = &#123;<br>  <span class="hljs-attr">namne</span>: <span class="hljs-string">&quot;张三&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>  <span class="hljs-attr">arr</span>: [],<br>  <span class="hljs-title function_">show</span>(<span class="hljs-params">name, sex</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">arr</span>.<span class="hljs-title function_">push</span>(&#123; <span class="hljs-attr">name</span>: name, <span class="hljs-attr">sex</span>: sex &#125;);<br>  &#125;,<br>&#125;;<br><br><span class="hljs-keyword">const</span> name2 = &#123;<br>  <span class="hljs-attr">namne2</span>: <span class="hljs-string">&quot;小A&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>  <span class="hljs-attr">arr</span>: [],<br>&#125;;<br><br><span class="hljs-comment">// 把name里面的函数提出来</span><br><span class="hljs-keyword">const</span> show2 = name.<span class="hljs-property">show</span>;<br><br><span class="hljs-comment">//调用show2，并使用call将show方法里面的this指向name2和name</span><br><span class="hljs-comment">// 后面的参数是方法接收的参数</span><br>show2.<span class="hljs-title function_">call</span>(name, <span class="hljs-string">&quot;小南&quot;</span>, <span class="hljs-string">&quot;女&quot;</span>);<br><br>show2.<span class="hljs-title function_">call</span>(name2, <span class="hljs-string">&quot;小A&quot;</span>, <span class="hljs-string">&quot;男&quot;</span>);<br><br>name.<span class="hljs-title function_">show</span>(<span class="hljs-string">&quot;小王&quot;</span>, <span class="hljs-string">&quot;男&quot;</span>);<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name2);<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s1.328888.xyz/2022/05/22/dR9Jv.png" alt="dR9Jv.png"></p>
+<p>可以看见这里 name,和 name2 对象里面 arr 数组通过 show2 的方法添加了元素</p>
+<p>通过 call，能够使用另一个对象里面的方法</p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>bind 方法创建一个新的函数</p>
+<p>在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> show = name.<span class="hljs-property">show</span>.<span class="hljs-title function_">bind</span>(name, <span class="hljs-string">&quot;小南&quot;</span>);<br><span class="hljs-comment">//此时show等同于name对象里面的show,this会指向name对象,而后面的参数会变成新函数的参数</span><br></code></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>字符串</title>
     <url>/2022/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
     <content><![CDATA[<h1 id="字符串的一些方法"><a href="#字符串的一些方法" class="headerlink" title="字符串的一些方法"></a>字符串的一些方法</h1><h2 id="slice-截取"><a href="#slice-截取" class="headerlink" title="slice 截取"></a>slice 截取</h2><p>slice(起始位置，结束位置)</p>
@@ -366,29 +409,14 @@
       </tags>
   </entry>
   <entry>
-    <title>对象</title>
-    <url>/2022/04/25/%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> 对象名 = &#123;属性<span class="hljs-number">1</span>，属性<span class="hljs-number">2</span>，属性<span class="hljs-number">3.</span>..&#125;<br></code></pre></td></tr></table></figure>
+    <title>遍历数组和对象</title>
+    <url>/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> 变量名||&#123;变量<span class="hljs-number">1</span>，变量<span class="hljs-number">2</span>&#125; <span class="hljs-keyword">of</span> 数组名||数组名.<span class="hljs-title function_">entries</span>())&#123;<br><span class="hljs-number">1</span>：下标<br><span class="hljs-number">2</span>：下标对应的元素<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>数组通过下标访问数据，对象通过属性名访问数据</p>
-<h2 id="访问数据的方法"><a href="#访问数据的方法" class="headerlink" title="访问数据的方法"></a>访问数据的方法</h2><ol>
-<li>对象名.属性名</li>
-<li>对象名[‘属性名’] (可以用一个变量来存储属性名)</li>
-</ol>
-<p>对面里面也可以存函数，这个函数叫做这个对象的方法</p>
-<h2 id="方法里面的-this-指向"><a href="#方法里面的-this-指向" class="headerlink" title="方法里面的 this 指向"></a>方法里面的 this 指向</h2><p>谁调用方法，this 就代表哪个对象</p>
-<p>数组实际上是一种特殊的对象，它们有自己的方法<br>例如：push,unshift</p>
-<p>一个对象的方法如果被赋值给了其他变量，则这个变量获得的值只是一个全局的函数，并不是对象的方法本身</p>
-<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><p>手动并明确的设置 this 关键字</p>
-<p>call(需要指向的 this,调用方法时的参数)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 初始化两个对象</span><br><span class="hljs-keyword">const</span> name = &#123;<br>  <span class="hljs-attr">namne</span>: <span class="hljs-string">&quot;张三&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>  <span class="hljs-attr">arr</span>: [],<br>  <span class="hljs-title function_">show</span>(<span class="hljs-params">name, sex</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">arr</span>.<span class="hljs-title function_">push</span>(&#123; <span class="hljs-attr">name</span>: name, <span class="hljs-attr">sex</span>: sex &#125;);<br>  &#125;,<br>&#125;;<br><br><span class="hljs-keyword">const</span> name2 = &#123;<br>  <span class="hljs-attr">namne2</span>: <span class="hljs-string">&quot;小A&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>  <span class="hljs-attr">arr</span>: [],<br>&#125;;<br><br><span class="hljs-comment">// 把name里面的函数提出来</span><br><span class="hljs-keyword">const</span> show2 = name.<span class="hljs-property">show</span>;<br><br><span class="hljs-comment">//调用show2，并使用call将show方法里面的this指向name2和name</span><br><span class="hljs-comment">// 后面的参数是方法接收的参数</span><br>show2.<span class="hljs-title function_">call</span>(name, <span class="hljs-string">&quot;小南&quot;</span>, <span class="hljs-string">&quot;女&quot;</span>);<br><br>show2.<span class="hljs-title function_">call</span>(name2, <span class="hljs-string">&quot;小A&quot;</span>, <span class="hljs-string">&quot;男&quot;</span>);<br><br>name.<span class="hljs-title function_">show</span>(<span class="hljs-string">&quot;小王&quot;</span>, <span class="hljs-string">&quot;男&quot;</span>);<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name2);<br></code></pre></td></tr></table></figure>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Object</span>.<span class="hljs-property">keys</span><br>	只获取对象中属性的名称，也就是键名<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">values</span><br>	把对象的格式转成数组的格式，第一层的属性名被替换成下标<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">entries</span><br>	将全部对象全部转换成数组<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/22/dR9Jv.png" alt="dR9Jv.png"></p>
-<p>可以看见这里 name,和 name2 对象里面 arr 数组通过 show2 的方法添加了元素</p>
-<p>通过 call，能够使用另一个对象里面的方法</p>
-<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>bind 方法创建一个新的函数</p>
-<p>在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> show = name.<span class="hljs-property">show</span>.<span class="hljs-title function_">bind</span>(name, <span class="hljs-string">&quot;小南&quot;</span>);<br><span class="hljs-comment">//此时show等同于name对象里面的show,this会指向name对象,而后面的参数会变成新函数的参数</span><br></code></pre></td></tr></table></figure>
+<p><img src="https://s1.328888.xyz/2022/05/10/HULz4.png" alt="HULz4.png"><br><img src="https://s1.328888.xyz/2022/05/10/HUJJ3.png" alt="HUJJ3.png"></p>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -424,20 +452,6 @@
 
 <p>有则返回 true,<br>无则返回 false</p>
 <h2 id="数组进阶"><a href="#数组进阶" class="headerlink" title="数组进阶"></a>数组进阶</h2>]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>遍历数组和对象</title>
-    <url>/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> 变量名||&#123;变量<span class="hljs-number">1</span>，变量<span class="hljs-number">2</span>&#125; <span class="hljs-keyword">of</span> 数组名||数组名.<span class="hljs-title function_">entries</span>())&#123;<br><span class="hljs-number">1</span>：下标<br><span class="hljs-number">2</span>：下标对应的元素<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Object</span>.<span class="hljs-property">keys</span><br>	只获取对象中属性的名称，也就是键名<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">values</span><br>	把对象的格式转成数组的格式，第一层的属性名被替换成下标<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">entries</span><br>	将全部对象全部转换成数组<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://s1.328888.xyz/2022/05/10/HULz4.png" alt="HULz4.png"><br><img src="https://s1.328888.xyz/2022/05/10/HUJJ3.png" alt="HUJJ3.png"></p>
-]]></content>
       <tags>
         <tag>js</tag>
       </tags>
