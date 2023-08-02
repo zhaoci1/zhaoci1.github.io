@@ -16,28 +16,27 @@
   <meta name="author" content="朝辞">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ajax 内部是咋写的1234567891011121314151617181920212223let oBtn &#x3D; document.getElementById(&quot;btn1&quot;);oBtn.onclick &#x3D; function () &amp;#123;  let xhr &#x3D; new XMLHttpRequest();  &#x2F;&#x2F;连接请求  xhr.open(&quot;GET&amp;quot">
+    <meta name="description" content="继承我们定义了两个类 12345678910111213141516171819class Person&amp;#123;    String name;        public void setName(String name)&amp;#123;        this.name &#x3D; name;    &amp;#125;    public String getName()&amp;#123;        Syst">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AJAX_1">
-<meta property="og:url" content="https://zhaoci1.github.io/2022/03/25/AJAX-1/index.html">
+<meta property="og:title" content="继承">
+<meta property="og:url" content="https://zhaoci1.github.io/2023/07/23/%E7%BB%A7%E6%89%BF/index.html">
 <meta property="og:site_name" content="朝辞">
-<meta property="og:description" content="ajax 内部是咋写的1234567891011121314151617181920212223let oBtn &#x3D; document.getElementById(&quot;btn1&quot;);oBtn.onclick &#x3D; function () &amp;#123;  let xhr &#x3D; new XMLHttpRequest();  &#x2F;&#x2F;连接请求  xhr.open(&quot;GET&amp;quot">
+<meta property="og:description" content="继承我们定义了两个类 12345678910111213141516171819class Person&amp;#123;    String name;        public void setName(String name)&amp;#123;        this.name &#x3D; name;    &amp;#125;    public String getName()&amp;#123;        Syst">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/1.png">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/2.png">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/3.png">
-<meta property="article:published_time" content="2022-03-25T08:32:45.000Z">
-<meta property="article:modified_time" content="2023-07-21T12:31:46.445Z">
+<meta property="og:image" content="https://pic.imgdb.cn/item/64bd21f31ddac507ccb7a3ca.jpg">
+<meta property="og:image" content="https://pic.imgdb.cn/item/64bdd8901ddac507cc1ef994.jpg">
+<meta property="article:published_time" content="2023-07-23T12:17:30.000Z">
+<meta property="article:modified_time" content="2023-07-24T06:24:57.087Z">
 <meta property="article:author" content="朝辞">
-<meta property="article:tag" content="js">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zhaoci1.github.io/image/ajax/1.png">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/64bd21f31ddac507ccb7a3ca.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>AJAX_1 - 朝辞</title>
+  <title>继承 - 朝辞</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="AJAX_1"></span>
+            <span id="subtitle" data-typed-text="继承"></span>
           
         </div>
 
@@ -215,8 +214,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-25 16:32" pubdate>
-          2022年3月25日 下午
+        <time datetime="2023-07-23 20:17" pubdate>
+          2023年7月23日 晚上
         </time>
       </span>
     
@@ -227,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          888 字
+          1.4k 字
         
       </span>
     
@@ -238,7 +237,7 @@
         
         
         
-          8 分钟
+          12 分钟
         
       </span>
     
@@ -275,32 +274,40 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">AJAX_1</h1>
+            <h1 id="seo-header">继承</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="ajax-内部是咋写的"><a href="#ajax-内部是咋写的" class="headerlink" title="ajax 内部是咋写的"></a>ajax 内部是咋写的</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> oBtn = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;btn1&quot;</span>);<br>oBtn.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br><br>  <span class="hljs-comment">//连接请求</span><br>  xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;GET&quot;</span>, <span class="hljs-string">&quot;1.php?a=12&amp;b=5&quot;</span>, <span class="hljs-literal">true</span>);<br><br>  <span class="hljs-comment">//发送请求</span><br>  xhr.<span class="hljs-title function_">send</span>();<br><br>  <span class="hljs-comment">//接收请求</span><br>  xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">//readyState的值表示目前通信处于什么状态</span><br>    <span class="hljs-comment">//0	初始化-刚刚创建</span><br>    <span class="hljs-comment">//1	以连接</span><br>    <span class="hljs-comment">//2	已发送</span><br>    <span class="hljs-comment">//3	已接收-头</span><br>    <span class="hljs-comment">//4	已接收-主体内容</span><br>    <span class="hljs-title function_">alert</span>(xhr.<span class="hljs-property">readyState</span>);<br>    <span class="hljs-comment">//不管请求成果或者失败，都会执行完4的内容</span><br>    <span class="hljs-comment">//这时候需要用到http状态码了</span><br>  &#125;;<br>&#125;;<br></code></pre></td></tr></table></figure>
+                <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>我们定义了两个类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>    String name;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String name)</span>&#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>    &#125;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person2</span>&#123;<br>    String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String name)</span>&#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>    &#125;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="http-状态码-status"><a href="#http-状态码-status" class="headerlink" title="http 状态码(status)"></a>http 状态码(status)</h2><p>游览器和服务器之间通过数字来表明状态,这个数字就是 http 状态码</p>
-<p>1xx 消息</p>
-<p>2xx 成功</p>
-<p>3xx 重定向：原来的地址更改到了新的地址</p>
-<p>​ 301：永久重定向-游览器不会再次请求老的地址</p>
-<p>​ 302：临时重定向-游览器下次还会请求老地址</p>
-<p>​ 304：缓存</p>
-<p>4xx 请求错误（客户端）</p>
-<p>5xx 服务端错误</p>
-<p>6xx 拓展</p>
-<p>所以，想要知道是否成功，就要看状态码是否是 2xx 或者 304</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js">xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">if</span> (xhr.<span class="hljs-property">readyState</span> == <span class="hljs-number">4</span>) &#123;<br>    <span class="hljs-keyword">if</span> ((xhr.<span class="hljs-property">status</span> &gt;= <span class="hljs-number">200</span> &amp;&amp; xhr.<span class="hljs-property">status</span> &lt;= <span class="hljs-number">300</span>) || xhr.<span class="hljs-property">status</span> == <span class="hljs-number">304</span>) &#123;<br>      <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;成功&quot;</span>);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;失败&quot;</span>);<br>    &#125;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<p>有很多重复代码，这是没必要的。这时候可以用上继承这个特性</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>    String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String name)</span>&#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">getName</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person2</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Person</span>&#123;&#125;<br><span class="hljs-type">Person2</span> <span class="hljs-variable">pre</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Person2</span>();<br>   pre.setName(<span class="hljs-string">&quot;张三&quot;</span>);<br>   pre.getName();<span class="hljs-comment">//张三</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="/../image/ajax/1.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>改成 1.php 就能成功了</p>
-<p><img src="/../image/ajax/2.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>如果使用 post 请求，则需要添加一条额外的语句</p>
-<p><img src="/../image/ajax/3.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>放在 open 和 send 之间</p>
+<p><img src="https://pic.imgdb.cn/item/64bd21f31ddac507ccb7a3ca.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>可以看到，我们第二个类都没声明任何东西，就可以使用父类的方法以及属性</p>
+<p>通过关键字extends可以使子类继承父类的方法和属性</p>
+<p><strong>class 子类名 extends 父类名{}</strong></p>
+<h2 id="无法被访问的字段"><a href="#无法被访问的字段" class="headerlink" title="无法被访问的字段"></a>无法被访问的字段</h2><p>如果父类里面有<strong>private</strong>所修饰的字段，子类是无法访问和使用的</p>
+<p>这个时候改用protected来修饰字段就可以了。</p>
+<h2 id="super"><a href="#super" class="headerlink" title="super"></a>super</h2><p>子类在继承父类的时候，子类不会继承父类的构造方法，用super可以解决这个问题</p>
+<p>父类如果没有定义无参的构造函数，子类定义自己的构造函数时，会报错</p>
+<p><img src="https://pic.imgdb.cn/item/64bdd8901ddac507cc1ef994.jpg" srcset="/img/loading.gif" lazyload></p>
+<p>因为构造方法，如果没有明确的调用父类的构造方法，编译器隐式的加上super(),可是我们这里父类并没有定义无参的构造方法，所以就造成了错误</p>
+<p>super更像是子类与父类的接口，这里解决方案就是super(a,b)</p>
+<h3 id="还是有个问题"><a href="#还是有个问题" class="headerlink" title="还是有个问题"></a>还是有个问题</h3><p>如果我需要在子类的构造方法中去初始化子类自己的变量</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person2</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Person</span> &#123;<br>    <span class="hljs-type">int</span> age;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Person2</span><span class="hljs-params">(<span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-comment">//这里系统会自动加上super()</span><br>        <span class="hljs-built_in">this</span>.age = age;<br>        System.out.println(<span class="hljs-built_in">this</span>.age);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>但是又不想去初始化从父类继承过来的那个变量，这里不用super就会报错。</p>
+<p>最优解还是父类定义一个无参的构造方法，最方便。</p>
+<h2 id="不想被继承的类"><a href="#不想被继承的类" class="headerlink" title="不想被继承的类"></a>不想被继承的类</h2><p>final这个功能很强大，不仅是将变量变成常量，而且还能修饰别的</p>
+<p>类，方法，字段如果被final修饰了，则不能被其他子类所继承</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">final</span> <span class="hljs-type">int</span> <span class="hljs-title function_">a</span><span class="hljs-params">()</span>&#123;&#125; <span class="hljs-comment">//不让被继承的方法</span><br><span class="hljs-keyword">final</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;&#125; <span class="hljs-comment">//不让被继承的类</span><br><span class="hljs-keyword">final</span> <span class="hljs-type">String</span> <span class="hljs-variable">name</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;Unamed&quot;</span>;<span class="hljs-comment">//不让被继承的属性</span><br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可以在构造函数里面初始化被final修饰的字段</p>
+</blockquote>
 
                 
               </div>
@@ -309,11 +316,32 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/java/" class="category-chain-item">java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/js/" class="print-no-link">#js</a>
+        <a href="/tags/java/" class="print-no-link">#java</a>
       
     </div>
   
@@ -325,8 +353,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>AJAX_1</div>
-      <div>https://zhaoci1.github.io/2022/03/25/AJAX-1/</div>
+      <div>继承</div>
+      <div>https://zhaoci1.github.io/2023/07/23/继承/</div>
     </div>
     <div class="license-meta">
       
@@ -338,7 +366,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年3月25日</div>
+          <div>2023年7月23日</div>
         </div>
       
       
@@ -370,9 +398,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/28/jsonp/" title="jsonp">
+                      <a href="/2023/07/24/%E5%A4%9A%E6%80%81%EF%BC%8C%E6%8A%BD%E8%B1%A1%EF%BC%8C%E6%8E%A5%E5%8F%A3/" title="多态，抽象，接口">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">jsonp</span>
+                        <span class="hidden-mobile">多态，抽象，接口</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -380,8 +408,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/24/async-await%E6%93%8D%E4%BD%9C/" title="async/await操作">
-                        <span class="hidden-mobile">async/await操作</span>
+                      <a href="/2023/07/21/java-%E6%96%B9%E6%B3%95/" title="java方法">
+                        <span class="hidden-mobile">java方法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

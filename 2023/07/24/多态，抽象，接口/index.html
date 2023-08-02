@@ -16,28 +16,26 @@
   <meta name="author" content="朝辞">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ajax 内部是咋写的1234567891011121314151617181920212223let oBtn &#x3D; document.getElementById(&quot;btn1&quot;);oBtn.onclick &#x3D; function () &amp;#123;  let xhr &#x3D; new XMLHttpRequest();  &#x2F;&#x2F;连接请求  xhr.open(&quot;GET&amp;quot">
+    <meta name="description" content="多态 多态的弊端，不能使用子类特有的内容 多态前提 必须要有关系，继承，实现 必须要有重写    多态向上转型12有一个动物类Animal,子类猫catAnimal a &#x3D; new Cat()  这什么意思呢，看看基本属性类型的强转： 1byte x &#x3D; 2; int a &#x3D; x &#x2F;&#x2F;这里x会自动提升为int  可以把上面的Animal看作int，cat看作byte，所以这里新new出来的猫类，会">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AJAX_1">
-<meta property="og:url" content="https://zhaoci1.github.io/2022/03/25/AJAX-1/index.html">
+<meta property="og:title" content="多态，抽象，接口">
+<meta property="og:url" content="https://zhaoci1.github.io/2023/07/24/%E5%A4%9A%E6%80%81%EF%BC%8C%E6%8A%BD%E8%B1%A1%EF%BC%8C%E6%8E%A5%E5%8F%A3/index.html">
 <meta property="og:site_name" content="朝辞">
-<meta property="og:description" content="ajax 内部是咋写的1234567891011121314151617181920212223let oBtn &#x3D; document.getElementById(&quot;btn1&quot;);oBtn.onclick &#x3D; function () &amp;#123;  let xhr &#x3D; new XMLHttpRequest();  &#x2F;&#x2F;连接请求  xhr.open(&quot;GET&amp;quot">
+<meta property="og:description" content="多态 多态的弊端，不能使用子类特有的内容 多态前提 必须要有关系，继承，实现 必须要有重写    多态向上转型12有一个动物类Animal,子类猫catAnimal a &#x3D; new Cat()  这什么意思呢，看看基本属性类型的强转： 1byte x &#x3D; 2; int a &#x3D; x &#x2F;&#x2F;这里x会自动提升为int  可以把上面的Animal看作int，cat看作byte，所以这里新new出来的猫类，会">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/1.png">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/2.png">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/3.png">
-<meta property="article:published_time" content="2022-03-25T08:32:45.000Z">
-<meta property="article:modified_time" content="2023-07-21T12:31:46.445Z">
+<meta property="og:image" content="https://pic.imgdb.cn/item/64be7a011ddac507cce99a25.jpg">
+<meta property="article:published_time" content="2023-07-24T06:25:30.000Z">
+<meta property="article:modified_time" content="2023-08-02T14:02:59.788Z">
 <meta property="article:author" content="朝辞">
-<meta property="article:tag" content="js">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zhaoci1.github.io/image/ajax/1.png">
+<meta name="twitter:image" content="https://pic.imgdb.cn/item/64be7a011ddac507cce99a25.jpg">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>AJAX_1 - 朝辞</title>
+  <title>多态，抽象，接口 - 朝辞</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="AJAX_1"></span>
+            <span id="subtitle" data-typed-text="多态，抽象，接口"></span>
           
         </div>
 
@@ -215,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-25 16:32" pubdate>
-          2022年3月25日 下午
+        <time datetime="2023-07-24 14:25" pubdate>
+          2023年7月24日 下午
         </time>
       </span>
     
@@ -227,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          888 字
+          1.9k 字
         
       </span>
     
@@ -238,7 +236,7 @@
         
         
         
-          8 分钟
+          16 分钟
         
       </span>
     
@@ -275,32 +273,89 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">AJAX_1</h1>
+            <h1 id="seo-header">多态，抽象，接口</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="ajax-内部是咋写的"><a href="#ajax-内部是咋写的" class="headerlink" title="ajax 内部是咋写的"></a>ajax 内部是咋写的</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> oBtn = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;btn1&quot;</span>);<br>oBtn.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br><br>  <span class="hljs-comment">//连接请求</span><br>  xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;GET&quot;</span>, <span class="hljs-string">&quot;1.php?a=12&amp;b=5&quot;</span>, <span class="hljs-literal">true</span>);<br><br>  <span class="hljs-comment">//发送请求</span><br>  xhr.<span class="hljs-title function_">send</span>();<br><br>  <span class="hljs-comment">//接收请求</span><br>  xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">//readyState的值表示目前通信处于什么状态</span><br>    <span class="hljs-comment">//0	初始化-刚刚创建</span><br>    <span class="hljs-comment">//1	以连接</span><br>    <span class="hljs-comment">//2	已发送</span><br>    <span class="hljs-comment">//3	已接收-头</span><br>    <span class="hljs-comment">//4	已接收-主体内容</span><br>    <span class="hljs-title function_">alert</span>(xhr.<span class="hljs-property">readyState</span>);<br>    <span class="hljs-comment">//不管请求成果或者失败，都会执行完4的内容</span><br>    <span class="hljs-comment">//这时候需要用到http状态码了</span><br>  &#125;;<br>&#125;;<br></code></pre></td></tr></table></figure>
+                <h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><ol>
+<li>多态的弊端，不能使用子类特有的内容</li>
+<li>多态前提<ol>
+<li>必须要有关系，继承，实现</li>
+<li>必须要有重写</li>
+</ol>
+</li>
+</ol>
+<h3 id="多态向上转型"><a href="#多态向上转型" class="headerlink" title="多态向上转型"></a>多态向上转型</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">有一个动物类Animal,子类猫cat<br><span class="hljs-type">Animal</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Cat</span>()<br></code></pre></td></tr></table></figure>
 
-<h2 id="http-状态码-status"><a href="#http-状态码-status" class="headerlink" title="http 状态码(status)"></a>http 状态码(status)</h2><p>游览器和服务器之间通过数字来表明状态,这个数字就是 http 状态码</p>
-<p>1xx 消息</p>
-<p>2xx 成功</p>
-<p>3xx 重定向：原来的地址更改到了新的地址</p>
-<p>​ 301：永久重定向-游览器不会再次请求老的地址</p>
-<p>​ 302：临时重定向-游览器下次还会请求老地址</p>
-<p>​ 304：缓存</p>
-<p>4xx 请求错误（客户端）</p>
-<p>5xx 服务端错误</p>
-<p>6xx 拓展</p>
-<p>所以，想要知道是否成功，就要看状态码是否是 2xx 或者 304</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js">xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">if</span> (xhr.<span class="hljs-property">readyState</span> == <span class="hljs-number">4</span>) &#123;<br>    <span class="hljs-keyword">if</span> ((xhr.<span class="hljs-property">status</span> &gt;= <span class="hljs-number">200</span> &amp;&amp; xhr.<span class="hljs-property">status</span> &lt;= <span class="hljs-number">300</span>) || xhr.<span class="hljs-property">status</span> == <span class="hljs-number">304</span>) &#123;<br>      <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;成功&quot;</span>);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;失败&quot;</span>);<br>    &#125;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<p>这什么意思呢，看看基本属性类型的强转：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">byte</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>; <span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> x <span class="hljs-comment">//这里x会自动提升为int</span><br></code></pre></td></tr></table></figure>
 
-<p><img src="/../image/ajax/1.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>改成 1.php 就能成功了</p>
-<p><img src="/../image/ajax/2.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>如果使用 post 请求，则需要添加一条额外的语句</p>
-<p><img src="/../image/ajax/3.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>放在 open 和 send 之间</p>
+<p><strong>可以把上面的Animal看作int，cat看作byte，所以这里新new出来的猫类，会自动提升为动物类</strong></p>
+<p>提升成动物类之后，只能用动物类里面的方法和自己类里面重写的方法，但是不能使用猫类自己特有的方法了</p>
+<p>可以限制功能使用，提高拓展性</p>
+<h3 id="多态向下转型"><a href="#多态向下转型" class="headerlink" title="多态向下转型"></a>多态向下转型</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">Cat c <span class="hljs-operator">=</span> (Cat) a<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<p><strong>将动物类的a，强转为猫类，然后赋给c，因为动物类是父类，所以这里强转为猫类就是向下转型</strong></p>
+<p>向下转型就可以使用子类特有的方法了</p>
+<h3 id="误区"><a href="#误区" class="headerlink" title="误区"></a>误区</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Animal</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animal</span>();<br><span class="hljs-type">Cat</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> (Cat)a; <br><span class="hljs-type">Animal</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">dog</span>();<br><span class="hljs-type">Cat</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> (Cat)a; <br></code></pre></td></tr></table></figure>
+
+<p>上面两种操作都是不行的</p>
+<ol>
+<li>不能将父类强转为子类，上面能转，是因为其本身new的就是猫类，所以可以强转回来</li>
+<li>两个毫不相关的类也不能转，猫可以是动物，也可以是猫，但是狗只能是狗，不能叫它猫</li>
+<li>小可以转大，但大不能转小</li>
+</ol>
+<h3 id="判断是否为正确的对象"><a href="#判断是否为正确的对象" class="headerlink" title="判断是否为正确的对象"></a>判断是否为正确的对象</h3><p>a instanceof Cat：判断a是否为Cat类型的对象</p>
+<p>instanceof 只能用于引用数据类型的判断 </p>
+<h3 id="多态中的成员变量"><a href="#多态中的成员变量" class="headerlink" title="多态中的成员变量"></a>多态中的成员变量</h3><p>参考引用型变量所属的类中，是否有调用的成员变量，有就通过，没有就失败</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">fu</span>()&#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> <span class="hljs-number">4</span>;<br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">zi</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">fu</span>()&#123;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">num</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-type">fu</span> <span class="hljs-variable">f</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">zi</span>();<br>System.ou.println(f.num); <span class="hljs-comment">//4</span><br></code></pre></td></tr></table></figure>
+
+<p>引用类型为哪个类，直接调用时，就会访问到哪个类里面的成员变量</p>
+<p>编译和运行时，参考等号的左边</p>
+<h3 id="多态中的成员方法"><a href="#多态中的成员方法" class="headerlink" title="多态中的成员方法"></a>多态中的成员方法</h3><p>自动类型提升了，就隐藏了子类特有的方法</p>
+<p>编译看左边，运行看右边，动态绑定，谁调用就绑定谁</p>
+<h3 id="多态中的静态方法"><a href="#多态中的静态方法" class="headerlink" title="多态中的静态方法"></a>多态中的静态方法</h3><p>静态方法在类生成的时候就绑定了，并不具备多态性</p>
+<p>多态是基于对象的，静态方法是基于类的</p>
+<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p>子类里面定义了一个和父类里一个相同的方法，则叫重写</p>
+<p>可以理解子类从父类那儿复制了一个方法，子类修改这个方法的时候，父类不会受影响</p>
+<h3 id="重写系统方法"><a href="#重写系统方法" class="headerlink" title="重写系统方法"></a>重写系统方法</h3><p>因为Object是所有类的祖类，所以在自定义类中，是可以重写系统方法的</p>
+<h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><p>如果一个<code>class</code>定义了方法，但没有具体执行代码，这个方法就是抽象方法，抽象方法用<code>abstract</code>修饰。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">abstract</span> class 类名&#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<p>如果父类本身的方法不需要实现任何功能，仅仅是为了定义方法格式，目的是让子类去重写它，那么，就可以把父类声明为抽象方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">class 类名&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span>;<br>&#125;<br><span class="hljs-comment">//会报错</span><br></code></pre></td></tr></table></figure>
+
+<p>包含抽象方法的父类，父类必须也为抽象类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">abstrract class 类名&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>抽象类本身是不能被实例化的，所以只能被用于继承</p>
+<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><p>当一个抽象类中的方法都是抽象的时候，这时候就可以用接口来表示</p>
+<p>接口里面定义方法，里面定义的方法默认都是public abstract，所以修饰符都不用写出来</p>
+<p>用interface来声明一个接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">interface 类名&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> 类型 变量名;<span class="hljs-comment">//定义全局常量</span><br>    返回值类型 方法名();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>接口中的成员都是公共的权限</p>
+<p>类与类是继承关系，<strong>类与接口是实现关系</strong>，接口不可以实例化 </p>
+<h2 id="子类实现接口"><a href="#子类实现接口" class="headerlink" title="子类实现接口"></a>子类实现接口</h2><p>子类实现接口时，需要用到implements关键，和普通继承不一样的是，子类可以选择实现多个接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">class 子类名 implements 接口<span class="hljs-number">1</span>，接口<span class="hljs-number">2</span>，接口<span class="hljs-number">3.</span>...&#123;&#125;<br></code></pre></td></tr></table></figure>
+
+<p>不要在多个接口里面，定义相同方法名的方法</p>
+<p>一个类是可以继承一个父类，实现多个接口的</p>
+<h2 id="接口继承接口"><a href="#接口继承接口" class="headerlink" title="接口继承接口"></a>接口继承接口</h2><p>接口可以通过extends关键字继承其他接口，可以多继承</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">interface  接口<span class="hljs-number">1</span> extends 接口<span class="hljs-number">2</span>, 接口<span class="hljs-number">3</span>, 接口<span class="hljs-number">4.</span>...<br></code></pre></td></tr></table></figure>
+
+<h2 id="default方法"><a href="#default方法" class="headerlink" title="default方法"></a>default方法</h2><p>在接口中，也可以用default来修饰一个方法，被修饰的方法，子类在继承接口的时候，可以选择是否重写这个方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">interface 类名&#123;<br>    <span class="hljs-keyword">default</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span>;<br>    String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>没被default所修饰的方法，子类里面必须要重写一遍的</p>
+</blockquote>
+<p>default可以避免接口新增一个方法时，下面的子类都得重写</p>
+<h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><p><img src="https://pic.imgdb.cn/item/64be7a011ddac507cce99a25.jpg" srcset="/img/loading.gif" lazyload></p>
+<blockquote>
+<p>多数参考廖雪峰老师的java教程</p>
+</blockquote>
 
                 
               </div>
@@ -309,11 +364,32 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/java/" class="category-chain-item">java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/js/" class="print-no-link">#js</a>
+        <a href="/tags/java/" class="print-no-link">#java</a>
       
     </div>
   
@@ -325,8 +401,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>AJAX_1</div>
-      <div>https://zhaoci1.github.io/2022/03/25/AJAX-1/</div>
+      <div>多态，抽象，接口</div>
+      <div>https://zhaoci1.github.io/2023/07/24/多态，抽象，接口/</div>
     </div>
     <div class="license-meta">
       
@@ -338,7 +414,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年3月25日</div>
+          <div>2023年7月24日</div>
         </div>
       
       
@@ -370,9 +446,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/28/jsonp/" title="jsonp">
+                      <a href="/2023/07/24/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-static/" title="静态字段和静态方法(static)">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">jsonp</span>
+                        <span class="hidden-mobile">静态字段和静态方法(static)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -380,8 +456,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/24/async-await%E6%93%8D%E4%BD%9C/" title="async/await操作">
-                        <span class="hidden-mobile">async/await操作</span>
+                      <a href="/2023/07/23/%E7%BB%A7%E6%89%BF/" title="继承">
+                        <span class="hidden-mobile">继承</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,28 +16,24 @@
   <meta name="author" content="朝辞">
   <meta name="keywords" content="">
   
-    <meta name="description" content="ajax 内部是咋写的1234567891011121314151617181920212223let oBtn &#x3D; document.getElementById(&quot;btn1&quot;);oBtn.onclick &#x3D; function () &amp;#123;  let xhr &#x3D; new XMLHttpRequest();  &#x2F;&#x2F;连接请求  xhr.open(&quot;GET&amp;quot">
+    <meta name="description" content="对象与对象对象里面添加一个对象作为属性一个学生类里面，添加一个电脑类，作为它的属性 12345学生类public class student &amp;#123;    public String name;    public comper cer; &#x2F;&#x2F;电脑类&amp;#125;  123456电脑类public class comper &amp;#123;    public String name;    pu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AJAX_1">
-<meta property="og:url" content="https://zhaoci1.github.io/2022/03/25/AJAX-1/index.html">
+<meta property="og:title" content="对象与对象">
+<meta property="og:url" content="https://zhaoci1.github.io/2023/07/28/%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="朝辞">
-<meta property="og:description" content="ajax 内部是咋写的1234567891011121314151617181920212223let oBtn &#x3D; document.getElementById(&quot;btn1&quot;);oBtn.onclick &#x3D; function () &amp;#123;  let xhr &#x3D; new XMLHttpRequest();  &#x2F;&#x2F;连接请求  xhr.open(&quot;GET&amp;quot">
+<meta property="og:description" content="对象与对象对象里面添加一个对象作为属性一个学生类里面，添加一个电脑类，作为它的属性 12345学生类public class student &amp;#123;    public String name;    public comper cer; &#x2F;&#x2F;电脑类&amp;#125;  123456电脑类public class comper &amp;#123;    public String name;    pu">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/1.png">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/2.png">
-<meta property="og:image" content="https://zhaoci1.github.io/image/ajax/3.png">
-<meta property="article:published_time" content="2022-03-25T08:32:45.000Z">
-<meta property="article:modified_time" content="2023-07-21T12:31:46.445Z">
+<meta property="article:published_time" content="2023-07-28T12:44:47.000Z">
+<meta property="article:modified_time" content="2023-07-28T13:19:53.964Z">
 <meta property="article:author" content="朝辞">
-<meta property="article:tag" content="js">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zhaoci1.github.io/image/ajax/1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>AJAX_1 - 朝辞</title>
+  <title>对象与对象 - 朝辞</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="AJAX_1"></span>
+            <span id="subtitle" data-typed-text="对象与对象"></span>
           
         </div>
 
@@ -215,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-03-25 16:32" pubdate>
-          2022年3月25日 下午
+        <time datetime="2023-07-28 20:44" pubdate>
+          2023年7月28日 晚上
         </time>
       </span>
     
@@ -227,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          888 字
+          938 字
         
       </span>
     
@@ -275,32 +271,30 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">AJAX_1</h1>
+            <h1 id="seo-header">对象与对象</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="ajax-内部是咋写的"><a href="#ajax-内部是咋写的" class="headerlink" title="ajax 内部是咋写的"></a>ajax 内部是咋写的</h1><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> oBtn = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">getElementById</span>(<span class="hljs-string">&quot;btn1&quot;</span>);<br>oBtn.<span class="hljs-property">onclick</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">let</span> xhr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">XMLHttpRequest</span>();<br><br>  <span class="hljs-comment">//连接请求</span><br>  xhr.<span class="hljs-title function_">open</span>(<span class="hljs-string">&quot;GET&quot;</span>, <span class="hljs-string">&quot;1.php?a=12&amp;b=5&quot;</span>, <span class="hljs-literal">true</span>);<br><br>  <span class="hljs-comment">//发送请求</span><br>  xhr.<span class="hljs-title function_">send</span>();<br><br>  <span class="hljs-comment">//接收请求</span><br>  xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    <span class="hljs-comment">//readyState的值表示目前通信处于什么状态</span><br>    <span class="hljs-comment">//0	初始化-刚刚创建</span><br>    <span class="hljs-comment">//1	以连接</span><br>    <span class="hljs-comment">//2	已发送</span><br>    <span class="hljs-comment">//3	已接收-头</span><br>    <span class="hljs-comment">//4	已接收-主体内容</span><br>    <span class="hljs-title function_">alert</span>(xhr.<span class="hljs-property">readyState</span>);<br>    <span class="hljs-comment">//不管请求成果或者失败，都会执行完4的内容</span><br>    <span class="hljs-comment">//这时候需要用到http状态码了</span><br>  &#125;;<br>&#125;;<br></code></pre></td></tr></table></figure>
+                <h1 id="对象与对象"><a href="#对象与对象" class="headerlink" title="对象与对象"></a>对象与对象</h1><h2 id="对象里面添加一个对象作为属性"><a href="#对象里面添加一个对象作为属性" class="headerlink" title="对象里面添加一个对象作为属性"></a>对象里面添加一个对象作为属性</h2><p>一个学生类里面，添加一个电脑类，作为它的属性</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">学生类<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">student</span> &#123;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> comper cer; <span class="hljs-comment">//电脑类</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="http-状态码-status"><a href="#http-状态码-status" class="headerlink" title="http 状态码(status)"></a>http 状态码(status)</h2><p>游览器和服务器之间通过数字来表明状态,这个数字就是 http 状态码</p>
-<p>1xx 消息</p>
-<p>2xx 成功</p>
-<p>3xx 重定向：原来的地址更改到了新的地址</p>
-<p>​ 301：永久重定向-游览器不会再次请求老的地址</p>
-<p>​ 302：临时重定向-游览器下次还会请求老地址</p>
-<p>​ 304：缓存</p>
-<p>4xx 请求错误（客户端）</p>
-<p>5xx 服务端错误</p>
-<p>6xx 拓展</p>
-<p>所以，想要知道是否成功，就要看状态码是否是 2xx 或者 304</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js">xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">if</span> (xhr.<span class="hljs-property">readyState</span> == <span class="hljs-number">4</span>) &#123;<br>    <span class="hljs-keyword">if</span> ((xhr.<span class="hljs-property">status</span> &gt;= <span class="hljs-number">200</span> &amp;&amp; xhr.<span class="hljs-property">status</span> &lt;= <span class="hljs-number">300</span>) || xhr.<span class="hljs-property">status</span> == <span class="hljs-number">304</span>) &#123;<br>      <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;成功&quot;</span>);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;失败&quot;</span>);<br>    &#125;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">电脑类<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">comper</span> &#123;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> String cpu;<br>    <span class="hljs-keyword">public</span> String gpu;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="/../image/ajax/1.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>改成 1.php 就能成功了</p>
-<p><img src="/../image/ajax/2.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>如果使用 post 请求，则需要添加一条额外的语句</p>
-<p><img src="/../image/ajax/3.png" srcset="/img/loading.gif" lazyload alt="image"></p>
-<p>放在 open 和 send 之间</p>
+<p>使用的话，就和普通变量一样使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">comper</span> <span class="hljs-variable">cper</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">comper</span>();<br>cper.cpu = <span class="hljs-string">&quot;酷睿&quot;</span>;<br><br><span class="hljs-type">student</span> <span class="hljs-variable">stud</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">student</span>();<br>stud.cer = cper; <span class="hljs-comment">// 将上面的电脑类作为值赋给学生类的属性(cer)</span><br></code></pre></td></tr></table></figure>
+
+<p>调用就是stud.cer.cpu。这个还是好理解的</p>
+<h2 id="将对象数组作为对象的属性"><a href="#将对象数组作为对象的属性" class="headerlink" title="将对象数组作为对象的属性"></a>将对象数组作为对象的属性</h2><p>是不是听起来听拗口的</p>
+<p>写出来还是好理解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">comper</span> &#123;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> String cpu;<br>    <span class="hljs-keyword">public</span> String gpu;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">comper</span><span class="hljs-params">(String name, String cpu, String gpu)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.cpu = cpu;<br>        <span class="hljs-built_in">this</span>.gpu = gpu;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>将上面的学生类拿过来用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">学生类<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">student</span> &#123;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> comper[] cer; <span class="hljs-comment">//用数组存储多个电脑类</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>这里cer使用起来和前面的对象数组的效果是一样的</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">student</span> <span class="hljs-variable">stud</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">student</span>();<br>        stud.cer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">comper</span>[]&#123;<br>                <span class="hljs-keyword">new</span> <span class="hljs-title class_">comper</span>(<span class="hljs-string">&quot;n1&quot;</span>, <span class="hljs-string">&quot;zhang@email.com&quot;</span>, <span class="hljs-string">&quot;x&quot;</span>),<br>                <span class="hljs-keyword">new</span> <span class="hljs-title class_">comper</span>(<span class="hljs-string">&quot;n2&quot;</span>, <span class="hljs-string">&quot;zhang@email.com&quot;</span>, <span class="hljs-string">&quot;y&quot;</span>)<br>        &#125;;<br>        System.out.println(stud.cer[<span class="hljs-number">0</span>].name);<span class="hljs-comment">//n1</span><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -309,11 +303,32 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/java/" class="category-chain-item">java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/js/" class="print-no-link">#js</a>
+        <a href="/tags/java/" class="print-no-link">#java</a>
       
     </div>
   
@@ -325,8 +340,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>AJAX_1</div>
-      <div>https://zhaoci1.github.io/2022/03/25/AJAX-1/</div>
+      <div>对象与对象</div>
+      <div>https://zhaoci1.github.io/2023/07/28/对象与对象/</div>
     </div>
     <div class="license-meta">
       
@@ -338,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年3月25日</div>
+          <div>2023年7月28日</div>
         </div>
       
       
@@ -370,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/03/28/jsonp/" title="jsonp">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">jsonp</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/03/24/async-await%E6%93%8D%E4%BD%9C/" title="async/await操作">
-                        <span class="hidden-mobile">async/await操作</span>
+                      <a href="/2023/07/28/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/" title="对象数组">
+                        <span class="hidden-mobile">对象数组</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
