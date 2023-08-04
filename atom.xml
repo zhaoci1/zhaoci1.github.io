@@ -6,7 +6,7 @@
   <link href="https://zhaoci1.github.io/atom.xml" rel="self"/>
   
   <link href="https://zhaoci1.github.io/"/>
-  <updated>2023-07-28T13:19:53.964Z</updated>
+  <updated>2023-08-04T12:33:10.882Z</updated>
   <id>https://zhaoci1.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深拷贝和浅拷贝</title>
+    <link href="https://zhaoci1.github.io/2023/08/04/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
+    <id>https://zhaoci1.github.io/2023/08/04/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</id>
+    <published>2023-08-04T11:42:42.000Z</published>
+    <updated>2023-08-04T12:33:10.882Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Java中拷贝问题"><a href="#Java中拷贝问题" class="headerlink" title="Java中拷贝问题"></a>Java中拷贝问题</h1><p>除了String类型，其他的引用类型在使用&#x3D;号赋值的时候，会将地址传给&#x3D;号左侧</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">User</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">User</span>();<br><span class="hljs-type">User</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> a;<br><span class="hljs-comment">//这里的b其实是获得了a的地址，后面继续操作b的话，相当于操作a</span><br></code></pre></td></tr></table></figure><p>要解决这样的问题就需要用到浅拷贝和深拷贝了</p><h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><p>实体类实现接口</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java">  <span class="hljs-comment">// Cloneable标记此类可以进行克隆操作，没有其他实际意义</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Cloneable</span>&#123;<br>    <br>    <span class="hljs-comment">//重写clone方法</span><br>    <span class="hljs-keyword">public</span> User <span class="hljs-title function_">clone</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> CloneNotSupportedException&#123;<br>         <span class="hljs-keyword">return</span> (User)<span class="hljs-built_in">super</span>.clone;  <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>浅拷贝有缺点，就是当类中有数组或者其他类成员的时候，还是会出现赋值地址的问题，所以就需要用到深拷贝</p><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span>&#123;<br>    <span class="hljs-keyword">private</span> User2 user2;<br>    <span class="hljs-keyword">private</span> String[] hobby;<br>&#125;<br></code></pre></td></tr></table></figure><p>这个时候浅拷贝是解决不了这个问题的</p><p>对象有两种解决方案</p><ol><li><p>new新的对象，然后赋值给user2</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><br><br><span class="hljs-type">User2</span> <span class="hljs-variable">user2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">User2</span>(clone.getUser().属性,属性<span class="hljs-number">2.</span>...);<br>clone.setUser2(user2);<br></code></pre></td></tr></table></figure></li><li><p>在成员类里面先进行浅拷贝，然后再将返回的对象赋值给成员类</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User2</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Cloneable</span>&#123;<br>    <br>     <span class="hljs-keyword">public</span> User2 <span class="hljs-title function_">clone</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> CloneNotSupportedException&#123;<br>         <span class="hljs-keyword">return</span> (User2)<span class="hljs-built_in">super</span>.clone;  <br>    &#125;<br>    <br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span>&#123;    <br>    <span class="hljs-keyword">private</span> User2 user2;    <br>    <span class="hljs-keyword">private</span> String[] hobby;<br>    <span class="hljs-type">User</span> <span class="hljs-variable">clone</span> <span class="hljs-operator">=</span> (User) <span class="hljs-built_in">super</span>.clone();<br>    <br>    <span class="hljs-type">User2</span> <span class="hljs-variable">user2</span> <span class="hljs-operator">=</span> clone.getUser2().clone();<br>    clone.setUser2(user2);<br>&#125;<br></code></pre></td></tr></table></figure></li></ol><h2 id="数组要容易些"><a href="#数组要容易些" class="headerlink" title="数组要容易些"></a>数组要容易些</h2><p>直接用copyOf对原数组进行覆盖即可</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Java中拷贝问题&quot;&gt;&lt;a href=&quot;#Java中拷贝问题&quot; class=&quot;headerlink&quot; title=&quot;Java中拷贝问题&quot;&gt;&lt;/a&gt;Java中拷贝问题&lt;/h1&gt;&lt;p&gt;除了String类型，其他的引用类型在使用&amp;#x3D;号赋值的时候，会将地址传给&amp;#</summary>
+      
+    
+    
+    
+    <category term="java" scheme="https://zhaoci1.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://zhaoci1.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单例模式</title>
+    <link href="https://zhaoci1.github.io/2023/08/04/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://zhaoci1.github.io/2023/08/04/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</id>
+    <published>2023-08-04T11:07:47.000Z</published>
+    <updated>2023-08-04T11:36:55.643Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="什么是单例模式"><a href="#什么是单例模式" class="headerlink" title="什么是单例模式"></a>什么是单例模式</h1><ul><li>最简单的设计模式之一</li><li>单个实例&#x2F;单个对象，最终只会产生一个对象</li></ul><h1 id="实现单例模式的方式"><a href="#实现单例模式的方式" class="headerlink" title="实现单例模式的方式"></a>实现单例模式的方式</h1><h2 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h2><ul><li>将构造方法私有化    -&gt;设置为private，不对外开放</li><li>在类的内部去创建对象</li><li>添加一个对外的方法，通过这个方法去创建实例</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> User user;<br>    <br>    <span class="hljs-comment">//将构造函数私有化,这样就使得外面new对象的时候无法成功</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-title function_">User</span><span class="hljs-params">()</span>&#123;&#125;<br>    <br>    <span class="hljs-comment">//提供创建对象的方法</span><br>    <span class="hljs-comment">//synchronized：锁,用来保证线程安全，但是会造成执行效率比较低</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">static</span> User <span class="hljs-title function_">getUser</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-comment">//如果已经创建了对象，则之间返回，否则创建新对象</span><br>        <span class="hljs-keyword">if</span>(<span class="hljs-built_in">this</span>.user == <span class="hljs-literal">null</span>)&#123;<br>            <span class="hljs-built_in">this</span>.user = <span class="hljs-keyword">new</span> <span class="hljs-title class_">User</span>();<br>        &#125;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.user;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><ul><li>及时加载，无论对象是否使用，都会创建一个</li><li>构造方法私有化</li><li>直接创建对象</li><li>对外提供方法，提供唯一对象</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">User</span> <span class="hljs-variable">user</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">User</span>();<br>    <br>    <span class="hljs-comment">//将构造函数私有化,这样就使得外面new对象的时候无法成功</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-title function_">User</span><span class="hljs-params">()</span>&#123;&#125;<br>    <br>    <span class="hljs-comment">//提供创建对象的方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> User <span class="hljs-title function_">getUser</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.user;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>优点是保证线程安全，缺陷是会造成资源的浪费，因为无论用不用该对象，该对象都会被创建</p><blockquote><p>暂时学了这么多，等待后续更新</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;什么是单例模式&quot;&gt;&lt;a href=&quot;#什么是单例模式&quot; class=&quot;headerlink&quot; title=&quot;什么是单例模式&quot;&gt;&lt;/a&gt;什么是单例模式&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;最简单的设计模式之一&lt;/li&gt;
+&lt;li&gt;单个实例&amp;#x2F;单个对象，最终只会产生一个对</summary>
+      
+    
+    
+    
+    <category term="java" scheme="https://zhaoci1.github.io/categories/java/"/>
+    
+    
+    <category term="java" scheme="https://zhaoci1.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>对象与对象</title>
@@ -416,52 +466,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;async-x2F-await-操作&quot;&gt;&lt;a href=&quot;#async-x2F-await-操作&quot; class=&quot;headerlink&quot; title=&quot;async&amp;#x2F;await 操作&quot;&gt;&lt;/a&gt;async&amp;#x2F;await 操作&lt;/h2&gt;&lt;figure</summary>
-      
-    
-    
-    
-    
-    <category term="js" scheme="https://zhaoci1.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js_es6面向对象</title>
-    <link href="https://zhaoci1.github.io/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>https://zhaoci1.github.io/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
-    <published>2022-03-23T07:36:50.000Z</published>
-    <updated>2022-04-27T06:39:46.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="es6-面向对象"><a href="#es6-面向对象" class="headerlink" title="es6 面向对象"></a>es6 面向对象</h1><p>es6 的面向对象相对于传统 js 面向对象方便了很多</p><p>不需要用 function 来创建一个类</p><p>和 java 类似</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">class</span> 对象名 &#123;<br>  <span class="hljs-title class_">Constructor</span>() &#123;<br>    这里写属性;<br>  &#125;<br>  这里写函数;<br>&#125;<br></code></pre></td></tr></table></figure><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p><h2 id="es6-的继承"><a href="#es6-的继承" class="headerlink" title="es6 的继承"></a>es6 的继承</h2><p>Es6 通过 super 来继承父类的属性</p><p>父类的方法通过 extends 来继承</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p><h2 id="es6-面向对象的-this"><a href="#es6-面向对象的-this" class="headerlink" title="es6 面向对象的 this"></a>es6 面向对象的 this</h2><p>js 的 this 容易被改变，这里本来应该显示 blue 的，但 this 现在指向了 document</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p><p>修改的方法是在对象的方法后面，跟上一个 bind（blue）</p><p>这里修改成 blue.showName.bind(blue)</p><p>bind 是强制改变 this 的指向</p><p>bind 的可以修改 this 指向的对象</p><p>和 js 的 call 这个方法类似</p><h2 id="箭头函数和普通函数的区别"><a href="#箭头函数和普通函数的区别" class="headerlink" title="箭头函数和普通函数的区别"></a>箭头函数和普通函数的区别</h2><p>箭头函数：根据我所在的环境，环境是谁 this 就是谁</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p><p>这里别的实例对象用这个方法的时候，就不需要要用 bind 来改变指向了，这里 this 处在哪个环境，this 就是谁</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p><p>普通函数：谁在调用 this，this 就是谁</p><p>上一节点击事件的错误就是因为是普通函数的缘故，this 指向了 document。</p><h2 id="Promise-对象"><a href="#Promise-对象" class="headerlink" title="Promise 对象"></a>Promise 对象</h2><p>拥有同步的简便，和异步的优点</p><p>有两个参数 resolve 和 reject</p><p>resolve：成功之后调用的函数</p><p>reject：失败之后调用的函数</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p><p>promise 这个对象里面能执行一些方法和语句，执行完成后，resolve 和 reject 都会将括号里的值返回出去</p><p>promise 有局限性</p><ol><li>promise 有用-解除异步操作</li><li>有局限-带逻辑的异步操作很麻烦</li></ol><h3 id="promise"><a href="#promise" class="headerlink" title="promise-"></a>promise-</h3><p>promise-race(||的作用)</p><p>promise-all(&amp;&amp;的作用)</p><p>能获取多个地址的数据</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p><p>Promise.all([pro 对象 1，pro 对象 2……]).then()</p><p>all 能获取 promise 的集合，可以用数组的形式将这三个对象存起来</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p><p>因为 jQuery 的 Ajax 返回的对象里面，带有 Promise，所以这里 all 里面的对象可以直接用 jQuery 的 Ajax 表达式来使用</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p><h2 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h2><p>回调：有结果之后来找你</p><ol><li>不是定义的人调用</li><li>什么时候调用不知道</li></ol><p>轮询：一直询问</p><h2 id="generator-函数"><a href="#generator-函数" class="headerlink" title="generator 函数"></a>generator 函数</h2><p>Function *show(){}</p><p>函数名前面加一个*号</p><p>gen 函数与普通函数的区别是能暂停</p><p>并且用 yield 来分块</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p><p>这儿已经被分成两块了</p><p>gen 函数直接使用不会生效，而是会产生一个返回值,这里将 show 这个对象给了 fan</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p><p>要执行 show 里面的语句，需要用 next 这个方法来驱动</p><p>next 会在 yield 之前停下，如果要执行 yield 后面的语句，需要在调用一下 next 的方法</p><p>这样的好处是，有些异步操作需要时间，然后可以使用 yield 来分块，当异步操作执行完毕后，在执行后面的语句</p><p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;es6-面向对象&quot;&gt;&lt;a href=&quot;#es6-面向对象&quot; class=&quot;headerlink&quot; title=&quot;es6 面向对象&quot;&gt;&lt;/a&gt;es6 面向对象&lt;/h1&gt;&lt;p&gt;es6 的面向对象相对于传统 js 面向对象方便了很多&lt;/p&gt;
-&lt;p&gt;不需要用 functi</summary>
-      
-    
-    
-    
-    
-    <category term="js" scheme="https://zhaoci1.github.io/tags/js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>js面向对象</title>
-    <link href="https://zhaoci1.github.io/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>https://zhaoci1.github.io/2022/03/21/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
-    <published>2022-03-21T08:39:34.000Z</published>
-    <updated>2022-04-27T06:40:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="js-面向对象"><a href="#js-面向对象" class="headerlink" title="js 面向对象"></a>js 面向对象</h1><blockquote><p><a href="https://www.jianshu.com/p/f9792fdd9915">参考了该文章：JavaScript 面向对象 - 简书 (jianshu.com)</a></p></blockquote><h2 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h2><figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs qml"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">createCar</span>(<span class="hljs-params">color,wheel</span>)</span>&#123;<span class="hljs-comment">//createCar工厂</span><br>    <span class="hljs-keyword">var</span> obj = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>;<span class="hljs-comment">//或obj = &#123;&#125; 原材料阶段</span><br>    obj.color = <span class="hljs-built_in">color</span>;<span class="hljs-comment">//加工</span><br>    obj.wheel = wheel;<span class="hljs-comment">//加工</span><br>    <span class="hljs-keyword">return</span> obj;<span class="hljs-comment">//输出产品</span><br>&#125;<br><span class="hljs-comment">//实例化</span><br><span class="hljs-keyword">var</span> cat1 = createCar(<span class="hljs-string">&quot;红色&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>);<br><span class="hljs-keyword">var</span> cat2 = createCar(<span class="hljs-string">&quot;蓝色&quot;</span>,<span class="hljs-string">&quot;4&quot;</span>);<br><br>alert(cat1.color);<span class="hljs-comment">//红色</span><br></code></pre></td></tr></table></figure><p>工厂模式对传入的值进行加工，然后输出</p><h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p><strong>构造函数就是类</strong></p><p>构造函数用于写属性</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p><p>当我们 new 这个类的时候，这里的 name 和 sex 会作为属性一并被赋给 obj3</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p><p>我这儿构造函数的命名不规范，应该首字母大写</p><h2 id="原型（prototype）"><a href="#原型（prototype）" class="headerlink" title="原型（prototype）"></a>原型（prototype）</h2><p>*每个函数都有一个属性——****prototype**<strong>。这个*</strong>*prototype**<strong>的属性值是一个对象（属性的集合），默认只有一个叫做*</strong>*constructor****的属性，指向这个函数本身**</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p><p>这里是给 createPre 类，添加一个 showName 的方法，然后后面创建实例化对象（obj3）的时候，这个 obj3 会有这个方法</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p><h2 id="构造函数和原型的用法"><a href="#构造函数和原型的用法" class="headerlink" title="构造函数和原型的用法"></a>构造函数和原型的用法</h2><p>构造函数里面加属性，原型里面加方法</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p><p><strong>这里再放一张容易理解对象的图</strong></p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p><p>这里的不同颜色的车和不同种类的狗，就是 new 出来的实例对象</p><h2 id="命令空间"><a href="#命令空间" class="headerlink" title="命令空间"></a>命令空间</h2><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p><p>不同对象，相同方法</p><h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>js 通过 call 方法来继承父元素的属性</p><p>call 方法：可以改变函数执行的时候，里面的 this</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p><p>call 可以传参数，这里的 this 就是 show2 这个对象</p><p>call 将 show2 这个对象传入 show</p><p>然后将 show 里面 this 指向指为 show2</p><h3 id="继承的问题"><a href="#继承的问题" class="headerlink" title="继承的问题"></a>继承的问题</h3><p>这里举个栗子</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p><p>这里 arr2 并不是复制了一份 arr1，而是将 arr2 也指向了 arr1 的空间了</p><p>他们都指向了同一块空间</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/14.png" alt="image"></p><p>可以看见这个 arr1 里面的数据也被更改了</p><p>解决这个问题的方法是，用循环将 arr1 里面的数据传入 arr2</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p><p>对象里面，方法的继承也存在同样的问题</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p><p>这样做的话，会和上面数组的问题一样，修改 show2 的方法，show 的方法也会被修改</p><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p><p>这样就不会出问题了</p><h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/15.png" alt="image"></p><p>重写就是将新的原型里面的方法，给重新写一遍</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;js-面向对象&quot;&gt;&lt;a href=&quot;#js-面向对象&quot; class=&quot;headerlink&quot; title=&quot;js 面向对象&quot;&gt;&lt;/a&gt;js 面向对象&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/f9</summary>
       
     
     
