@@ -18,23 +18,12 @@
 <p>所以，想要知道是否成功，就要看状态码是否是 2xx 或者 304</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js">xhr.<span class="hljs-property">onreadystatechange</span> = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">if</span> (xhr.<span class="hljs-property">readyState</span> == <span class="hljs-number">4</span>) &#123;<br>    <span class="hljs-keyword">if</span> ((xhr.<span class="hljs-property">status</span> &gt;= <span class="hljs-number">200</span> &amp;&amp; xhr.<span class="hljs-property">status</span> &lt;= <span class="hljs-number">300</span>) || xhr.<span class="hljs-property">status</span> == <span class="hljs-number">304</span>) &#123;<br>      <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;成功&quot;</span>);<br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>      <span class="hljs-title function_">alert</span>(<span class="hljs-string">&quot;失败&quot;</span>);<br>    &#125;<br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<p><img src="/../image/ajax/1.png" alt="image"></p>
+<p><img src="/.io//image/ajax/1.png" alt="image"></p>
 <p>改成 1.php 就能成功了</p>
-<p><img src="/../image/ajax/2.png" alt="image"></p>
+<p><img src="/.io//image/ajax/2.png" alt="image"></p>
 <p>如果使用 post 请求，则需要添加一条额外的语句</p>
-<p><img src="/../image/ajax/3.png" alt="image"></p>
+<p><img src="/.io//image/ajax/3.png" alt="image"></p>
 <p>放在 open 和 send 之间</p>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DOM</title>
-    <url>/2022/04/28/DOM/</url>
-    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
-<p>DOM 允许我们操作 HTML 元素</p>
-<p>DOm 连接 HTML 与 JS 交互</p>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -53,6 +42,17 @@
 <figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> <span class="hljs-title function_">calcAge</span> = (<span class="hljs-params">形参</span>) =&gt; &#123;<br>  <span class="hljs-comment">//多行需要使用return</span><br>  <span class="hljs-keyword">return</span> 返回值;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
 <p>函数通常以遇到的第一个 return 而结束</p>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DOM</title>
+    <url>/2022/04/28/DOM/</url>
+    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
+<p>DOM 允许我们操作 HTML 元素</p>
+<p>DOm 连接 HTML 与 JS 交互</p>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -101,6 +101,71 @@
       </tags>
   </entry>
   <entry>
+    <title>java异常</title>
+    <url>/2023/08/07/java%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<h1 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h1><p>我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。</p>
+<h1 id="异常的分类-Exception"><a href="#异常的分类-Exception" class="headerlink" title="异常的分类(Exception)"></a>异常的分类(Exception)</h1><h2 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h2><p>在编译器编辑的时候就发现的异常，通常编译器会会报红</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\编译时异常.png"></p>
+<ol>
+<li>这种也称之为可检测的异常</li>
+<li>必须要处理</li>
+</ol>
+<h2 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h2><ol>
+<li>编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等…..</li>
+<li>这种也称之为未检测的异常，不一定会触发</li>
+<li>可处理也可以不用处理</li>
+</ol>
+<h1 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h1><h2 id="积极处理：捕捉异常"><a href="#积极处理：捕捉异常" class="headerlink" title="积极处理：捕捉异常"></a>积极处理：捕捉异常</h2><h3 id="try…catch"><a href="#try…catch" class="headerlink" title="try…catch"></a>try…catch</h3><p>语法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    要进行捕捉错误的代码，可能会出现异常的代码<br>&#125;<span class="hljs-keyword">catch</span>(异常种类 对象名)&#123;<br>    处理方式<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>try和catch不能单独使用</p>
+<p>选择异常种类时，尽量明确异常的种类，少使用exception</p>
+<p>未使用捕捉</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\强制结束程序.png"></p>
+<p>使用捕捉</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\捕捉异常.png"></p>
+<h3 id="try…catch…catch"><a href="#try…catch…catch" class="headerlink" title="try…catch…catch"></a>try…catch…catch</h3><p>捕捉多个异常，因为一个try可能会不止一个异常，这时候需要多个catch进行解决</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>像else if一样，异常会根据catch()括号里面的异常类型来选择进入哪个catch。</p>
+<p>要注意一个点，父类异常类如果在第一个catch，那么子类异常类就不能往后写了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(Exception e)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(a e)&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>因为Exception是a的父类，exception包含了a的异常类，所以异常发生的时候，会先进入父类，会造成子类完全访问不到</p>
+<h3 id="try…catch…finally"><a href="#try…catch…finally" class="headerlink" title="try…catch…finally"></a>try…catch…finally</h3><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">finally</span>&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>try无论捉没捉到异常，finally里面的语句都会被执行</p>
+<h3 id="try…-with…-resources-自动回收"><a href="#try…-with…-resources-自动回收" class="headerlink" title="try….with….resources(自动回收)"></a>try….with….resources(自动回收)</h3><p>一般像普通程序捕捉异常，会手动回收异常类，调用close方法</p>
+<p>如果用了resources语法，则可以不用手动回收</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>(需要回收的对象)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="消极处理"><a href="#消极处理" class="headerlink" title="消极处理"></a>消极处理</h2><p>通过throw来将异常抛出，谁调用谁处理</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\消极处理.png"></p>
+<p>如果抛出的是RuntimeException异常类，则可以处理也可以不处理</p>
+<blockquote>
+<p>尽量使用积极处理</p>
+</blockquote>
+<h2 id="throw和throws"><a href="#throw和throws" class="headerlink" title="throw和throws"></a>throw和throws</h2><p>throw new 异常类</p>
+<ol>
+<li>throws用在函数声明上，后面可以跟多个异常类，用逗号隔开</li>
+<li>throw后跟的是异常对象</li>
+</ol>
+<p>throw如果手动引发一个编译时的异常，那么该异常就一定要处理！</p>
+<p>如果是引发的一个运行时的异常，那么该异常可处理也可以不用处理</p>
+<h1 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h1><p>除了使用系统自带的异常规则，我们也可以自己去建立异常规则。</p>
+<p>比如系统计算数学，0不能作为除数，而我们想加一条规则，负数不能作为除数，这个时候就要用到自定义异常了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyException</span> extends 异常类&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">()</span>&#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">(String message)</span>&#123;<br>        <span class="hljs-built_in">super</span>(message);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">show</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> <span class="hljs-keyword">throws</span> MyException &#123;<span class="hljs-comment">//方法将错误接着抛出,调用该方法的地方需要用try进行捕捉异常</span><br>       <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyException</span>(<span class="hljs-string">&quot;除数不能为负数&quot;</span>); <span class="hljs-comment">//将错误抛出</span><br>        &#125;<br>     <span class="hljs-keyword">return</span> a / b;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\自定义异常.png"></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js_es6面向对象</title>
     <url>/2022/03/23/js-es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="es6-面向对象"><a href="#es6-面向对象" class="headerlink" title="es6 面向对象"></a>es6 面向对象</h1><p>es6 的面向对象相对于传统 js 面向对象方便了很多</p>
@@ -108,29 +173,29 @@
 <p>和 java 类似</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">class</span> 对象名 &#123;<br>  <span class="hljs-title class_">Constructor</span>() &#123;<br>    这里写属性;<br>  &#125;<br>  这里写函数;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p>
 <h2 id="es6-的继承"><a href="#es6-的继承" class="headerlink" title="es6 的继承"></a>es6 的继承</h2><p>Es6 通过 super 来继承父类的属性</p>
 <p>父类的方法通过 extends 来继承</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p>
 <h2 id="es6-面向对象的-this"><a href="#es6-面向对象的-this" class="headerlink" title="es6 面向对象的 this"></a>es6 面向对象的 this</h2><p>js 的 this 容易被改变，这里本来应该显示 blue 的，但 this 现在指向了 document</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p>
 <p>修改的方法是在对象的方法后面，跟上一个 bind（blue）</p>
 <p>这里修改成 blue.showName.bind(blue)</p>
 <p>bind 是强制改变 this 的指向</p>
 <p>bind 的可以修改 this 指向的对象</p>
 <p>和 js 的 call 这个方法类似</p>
 <h2 id="箭头函数和普通函数的区别"><a href="#箭头函数和普通函数的区别" class="headerlink" title="箭头函数和普通函数的区别"></a>箭头函数和普通函数的区别</h2><p>箭头函数：根据我所在的环境，环境是谁 this 就是谁</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p>
 <p>这里别的实例对象用这个方法的时候，就不需要要用 bind 来改变指向了，这里 this 处在哪个环境，this 就是谁</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p>
 <p>普通函数：谁在调用 this，this 就是谁</p>
 <p>上一节点击事件的错误就是因为是普通函数的缘故，this 指向了 document。</p>
 <h2 id="Promise-对象"><a href="#Promise-对象" class="headerlink" title="Promise 对象"></a>Promise 对象</h2><p>拥有同步的简便，和异步的优点</p>
 <p>有两个参数 resolve 和 reject</p>
 <p>resolve：成功之后调用的函数</p>
 <p>reject：失败之后调用的函数</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p>
 <p>promise 这个对象里面能执行一些方法和语句，执行完成后，resolve 和 reject 都会将括号里的值返回出去</p>
 <p>promise 有局限性</p>
 <ol>
@@ -140,12 +205,12 @@
 <h3 id="promise"><a href="#promise" class="headerlink" title="promise-"></a>promise-</h3><p>promise-race(||的作用)</p>
 <p>promise-all(&amp;&amp;的作用)</p>
 <p>能获取多个地址的数据</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p>
 <p>Promise.all([pro 对象 1，pro 对象 2……]).then()</p>
 <p>all 能获取 promise 的集合，可以用数组的形式将这三个对象存起来</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p>
 <p>因为 jQuery 的 Ajax 返回的对象里面，带有 Promise，所以这里 all 里面的对象可以直接用 jQuery 的 Ajax 表达式来使用</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p>
 <h2 id="回调"><a href="#回调" class="headerlink" title="回调"></a>回调</h2><p>回调：有结果之后来找你</p>
 <ol>
 <li>不是定义的人调用</li>
@@ -156,14 +221,14 @@
 <p>函数名前面加一个*号</p>
 <p>gen 函数与普通函数的区别是能暂停</p>
 <p>并且用 yield 来分块</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p>
 <p>这儿已经被分成两块了</p>
 <p>gen 函数直接使用不会生效，而是会产生一个返回值,这里将 show 这个对象给了 fan</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p>
 <p>要执行 show 里面的语句，需要用 next 这个方法来驱动</p>
 <p>next 会在 yield 之前停下，如果要执行 yield 后面的语句，需要在调用一下 next 的方法</p>
 <p>这样的好处是，有些异步操作需要时间，然后可以使用 yield 来分块，当异步操作执行完毕后，在执行后面的语句</p>
-<p><img src="/../image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p>
+<p><img src="/.io//image/es6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p>
 ]]></content>
       <tags>
         <tag>js</tag>
@@ -188,42 +253,42 @@
 <p>工厂模式对传入的值进行加工，然后输出</p>
 <h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p><strong>构造函数就是类</strong></p>
 <p>构造函数用于写属性</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1.png" alt="image"></p>
 <p>当我们 new 这个类的时候，这里的 name 和 sex 会作为属性一并被赋给 obj3</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/2.png" alt="image"></p>
 <p>我这儿构造函数的命名不规范，应该首字母大写</p>
 <h2 id="原型（prototype）"><a href="#原型（prototype）" class="headerlink" title="原型（prototype）"></a>原型（prototype）</h2><p>*每个函数都有一个属性——****prototype**<strong>。这个*</strong>*prototype**<strong>的属性值是一个对象（属性的集合），默认只有一个叫做*</strong>*constructor****的属性，指向这个函数本身**</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/3.png" alt="image"></p>
 <p>这里是给 createPre 类，添加一个 showName 的方法，然后后面创建实例化对象（obj3）的时候，这个 obj3 会有这个方法</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/4.png" alt="image"></p>
 <h2 id="构造函数和原型的用法"><a href="#构造函数和原型的用法" class="headerlink" title="构造函数和原型的用法"></a>构造函数和原型的用法</h2><p>构造函数里面加属性，原型里面加方法</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/5.png" alt="image"></p>
 <p><strong>这里再放一张容易理解对象的图</strong></p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/6.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/7.png" alt="image"></p>
 <p>这里的不同颜色的车和不同种类的狗，就是 new 出来的实例对象</p>
-<h2 id="命令空间"><a href="#命令空间" class="headerlink" title="命令空间"></a>命令空间</h2><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p>
+<h2 id="命令空间"><a href="#命令空间" class="headerlink" title="命令空间"></a>命令空间</h2><p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/8.png" alt="image"></p>
 <p>不同对象，相同方法</p>
 <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>js 通过 call 方法来继承父元素的属性</p>
 <p>call 方法：可以改变函数执行的时候，里面的 this</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/9.png" alt="image"></p>
 <p>call 可以传参数，这里的 this 就是 show2 这个对象</p>
 <p>call 将 show2 这个对象传入 show</p>
 <p>然后将 show 里面 this 指向指为 show2</p>
 <h3 id="继承的问题"><a href="#继承的问题" class="headerlink" title="继承的问题"></a>继承的问题</h3><p>这里举个栗子</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/10.png" alt="image"></p>
 <p>这里 arr2 并不是复制了一份 arr1，而是将 arr2 也指向了 arr1 的空间了</p>
 <p>他们都指向了同一块空间</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/14.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/14.png" alt="image"></p>
 <p>可以看见这个 arr1 里面的数据也被更改了</p>
 <p>解决这个问题的方法是，用循环将 arr1 里面的数据传入 arr2</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/11.png" alt="image"></p>
 <p>对象里面，方法的继承也存在同样的问题</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/13.png" alt="image"></p>
 <p>这样做的话，会和上面数组的问题一样，修改 show2 的方法，show 的方法也会被修改</p>
-<p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p>
+<p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/12.png" alt="image"></p>
 <p>这样就不会出问题了</p>
-<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p><img src="/../image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/15.png" alt="image"></p>
+<h2 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h2><p><img src="/.io//image/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/15.png" alt="image"></p>
 <p>重写就是将新的原型里面的方法，给重新写一遍</p>
 ]]></content>
       <tags>
@@ -622,6 +687,17 @@
       </tags>
   </entry>
   <entry>
+    <title>拓展运算符</title>
+    <url>/2022/05/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="在右边时：…变量名"><a href="#在右边时：…变量名" class="headerlink" title="在右边时：…变量名"></a>在右边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];<br><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, ...arr];<br><span class="hljs-comment">//arr1 = [1,2,3,1,2,3,4]</span><br>...arr把整个arr的数组解构成一个个的元素，这个也可以用于解构对象<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="在左边时：…变量名"><a href="#在左边时：…变量名" class="headerlink" title="在左边时：…变量名"></a>在左边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>];<br><span class="hljs-keyword">const</span> [a, b, c, ...arr2] = arr;<br><span class="hljs-comment">//arr2 = [4,5,6,7]</span><br>在左边时将剩余的数组元素合并成一个数组;<br>当作为函数的参数使用时，会将传递的实参全部存入，和<span class="hljs-variable language_">arguments</span>类似<br></code></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数组</title>
     <url>/2022/04/25/%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<h2 id="创建数组的方法"><a href="#创建数组的方法" class="headerlink" title="创建数组的方法"></a>创建数组的方法</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> 数组名 = [元素<span class="hljs-number">1</span>，元素<span class="hljs-number">2</span>，元素<span class="hljs-number">3.</span>..]<br><br><span class="hljs-keyword">let</span> 数组名 <span class="hljs-keyword">new</span> <span class="hljs-title class_">Array</span>(元素<span class="hljs-number">1</span>，元素<span class="hljs-number">2</span>，元素<span class="hljs-number">3.</span>..)<br></code></pre></td></tr></table></figure>
@@ -656,17 +732,6 @@
       </tags>
   </entry>
   <entry>
-    <title>拓展运算符</title>
-    <url>/2022/05/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="在右边时：…变量名"><a href="#在右边时：…变量名" class="headerlink" title="在右边时：…变量名"></a>在右边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];<br><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, ...arr];<br><span class="hljs-comment">//arr1 = [1,2,3,1,2,3,4]</span><br>...arr把整个arr的数组解构成一个个的元素，这个也可以用于解构对象<br><br></code></pre></td></tr></table></figure>
-
-<h2 id="在左边时：…变量名"><a href="#在左边时：…变量名" class="headerlink" title="在左边时：…变量名"></a>在左边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>];<br><span class="hljs-keyword">const</span> [a, b, c, ...arr2] = arr;<br><span class="hljs-comment">//arr2 = [4,5,6,7]</span><br>在左边时将剩余的数组元素合并成一个数组;<br>当作为函数的参数使用时，会将传递的实参全部存入，和<span class="hljs-variable language_">arguments</span>类似<br></code></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深拷贝和浅拷贝</title>
     <url>/2022/08/04/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
     <content><![CDATA[<h1 id="Java中拷贝问题"><a href="#Java中拷贝问题" class="headerlink" title="Java中拷贝问题"></a>Java中拷贝问题</h1><p>除了String类型，其他的引用类型在使用&#x3D;号赋值的时候，会将地址传给&#x3D;号左侧</p>
@@ -695,20 +760,6 @@
       </categories>
       <tags>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>遍历数组和对象</title>
-    <url>/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> 变量名||&#123;变量<span class="hljs-number">1</span>，变量<span class="hljs-number">2</span>&#125; <span class="hljs-keyword">of</span> 数组名||数组名.<span class="hljs-title function_">entries</span>())&#123;<br><span class="hljs-number">1</span>：下标<br><span class="hljs-number">2</span>：下标对应的元素<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Object</span>.<span class="hljs-property">keys</span><br>	只获取对象中属性的名称，也就是键名<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">values</span><br>	把对象的格式转成数组的格式，第一层的属性名被替换成下标<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">entries</span><br>	将全部对象全部转换成数组<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://s1.328888.xyz/2022/05/10/HULz4.png" alt="HULz4.png"><br><img src="https://s1.328888.xyz/2022/05/10/HUJJ3.png" alt="HUJJ3.png"></p>
-]]></content>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -752,79 +803,17 @@
       </tags>
   </entry>
   <entry>
-    <title>静态字段和静态方法(static)</title>
-    <url>/2023/07/24/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-static/</url>
-    <content><![CDATA[<h1 id="静态字段和静态方法"><a href="#静态字段和静态方法" class="headerlink" title="静态字段和静态方法"></a>静态字段和静态方法</h1>]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java异常</title>
-    <url>/2023/08/07/java%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<h1 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h1><p>我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。</p>
-<h1 id="异常的分类-Exception"><a href="#异常的分类-Exception" class="headerlink" title="异常的分类(Exception)"></a>异常的分类(Exception)</h1><h2 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h2><p>在编译器编辑的时候就发现的异常，通常编译器会会报红</p>
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\编译时异常.png"></p>
-<ol>
-<li>这种也称之为可检测的异常</li>
-<li>必须要处理</li>
-</ol>
-<h2 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h2><ol>
-<li>编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等…..</li>
-<li>这种也称之为未检测的异常，不一定会触发</li>
-<li>可处理也可以不用处理</li>
-</ol>
-<h1 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h1><h2 id="积极处理：捕捉异常"><a href="#积极处理：捕捉异常" class="headerlink" title="积极处理：捕捉异常"></a>积极处理：捕捉异常</h2><h3 id="try…catch"><a href="#try…catch" class="headerlink" title="try…catch"></a>try…catch</h3><p>语法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    要进行捕捉错误的代码，可能会出现异常的代码<br>&#125;<span class="hljs-keyword">catch</span>(异常种类 对象名)&#123;<br>    处理方式<br>&#125;<br></code></pre></td></tr></table></figure>
+    <title>遍历数组和对象</title>
+    <url>/2022/05/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> 变量名||&#123;变量<span class="hljs-number">1</span>，变量<span class="hljs-number">2</span>&#125; <span class="hljs-keyword">of</span> 数组名||数组名.<span class="hljs-title function_">entries</span>())&#123;<br><span class="hljs-number">1</span>：下标<br><span class="hljs-number">2</span>：下标对应的元素<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>try和catch不能单独使用</p>
-<p>选择异常种类时，尽量明确异常的种类，少使用exception</p>
-<p>未使用捕捉</p>
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\强制结束程序.png"></p>
-<p>使用捕捉</p>
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\捕捉异常.png"></p>
-<h3 id="try…catch…catch"><a href="#try…catch…catch" class="headerlink" title="try…catch…catch"></a>try…catch…catch</h3><p>捕捉多个异常，因为一个try可能会不止一个异常，这时候需要多个catch进行解决</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Object</span>.<span class="hljs-property">keys</span><br>	只获取对象中属性的名称，也就是键名<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">values</span><br>	把对象的格式转成数组的格式，第一层的属性名被替换成下标<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">entries</span><br>	将全部对象全部转换成数组<br></code></pre></td></tr></table></figure>
 
-<p>像else if一样，异常会根据catch()括号里面的异常类型来选择进入哪个catch。</p>
-<p>要注意一个点，父类异常类如果在第一个catch，那么子类异常类就不能往后写了</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(Exception e)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(a e)&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>因为Exception是a的父类，exception包含了a的异常类，所以异常发生的时候，会先进入父类，会造成子类完全访问不到</p>
-<h3 id="try…catch…finally"><a href="#try…catch…finally" class="headerlink" title="try…catch…finally"></a>try…catch…finally</h3><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">finally</span>&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>try无论捉没捉到异常，finally里面的语句都会被执行</p>
-<h3 id="try…-with…-resources-自动回收"><a href="#try…-with…-resources-自动回收" class="headerlink" title="try….with….resources(自动回收)"></a>try….with….resources(自动回收)</h3><p>一般像普通程序捕捉异常，会手动回收异常类，调用close方法</p>
-<p>如果用了resources语法，则可以不用手动回收</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>(需要回收的对象)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="消极处理"><a href="#消极处理" class="headerlink" title="消极处理"></a>消极处理</h2><p>通过throw来将异常抛出，谁调用谁处理</p>
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\消极处理.png"></p>
-<p>如果抛出的是RuntimeException异常类，则可以处理也可以不处理</p>
-<blockquote>
-<p>尽量使用积极处理</p>
-</blockquote>
-<h2 id="throw和throws"><a href="#throw和throws" class="headerlink" title="throw和throws"></a>throw和throws</h2><p>throw new 异常类</p>
-<ol>
-<li>throws用在函数声明上，后面可以跟多个异常类，用逗号隔开</li>
-<li>throw后跟的是异常对象</li>
-</ol>
-<p>throw如果手动引发一个编译时的异常，那么该异常就一定要处理！</p>
-<p>如果是引发的一个运行时的异常，那么该异常可处理也可以不用处理</p>
-<h1 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h1><p>除了使用系统自带的异常规则，我们也可以自己去建立异常规则。</p>
-<p>比如系统计算数学，0不能作为除数，而我们想加一条规则，负数不能作为除数，这个时候就要用到自定义异常了</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyException</span> extends 异常类&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">()</span>&#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">(String message)</span>&#123;<br>        <span class="hljs-built_in">super</span>(message);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">show</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> <span class="hljs-keyword">throws</span> MyException &#123;<span class="hljs-comment">//方法将错误接着抛出,调用该方法的地方需要用try进行捕捉异常</span><br>       <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyException</span>(<span class="hljs-string">&quot;除数不能为负数&quot;</span>); <span class="hljs-comment">//将错误抛出</span><br>        &#125;<br>     <span class="hljs-keyword">return</span> a / b;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\自定义异常.png"></p>
+<p><img src="https://s1.328888.xyz/2022/05/10/HULz4.png" alt="HULz4.png"><br><img src="https://s1.328888.xyz/2022/05/10/HUJJ3.png" alt="HUJJ3.png"></p>
 ]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
       <tags>
-        <tag>java</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -871,6 +860,17 @@
 <p>HashMap&lt;键的类型，值的类型&gt;</p>
 <p>键值的类型可以是任意类型</p>
 <h1 id="Stream流"><a href="#Stream流" class="headerlink" title="Stream流"></a>Stream流</h1>]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>静态字段和静态方法(static)</title>
+    <url>/2023/07/24/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-static/</url>
+    <content><![CDATA[<h1 id="静态字段和静态方法"><a href="#静态字段和静态方法" class="headerlink" title="静态字段和静态方法"></a>静态字段和静态方法</h1>]]></content>
       <categories>
         <category>java</category>
       </categories>
