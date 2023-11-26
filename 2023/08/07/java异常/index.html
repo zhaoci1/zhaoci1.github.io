@@ -16,28 +16,30 @@
   <meta name="author" content="朝辞">
   <meta name="keywords" content="">
   
-    <meta name="description" content="函数函数默认值12345678&#x2F;&#x2F; es5const show &#x3D; function (one) &amp;#123;  one &#x3D; one || 5;&amp;#125;;&#x2F;&#x2F; es6const show &#x3D; function (one &#x3D; 5) &amp;#123;&amp;#125;;&#x2F;&#x2F; one此时默认值就为5传参的时候如果不想输入，而直接使用默认值，则传过去一个undefined就可以  参数问题如果函数的接受参数是一">
+    <meta name="description" content="什么是异常我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。 异常的分类(Exception)编译时异常在编译器编辑的时候就发现的异常，通常编译器会会报红   这种也称之为可检测的异常 必须要处理  运行时异常 编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等….. 这种也称之为未检测的异常，不一定会触发 可处理也可以不用处理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="函数">
-<meta property="og:url" content="https://zhaoci1.github.io/2022/05/16/%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:title" content="java异常">
+<meta property="og:url" content="https://zhaoci1.github.io/2023/08/07/java%E5%BC%82%E5%B8%B8/index.html">
 <meta property="og:site_name" content="朝辞">
-<meta property="og:description" content="函数函数默认值12345678&#x2F;&#x2F; es5const show &#x3D; function (one) &amp;#123;  one &#x3D; one || 5;&amp;#125;;&#x2F;&#x2F; es6const show &#x3D; function (one &#x3D; 5) &amp;#123;&amp;#125;;&#x2F;&#x2F; one此时默认值就为5传参的时候如果不想输入，而直接使用默认值，则传过去一个undefined就可以  参数问题如果函数的接受参数是一">
+<meta property="og:description" content="什么是异常我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。 异常的分类(Exception)编译时异常在编译器编辑的时候就发现的异常，通常编译器会会报红   这种也称之为可检测的异常 必须要处理  运行时异常 编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等….. 这种也称之为未检测的异常，不一定会触发 可处理也可以不用处理">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://s1.328888.xyz/2022/05/16/qMDnM.png">
-<meta property="og:image" content="https://s1.328888.xyz/2022/05/18/D0XEg.png">
-<meta property="og:image" content="https://s1.328888.xyz/2022/05/19/D3Hik.png">
-<meta property="article:published_time" content="2022-05-16T02:10:25.000Z">
-<meta property="article:modified_time" content="2022-05-30T02:07:14.000Z">
+<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E7%BC%96%E8%AF%91%E6%97%B6%E5%BC%82%E5%B8%B8.png">
+<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E5%BC%BA%E5%88%B6%E7%BB%93%E6%9D%9F%E7%A8%8B%E5%BA%8F.png">
+<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E6%8D%95%E6%8D%89%E5%BC%82%E5%B8%B8.png">
+<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E6%B6%88%E6%9E%81%E5%A4%84%E7%90%86.png">
+<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8.png">
+<meta property="article:published_time" content="2023-08-07T12:38:09.000Z">
+<meta property="article:modified_time" content="2023-08-07T14:20:22.558Z">
 <meta property="article:author" content="朝辞">
-<meta property="article:tag" content="js">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://s1.328888.xyz/2022/05/16/qMDnM.png">
+<meta name="twitter:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E7%BC%96%E8%AF%91%E6%97%B6%E5%BC%82%E5%B8%B8.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>函数 - 朝辞</title>
+  <title>java异常 - 朝辞</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +206,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="函数"></span>
+            <span id="subtitle" data-typed-text="java异常"></span>
           
         </div>
 
@@ -215,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-05-16 10:10" pubdate>
-          2022年5月16日 上午
+        <time datetime="2023-08-07 20:38" pubdate>
+          2023年8月7日 晚上
         </time>
       </span>
     
@@ -227,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          1.5k 字
         
       </span>
     
@@ -238,7 +240,7 @@
         
         
         
-          16 分钟
+          13 分钟
         
       </span>
     
@@ -275,48 +277,65 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">函数</h1>
+            <h1 id="seo-header">java异常</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="函数默认值"><a href="#函数默认值" class="headerlink" title="函数默认值"></a>函数默认值</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// es5</span><br><span class="hljs-keyword">const</span> show = <span class="hljs-keyword">function</span> (<span class="hljs-params">one</span>) &#123;<br>  one = one || <span class="hljs-number">5</span>;<br>&#125;;<br><span class="hljs-comment">// es6</span><br><span class="hljs-keyword">const</span> show = <span class="hljs-keyword">function</span> (<span class="hljs-params">one = <span class="hljs-number">5</span></span>) &#123;&#125;;<br><span class="hljs-comment">// one此时默认值就为5</span><br>传参的时候如果不想输入，而直接使用默认值，则传过去一个<span class="hljs-literal">undefined</span>就可以<br></code></pre></td></tr></table></figure>
+                <h1 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h1><p>我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。</p>
+<h1 id="异常的分类-Exception"><a href="#异常的分类-Exception" class="headerlink" title="异常的分类(Exception)"></a>异常的分类(Exception)</h1><h2 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h2><p>在编译器编辑的时候就发现的异常，通常编译器会会报红</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\编译时异常.png" srcset="/img/loading.gif" lazyload></p>
+<ol>
+<li>这种也称之为可检测的异常</li>
+<li>必须要处理</li>
+</ol>
+<h2 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h2><ol>
+<li>编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等…..</li>
+<li>这种也称之为未检测的异常，不一定会触发</li>
+<li>可处理也可以不用处理</li>
+</ol>
+<h1 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h1><h2 id="积极处理：捕捉异常"><a href="#积极处理：捕捉异常" class="headerlink" title="积极处理：捕捉异常"></a>积极处理：捕捉异常</h2><h3 id="try…catch"><a href="#try…catch" class="headerlink" title="try…catch"></a>try…catch</h3><p>语法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    要进行捕捉错误的代码，可能会出现异常的代码<br>&#125;<span class="hljs-keyword">catch</span>(异常种类 对象名)&#123;<br>    处理方式<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="参数问题"><a href="#参数问题" class="headerlink" title="参数问题"></a>参数问题</h2><p>如果函数的接受参数是一个复合对象</p>
-<p>则这个参数会指向那个对象的地址</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> obj = &#123;<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;张三&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>&#125;;<br><br><span class="hljs-keyword">const</span> show = <span class="hljs-keyword">function</span> (<span class="hljs-params">obj2</span>) &#123;<br>  obj2.<span class="hljs-property">name</span> = <span class="hljs-string">&quot;李四&quot;</span>;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<p>try和catch不能单独使用</p>
+<p>选择异常种类时，尽量明确异常的种类，少使用exception</p>
+<p>未使用捕捉</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\强制结束程序.png" srcset="/img/loading.gif" lazyload></p>
+<p>使用捕捉</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\捕捉异常.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="try…catch…catch"><a href="#try…catch…catch" class="headerlink" title="try…catch…catch"></a>try…catch…catch</h3><p>捕捉多个异常，因为一个try可能会不止一个异常，这时候需要多个catch进行解决</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>此时 obj 的 name 也被修改成李四了;</p>
-<p>和这个情况是一样的;</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> obj = &#123;<br>  <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;张三&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>&#125;;<br><br><span class="hljs-keyword">let</span> obj2 = obj;<br><br>obj2.<span class="hljs-property">name</span> = <span class="hljs-string">&quot;李四&quot;</span>;<br></code></pre></td></tr></table></figure>
+<p>像else if一样，异常会根据catch()括号里面的异常类型来选择进入哪个catch。</p>
+<p>要注意一个点，父类异常类如果在第一个catch，那么子类异常类就不能往后写了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(Exception e)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(a e)&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/16/qMDnM.png" srcset="/img/loading.gif" lazyload alt="qMDnM.png"></p>
-<p>函数也是对象</p>
-<h3 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> one = <span class="hljs-keyword">function</span> (<span class="hljs-params">str</span>) &#123;<br>  <span class="hljs-keyword">return</span> str.<span class="hljs-title function_">toUpperCase</span>();<br>&#125;;<br><br><span class="hljs-keyword">const</span> two = <span class="hljs-keyword">function</span> (<span class="hljs-params">str, fn</span>) &#123;<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(str);<br>  <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">fn</span>(str));<br>&#125;;<br><br><span class="hljs-title function_">two</span>(<span class="hljs-string">&quot;agecdfg&quot;</span>, one);<br></code></pre></td></tr></table></figure>
+<p>因为Exception是a的父类，exception包含了a的异常类，所以异常发生的时候，会先进入父类，会造成子类完全访问不到</p>
+<h3 id="try…catch…finally"><a href="#try…catch…finally" class="headerlink" title="try…catch…finally"></a>try…catch…finally</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">finally</span>&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/18/D0XEg.png" srcset="/img/loading.gif" lazyload alt="D0XEg.png"></p>
-<p>如果当作事件来看，会好理解很多</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js">btn.<span class="hljs-title function_">addEventListener</span>(<span class="hljs-string">&quot;click&quot;</span>, <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;&#125;);<br><span class="hljs-comment">//本身add...就是一个方法（也可以称为函数），第二个参数就是要实现的函数</span><br></code></pre></td></tr></table></figure>
+<p>try无论捉没捉到异常，finally里面的语句都会被执行</p>
+<h3 id="try…-with…-resources-自动回收"><a href="#try…-with…-resources-自动回收" class="headerlink" title="try….with….resources(自动回收)"></a>try….with….resources(自动回收)</h3><p>一般像普通程序捕捉异常，会手动回收异常类，调用close方法</p>
+<p>如果用了resources语法，则可以不用手动回收</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>(需要回收的对象)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>你到一个商店买东西，刚好你要的东西没有货，于是你在店员那里留下了你的电话，过了几天店里有货了，店员就打了你的电话，然后你接到电话后就到店里去取了货。</p>
-<p>在这个例子里，你的电话号码就叫回调函数，你把电话留给店员就叫登记回调函数，店里后来有货了叫做触发了回调关联的事件，店员给你打电话叫做调用回调函数，你到店里去取货叫做响应回调事件。</p>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>闭包让你可以在一个内层函数中访问到其外层函数的作用域</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> greet = <span class="hljs-keyword">function</span> (<span class="hljs-params">string</span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">function</span> (<span class="hljs-params">name</span>) &#123;<br>    <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(string, name);<br>  &#125;;<br>&#125;;<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-title function_">greet</span>(<span class="hljs-string">&quot;Hello&quot;</span>));<br><span class="hljs-title function_">greet</span>(<span class="hljs-string">&quot;Hello&quot;</span>)(<span class="hljs-string">&quot;小王&quot;</span>);<br><span class="hljs-title function_">greet2</span>(<span class="hljs-string">&quot;小王&quot;</span>);<br></code></pre></td></tr></table></figure>
+<h2 id="消极处理"><a href="#消极处理" class="headerlink" title="消极处理"></a>消极处理</h2><p>通过throw来将异常抛出，谁调用谁处理</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\消极处理.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果抛出的是RuntimeException异常类，则可以处理也可以不处理</p>
+<blockquote>
+<p>尽量使用积极处理</p>
+</blockquote>
+<h2 id="throw和throws"><a href="#throw和throws" class="headerlink" title="throw和throws"></a>throw和throws</h2><p>throw new 异常类</p>
+<ol>
+<li>throws用在函数声明上，后面可以跟多个异常类，用逗号隔开</li>
+<li>throw后跟的是异常对象</li>
+</ol>
+<p>throw如果手动引发一个编译时的异常，那么该异常就一定要处理！</p>
+<p>如果是引发的一个运行时的异常，那么该异常可处理也可以不用处理</p>
+<h1 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h1><p>除了使用系统自带的异常规则，我们也可以自己去建立异常规则。</p>
+<p>比如系统计算数学，0不能作为除数，而我们想加一条规则，负数不能作为除数，这个时候就要用到自定义异常了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyException</span> extends 异常类&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">()</span>&#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">(String message)</span>&#123;<br>        <span class="hljs-built_in">super</span>(message);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">show</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> <span class="hljs-keyword">throws</span> MyException &#123;<span class="hljs-comment">//方法将错误接着抛出,调用该方法的地方需要用try进行捕捉异常</span><br>       <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyException</span>(<span class="hljs-string">&quot;除数不能为负数&quot;</span>); <span class="hljs-comment">//将错误抛出</span><br>        &#125;<br>     <span class="hljs-keyword">return</span> a / b;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="https://s1.328888.xyz/2022/05/19/D3Hik.png" srcset="/img/loading.gif" lazyload alt="D3Hik.png"></p>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>闭包让你可以在一个内层函数中访问到其外层函数的作用域闭包让你可以在一个内层函数中访问到其外层函数的作用域</p>
-<p>闭包是封闭变量，执行上下文的环境，在其中创建了一个函数,即使在那个执行上下文消失之后（即使在函数之后），执行上下文所属的已经返回</p>
-<p>闭包使函数可以访问所有变量，其父函数</p>
-<p>所以函数保持对其外部范围的引用，即使在那个外部范围消失之后，这基本上保留了整个时间范围链</p>
-<h3 id="另一个定义"><a href="#另一个定义" class="headerlink" title="另一个定义"></a>另一个定义</h3><p>类比是闭包确保一个函数永远不会失去连接，到函数诞生地存在的变量，它记得变量，即使在出生地消失之后</p>
-<p>就像一个不会失去联系的人到他们的家乡，在这个类比当中，人就是函数，而家乡是函数的父范围,然后该功能不会失去连接到存储在此父级范围中的变量</p>
-<h2 id="如果没有函数返回值"><a href="#如果没有函数返回值" class="headerlink" title="如果没有函数返回值"></a>如果没有函数返回值</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">let</span> a;<br><br><span class="hljs-keyword">let</span> b = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">let</span> c = <span class="hljs-number">777</span>;<br>  a = <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>    consnole.<span class="hljs-title function_">log</span>(c * <span class="hljs-number">2</span>);<br>  &#125;;<br>&#125;;<br><br><span class="hljs-title function_">a</span>(); <span class="hljs-comment">//会提示未定义</span><br><br><span class="hljs-title function_">b</span>();当调用完a之后，会关闭b的变量环境<br><span class="hljs-title function_">a</span>(); <span class="hljs-comment">//输出结果是c*2的值</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="内部作用域的属性在-scopes-里面"><a href="#内部作用域的属性在-scopes-里面" class="headerlink" title="内部作用域的属性在 scopes 里面"></a>内部作用域的属性在 scopes 里面</h2><h3 id="closure：获取父函数的的变量"><a href="#closure：获取父函数的的变量" class="headerlink" title="closure：获取父函数的的变量"></a>closure：获取父函数的的变量</h3><p>双括号代表是一个内部属性,无法从代码中访问</p>
-<h2 id="立即调用函数表达式，简称-IIFE"><a href="#立即调用函数表达式，简称-IIFE" class="headerlink" title="立即调用函数表达式，简称 IIFE"></a>立即调用函数表达式，简称 IIFE</h2><p>用括号去欺骗 JavaScript 来进行使用</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js">(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;<br>  执行语句;<br>&#125;)();<br><br>(<span class="hljs-function">() =&gt;</span> <span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(<span class="hljs-string">&quot;123&quot;</span>))();<br></code></pre></td></tr></table></figure>
-
-<p>立即创建，立即调用</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\自定义异常.png" srcset="/img/loading.gif" lazyload></p>
 
                 
               </div>
@@ -325,11 +344,32 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/java/" class="category-chain-item">java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/js/" class="print-no-link">#js</a>
+        <a href="/tags/java/" class="print-no-link">#java</a>
       
     </div>
   
@@ -341,8 +381,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>函数</div>
-      <div>https://zhaoci1.github.io/2022/05/16/函数/</div>
+      <div>java异常</div>
+      <div>https://zhaoci1.github.io/2023/08/07/java异常/</div>
     </div>
     <div class="license-meta">
       
@@ -354,7 +394,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年5月16日</div>
+          <div>2023年8月7日</div>
         </div>
       
       
@@ -386,9 +426,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/04/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/" title="深拷贝和浅拷贝">
+                      <a href="/2023/08/12/%E9%9B%86%E5%90%88/" title="集合">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">深拷贝和浅拷贝</span>
+                        <span class="hidden-mobile">集合</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -396,8 +436,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/05/12/%E5%AD%97%E7%AC%A6%E4%B8%B2/" title="字符串">
-                        <span class="hidden-mobile">字符串</span>
+                      <a href="/2023/08/04/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" title="单例模式">
+                        <span class="hidden-mobile">单例模式</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

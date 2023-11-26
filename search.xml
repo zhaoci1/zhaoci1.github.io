@@ -668,7 +668,7 @@
   </entry>
   <entry>
     <title>深拷贝和浅拷贝</title>
-    <url>/2023/08/04/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
+    <url>/2022/08/04/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
     <content><![CDATA[<h1 id="Java中拷贝问题"><a href="#Java中拷贝问题" class="headerlink" title="Java中拷贝问题"></a>Java中拷贝问题</h1><p>除了String类型，其他的引用类型在使用&#x3D;号赋值的时候，会将地址传给&#x3D;号左侧</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">User</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">User</span>();<br><span class="hljs-type">User</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> a;<br><span class="hljs-comment">//这里的b其实是获得了a的地址，后面继续操作b的话，相当于操作a</span><br></code></pre></td></tr></table></figure>
 
@@ -755,6 +755,122 @@
     <title>静态字段和静态方法(static)</title>
     <url>/2023/07/24/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-static/</url>
     <content><![CDATA[<h1 id="静态字段和静态方法"><a href="#静态字段和静态方法" class="headerlink" title="静态字段和静态方法"></a>静态字段和静态方法</h1>]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java异常</title>
+    <url>/2023/08/07/java%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<h1 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h1><p>我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。</p>
+<h1 id="异常的分类-Exception"><a href="#异常的分类-Exception" class="headerlink" title="异常的分类(Exception)"></a>异常的分类(Exception)</h1><h2 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h2><p>在编译器编辑的时候就发现的异常，通常编译器会会报红</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\编译时异常.png"></p>
+<ol>
+<li>这种也称之为可检测的异常</li>
+<li>必须要处理</li>
+</ol>
+<h2 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h2><ol>
+<li>编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等…..</li>
+<li>这种也称之为未检测的异常，不一定会触发</li>
+<li>可处理也可以不用处理</li>
+</ol>
+<h1 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h1><h2 id="积极处理：捕捉异常"><a href="#积极处理：捕捉异常" class="headerlink" title="积极处理：捕捉异常"></a>积极处理：捕捉异常</h2><h3 id="try…catch"><a href="#try…catch" class="headerlink" title="try…catch"></a>try…catch</h3><p>语法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    要进行捕捉错误的代码，可能会出现异常的代码<br>&#125;<span class="hljs-keyword">catch</span>(异常种类 对象名)&#123;<br>    处理方式<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>try和catch不能单独使用</p>
+<p>选择异常种类时，尽量明确异常的种类，少使用exception</p>
+<p>未使用捕捉</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\强制结束程序.png"></p>
+<p>使用捕捉</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\捕捉异常.png"></p>
+<h3 id="try…catch…catch"><a href="#try…catch…catch" class="headerlink" title="try…catch…catch"></a>try…catch…catch</h3><p>捕捉多个异常，因为一个try可能会不止一个异常，这时候需要多个catch进行解决</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>像else if一样，异常会根据catch()括号里面的异常类型来选择进入哪个catch。</p>
+<p>要注意一个点，父类异常类如果在第一个catch，那么子类异常类就不能往后写了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(Exception e)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(a e)&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>因为Exception是a的父类，exception包含了a的异常类，所以异常发生的时候，会先进入父类，会造成子类完全访问不到</p>
+<h3 id="try…catch…finally"><a href="#try…catch…finally" class="headerlink" title="try…catch…finally"></a>try…catch…finally</h3><figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">finally</span>&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>try无论捉没捉到异常，finally里面的语句都会被执行</p>
+<h3 id="try…-with…-resources-自动回收"><a href="#try…-with…-resources-自动回收" class="headerlink" title="try….with….resources(自动回收)"></a>try….with….resources(自动回收)</h3><p>一般像普通程序捕捉异常，会手动回收异常类，调用close方法</p>
+<p>如果用了resources语法，则可以不用手动回收</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>(需要回收的对象)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h2 id="消极处理"><a href="#消极处理" class="headerlink" title="消极处理"></a>消极处理</h2><p>通过throw来将异常抛出，谁调用谁处理</p>
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\消极处理.png"></p>
+<p>如果抛出的是RuntimeException异常类，则可以处理也可以不处理</p>
+<blockquote>
+<p>尽量使用积极处理</p>
+</blockquote>
+<h2 id="throw和throws"><a href="#throw和throws" class="headerlink" title="throw和throws"></a>throw和throws</h2><p>throw new 异常类</p>
+<ol>
+<li>throws用在函数声明上，后面可以跟多个异常类，用逗号隔开</li>
+<li>throw后跟的是异常对象</li>
+</ol>
+<p>throw如果手动引发一个编译时的异常，那么该异常就一定要处理！</p>
+<p>如果是引发的一个运行时的异常，那么该异常可处理也可以不用处理</p>
+<h1 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h1><p>除了使用系统自带的异常规则，我们也可以自己去建立异常规则。</p>
+<p>比如系统计算数学，0不能作为除数，而我们想加一条规则，负数不能作为除数，这个时候就要用到自定义异常了</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyException</span> extends 异常类&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">()</span>&#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">(String message)</span>&#123;<br>        <span class="hljs-built_in">super</span>(message);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">show</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> <span class="hljs-keyword">throws</span> MyException &#123;<span class="hljs-comment">//方法将错误接着抛出,调用该方法的地方需要用try进行捕捉异常</span><br>       <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyException</span>(<span class="hljs-string">&quot;除数不能为负数&quot;</span>); <span class="hljs-comment">//将错误抛出</span><br>        &#125;<br>     <span class="hljs-keyword">return</span> a / b;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\自定义异常.png"></p>
+]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>集合</title>
+    <url>/2023/08/12/%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>这里只介绍常用的一些集合及方法</p>
+<p>存储数据的容器</p>
+<p>可以存储多种类型的数据，可以随着集合的大小动态增加和缩小</p>
+<h1 id="集合的分类"><a href="#集合的分类" class="headerlink" title="集合的分类"></a>集合的分类</h1><p><img src="/.io//Users\zzz\Desktop\blog\source_posts\集合\集合分类.png"></p>
+<h1 id="定义集合的方式"><a href="#定义集合的方式" class="headerlink" title="定义集合的方式"></a>定义集合的方式</h1><h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><figure class="highlight abnf"><table><tr><td class="code"><pre><code class="hljs abnf">Collection collection <span class="hljs-operator">=</span> new ArraList()<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><figure class="highlight abnf"><table><tr><td class="code"><pre><code class="hljs abnf">ArrayList&lt;泛型&gt; list <span class="hljs-operator">=</span> new ArrayList()<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="ArrayList-lt-泛型-gt"><a href="#ArrayList-lt-泛型-gt" class="headerlink" title="ArrayList&lt;泛型&gt;"></a>ArrayList&lt;泛型&gt;</h1><p>常用的方法</p>
+<h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><p>向集合里面添加数据</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">ArrayList&lt;数据类型&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Arraylist</span>();<br>list.add(数据);<br></code></pre></td></tr></table></figure>
+
+<h2 id="isEmpty"><a href="#isEmpty" class="headerlink" title="isEmpty"></a>isEmpty</h2><p>判断集合是否为空，返回布尔类型</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">list.isEmpty()<br></code></pre></td></tr></table></figure>
+
+<h2 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h2><p>移除元素，如果参数为对象，则返回布尔类型，如果参数为下标或者索引，返回值则为删除的元素</p>
+<figure class="highlight routeros"><table><tr><td class="code"><pre><code class="hljs routeros">list.<span class="hljs-built_in">remove</span>(参数)<br></code></pre></td></tr></table></figure>
+
+<h2 id="addAll"><a href="#addAll" class="headerlink" title="addAll"></a>addAll</h2><p>添加多个元素，返回值为boolean，参数为一个集合，将集合展开添加至list，如果使用add添加集合，add会将一整个集合当作一个元素添加进去.</p>
+<p>参数1为添加的位置，参数2为要添加的集合</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">list</span>.addAll(参数<span class="hljs-number">1</span>，参数<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>根据index的值来修改指定位置的对象为参数，返回值为修改之前的对象</p>
+<figure class="highlight delphi"><table><tr><td class="code"><pre><code class="hljs delphi">list.<span class="hljs-keyword">set</span>(<span class="hljs-keyword">index</span>,参数);<br></code></pre></td></tr></table></figure>
+
+<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><p>根据index来查找对象</p>
+<figure class="highlight delphi"><table><tr><td class="code"><pre><code class="hljs delphi">list.<span class="hljs-keyword">set</span>(<span class="hljs-keyword">index</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h2><p>根据对象查找该索引</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><code class="hljs arcade">list.<span class="hljs-built_in">indexOf</span>(参数)<br></code></pre></td></tr></table></figure>
+
+<h2 id="size"><a href="#size" class="headerlink" title="size"></a>size</h2><p>返回集合的长度</p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><code class="hljs fortran">list.<span class="hljs-built_in">size</span>()<br></code></pre></td></tr></table></figure>
+
+<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><h2 id="HasMap"><a href="#HasMap" class="headerlink" title="HasMap"></a>HasMap</h2><figure class="highlight lsl"><table><tr><td class="code"><pre><code class="hljs lsl">HashMap&lt;String, Object&gt; <span class="hljs-type">list</span> = new HashMap&lt;&gt;();<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;name2&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack2&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack3&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack4&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack5&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);<br><br><span class="hljs-comment">//        返回对应key的value，如果key不存在，则返回默认值</span><br>        System.out.println(<span class="hljs-string">&quot;getOrDefault返回对应的key<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>.getOrDefault(<span class="hljs-string">&quot;javase&quot;</span>, <span class="hljs-string">&quot;javasm&quot;</span>));<br><span class="hljs-comment">//        添加数据，如果该key存在，则不添加，如果不存在，则添加</span><br>        <span class="hljs-type">list</span>.putIfAbsent(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;java&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;putIfAbsent添加数据<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>);<br>        <br><span class="hljs-comment">//        根据键值对进行删除操作，键值对与map里面的键值对匹配才会删除</span><br>        <span class="hljs-type">list</span>.remove(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;remove删除数据<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>);<br>        <br><span class="hljs-comment">//        替换操作，根据对应的key去替换value</span><br>        <span class="hljs-type">list</span>.replace(<span class="hljs-string">&quot;name2&quot;</span>, <span class="hljs-string">&quot;jack&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;replace替换<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>);<br>        <br><span class="hljs-comment">//        通过匹配键值对，来对其进行替换</span><br>        <span class="hljs-type">list</span>.replace(<span class="hljs-string">&quot;jack3&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>, <span class="hljs-string">&quot;王五&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;replace匹配键值对<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>);<br></code></pre></td></tr></table></figure>
+
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\集合\HashMap.png"></p>
+<p>定义的方式</p>
+<p>HashMap&lt;键的类型，值的类型&gt;</p>
+<p>键值的类型可以是任意类型</p>
+<h1 id="Stream流"><a href="#Stream流" class="headerlink" title="Stream流"></a>Stream流</h1>]]></content>
       <categories>
         <category>java</category>
       </categories>
