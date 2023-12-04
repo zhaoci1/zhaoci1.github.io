@@ -16,30 +16,24 @@
   <meta name="author" content="朝辞">
   <meta name="keywords" content="">
   
-    <meta name="description" content="什么是异常我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。 异常的分类(Exception)编译时异常在编译器编辑的时候就发现的异常，通常编译器会会报红   这种也称之为可检测的异常 必须要处理  运行时异常 编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等….. 这种也称之为未检测的异常，不一定会触发 可处理也可以不用处理">
+    <meta name="description" content="对象数组字面意思来说就是一个类型为对象的数组，然后这个数组里面每一个元素都是实例对象 java用的还是不太熟，这里用js的对象数组来理解就方便些 js和java对象数组比较JS定义对象数组1234data &#x3D; [  &amp;#123;name: &quot;n1&quot;, &quot;email&quot;: &quot;zhang@email.com&quot;&amp;#125;,  &amp;#123;nam">
 <meta property="og:type" content="article">
-<meta property="og:title" content="java异常">
-<meta property="og:url" content="https://zhaoci1.github.io/2023/08/07/java%E5%BC%82%E5%B8%B8/index.html">
+<meta property="og:title" content="对象数组">
+<meta property="og:url" content="https://zhaoci1.github.io/2022/07/28/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/index.html">
 <meta property="og:site_name" content="朝辞">
-<meta property="og:description" content="什么是异常我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。 异常的分类(Exception)编译时异常在编译器编辑的时候就发现的异常，通常编译器会会报红   这种也称之为可检测的异常 必须要处理  运行时异常 编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等….. 这种也称之为未检测的异常，不一定会触发 可处理也可以不用处理">
+<meta property="og:description" content="对象数组字面意思来说就是一个类型为对象的数组，然后这个数组里面每一个元素都是实例对象 java用的还是不太熟，这里用js的对象数组来理解就方便些 js和java对象数组比较JS定义对象数组1234data &#x3D; [  &amp;#123;name: &quot;n1&quot;, &quot;email&quot;: &quot;zhang@email.com&quot;&amp;#125;,  &amp;#123;nam">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E7%BC%96%E8%AF%91%E6%97%B6%E5%BC%82%E5%B8%B8.png">
-<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E5%BC%BA%E5%88%B6%E7%BB%93%E6%9D%9F%E7%A8%8B%E5%BA%8F.png">
-<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E6%8D%95%E6%8D%89%E5%BC%82%E5%B8%B8.png">
-<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E6%B6%88%E6%9E%81%E5%A4%84%E7%90%86.png">
-<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8.png">
-<meta property="article:published_time" content="2023-08-07T12:38:09.000Z">
-<meta property="article:modified_time" content="2023-08-07T14:20:22.558Z">
+<meta property="article:published_time" content="2022-07-28T11:58:23.000Z">
+<meta property="article:modified_time" content="2023-12-04T09:34:20.281Z">
 <meta property="article:author" content="朝辞">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/java%E5%BC%82%E5%B8%B8/%E7%BC%96%E8%AF%91%E6%97%B6%E5%BC%82%E5%B8%B8.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>java异常 - 朝辞</title>
+  <title>对象数组 - 朝辞</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -206,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="java异常"></span>
+            <span id="subtitle" data-typed-text="对象数组"></span>
           
         </div>
 
@@ -217,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-08-07 20:38" pubdate>
-          2023年8月7日 晚上
+        <time datetime="2022-07-28 19:58" pubdate>
+          2022年7月28日 晚上
         </time>
       </span>
     
@@ -229,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k 字
+          483 字
         
       </span>
     
@@ -240,7 +234,7 @@
         
         
         
-          13 分钟
+          5 分钟
         
       </span>
     
@@ -277,65 +271,23 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">java异常</h1>
+            <h1 id="seo-header">对象数组</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h1><p>我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。</p>
-<h1 id="异常的分类-Exception"><a href="#异常的分类-Exception" class="headerlink" title="异常的分类(Exception)"></a>异常的分类(Exception)</h1><h2 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h2><p>在编译器编辑的时候就发现的异常，通常编译器会会报红</p>
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\编译时异常.png" srcset="/img/loading.gif" lazyload></p>
-<ol>
-<li>这种也称之为可检测的异常</li>
-<li>必须要处理</li>
-</ol>
-<h2 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h2><ol>
-<li>编译可以正常的通过，但是运行会报错。比如：空指针异常，数组下标越界等等…..</li>
-<li>这种也称之为未检测的异常，不一定会触发</li>
-<li>可处理也可以不用处理</li>
-</ol>
-<h1 id="处理异常"><a href="#处理异常" class="headerlink" title="处理异常"></a>处理异常</h1><h2 id="积极处理：捕捉异常"><a href="#积极处理：捕捉异常" class="headerlink" title="积极处理：捕捉异常"></a>积极处理：捕捉异常</h2><h3 id="try…catch"><a href="#try…catch" class="headerlink" title="try…catch"></a>try…catch</h3><p>语法</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    要进行捕捉错误的代码，可能会出现异常的代码<br>&#125;<span class="hljs-keyword">catch</span>(异常种类 对象名)&#123;<br>    处理方式<br>&#125;<br></code></pre></td></tr></table></figure>
+                <h1 id="对象数组"><a href="#对象数组" class="headerlink" title="对象数组"></a>对象数组</h1><p>字面意思来说就是一个类型为对象的数组，然后这个数组里面每一个元素都是实例对象</p>
+<p>java用的还是不太熟，这里用js的对象数组来理解就方便些</p>
+<h2 id="js和java对象数组比较"><a href="#js和java对象数组比较" class="headerlink" title="js和java对象数组比较"></a>js和java对象数组比较</h2><h3 id="JS定义对象数组"><a href="#JS定义对象数组" class="headerlink" title="JS定义对象数组"></a>JS定义对象数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">data = [<br>  &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">&quot;n1&quot;</span>, <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;zhang@email.com&quot;</span>&#125;,<br>  &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">&quot;n2&quot;</span>,   <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;jiang@email.com&quot;</span>&#125;<br>];<br></code></pre></td></tr></table></figure>
 
-<p>try和catch不能单独使用</p>
-<p>选择异常种类时，尽量明确异常的种类，少使用exception</p>
-<p>未使用捕捉</p>
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\强制结束程序.png" srcset="/img/loading.gif" lazyload></p>
-<p>使用捕捉</p>
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\捕捉异常.png" srcset="/img/loading.gif" lazyload></p>
-<h3 id="try…catch…catch"><a href="#try…catch…catch" class="headerlink" title="try…catch…catch"></a>try…catch…catch</h3><p>捕捉多个异常，因为一个try可能会不止一个异常，这时候需要多个catch进行解决</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="java定义对象数组"><a href="#java定义对象数组" class="headerlink" title="java定义对象数组"></a>java定义对象数组</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">car[] data = <span class="hljs-keyword">new</span> <span class="hljs-title class_">car</span>[]&#123;<br>            <span class="hljs-keyword">new</span> <span class="hljs-title class_">car</span>(<span class="hljs-string">&quot;n1&quot;</span>, <span class="hljs-string">&quot;zhang@email.com&quot;</span>),<br>            <span class="hljs-keyword">new</span> <span class="hljs-title class_">car</span>(<span class="hljs-string">&quot;n2&quot;</span>, <span class="hljs-string">&quot;zhang@email.com&quot;</span>)<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<p>像else if一样，异常会根据catch()括号里面的异常类型来选择进入哪个catch。</p>
-<p>要注意一个点，父类异常类如果在第一个catch，那么子类异常类就不能往后写了</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(Exception e)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>(a e)&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+<p>两者定义的区别还是很明显的，但是作用没太大差别</p>
+<h3 id="JS对象数组取数据"><a href="#JS对象数组取数据" class="headerlink" title="JS对象数组取数据"></a>JS对象数组取数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">data[<span class="hljs-number">0</span>].<span class="hljs-property">name</span>;<br></code></pre></td></tr></table></figure>
 
-<p>因为Exception是a的父类，exception包含了a的异常类，所以异常发生的时候，会先进入父类，会造成子类完全访问不到</p>
-<h3 id="try…catch…finally"><a href="#try…catch…finally" class="headerlink" title="try…catch…finally"></a>try…catch…finally</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<span class="hljs-keyword">finally</span>&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+<h3 id="Java对象数组取数据"><a href="#Java对象数组取数据" class="headerlink" title="Java对象数组取数据"></a>Java对象数组取数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">data[<span class="hljs-number">0</span>]name<br></code></pre></td></tr></table></figure>
 
-<p>try无论捉没捉到异常，finally里面的语句都会被执行</p>
-<h3 id="try…-with…-resources-自动回收"><a href="#try…-with…-resources-自动回收" class="headerlink" title="try….with….resources(自动回收)"></a>try….with….resources(自动回收)</h3><p>一般像普通程序捕捉异常，会手动回收异常类，调用close方法</p>
-<p>如果用了resources语法，则可以不用手动回收</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">try</span>(需要回收的对象)&#123;<br>    <br>&#125;<span class="hljs-keyword">catch</span>()&#123;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h2 id="消极处理"><a href="#消极处理" class="headerlink" title="消极处理"></a>消极处理</h2><p>通过throw来将异常抛出，谁调用谁处理</p>
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\消极处理.png" srcset="/img/loading.gif" lazyload></p>
-<p>如果抛出的是RuntimeException异常类，则可以处理也可以不处理</p>
-<blockquote>
-<p>尽量使用积极处理</p>
-</blockquote>
-<h2 id="throw和throws"><a href="#throw和throws" class="headerlink" title="throw和throws"></a>throw和throws</h2><p>throw new 异常类</p>
-<ol>
-<li>throws用在函数声明上，后面可以跟多个异常类，用逗号隔开</li>
-<li>throw后跟的是异常对象</li>
-</ol>
-<p>throw如果手动引发一个编译时的异常，那么该异常就一定要处理！</p>
-<p>如果是引发的一个运行时的异常，那么该异常可处理也可以不用处理</p>
-<h1 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h1><p>除了使用系统自带的异常规则，我们也可以自己去建立异常规则。</p>
-<p>比如系统计算数学，0不能作为除数，而我们想加一条规则，负数不能作为除数，这个时候就要用到自定义异常了</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyException</span> extends 异常类&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">()</span>&#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">MyException</span><span class="hljs-params">(String message)</span>&#123;<br>        <span class="hljs-built_in">super</span>(message);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">show</span><span class="hljs-params">(<span class="hljs-type">int</span> a, <span class="hljs-type">int</span> b)</span> <span class="hljs-keyword">throws</span> MyException &#123;<span class="hljs-comment">//方法将错误接着抛出,调用该方法的地方需要用try进行捕捉异常</span><br>       <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">0</span>) &#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyException</span>(<span class="hljs-string">&quot;除数不能为负数&quot;</span>); <span class="hljs-comment">//将错误抛出</span><br>        &#125;<br>     <span class="hljs-keyword">return</span> a / b;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\自定义异常.png" srcset="/img/loading.gif" lazyload></p>
+<p>取数据倒是没啥差别</p>
 
                 
               </div>
@@ -381,8 +333,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>java异常</div>
-      <div>https://zhaoci1.github.io/2023/08/07/java异常/</div>
+      <div>对象数组</div>
+      <div>https://zhaoci1.github.io/2022/07/28/对象数组/</div>
     </div>
     <div class="license-meta">
       
@@ -394,7 +346,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年8月7日</div>
+          <div>2022年7月28日</div>
         </div>
       
       
@@ -426,9 +378,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/08/12/%E9%9B%86%E5%90%88/" title="集合">
+                      <a href="/2022/08/04/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" title="单例模式">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">集合</span>
+                        <span class="hidden-mobile">单例模式</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -436,8 +388,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/08/04/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" title="单例模式">
-                        <span class="hidden-mobile">单例模式</span>
+                      <a href="/2022/07/24/%E5%A4%9A%E6%80%81%EF%BC%8C%E6%8A%BD%E8%B1%A1%EF%BC%8C%E6%8E%A5%E5%8F%A3/" title="多态，抽象，接口">
+                        <span class="hidden-mobile">多态，抽象，接口</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

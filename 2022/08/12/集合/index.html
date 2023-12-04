@@ -16,24 +16,27 @@
   <meta name="author" content="朝辞">
   <meta name="keywords" content="">
   
-    <meta name="description" content="对象数组字面意思来说就是一个类型为对象的数组，然后这个数组里面每一个元素都是实例对象 java用的还是不太熟，这里用js的对象数组来理解就方便些 js和java对象数组比较JS定义对象数组1234data &#x3D; [  &amp;#123;name: &quot;n1&quot;, &quot;email&quot;: &quot;zhang@email.com&quot;&amp;#125;,  &amp;#123;nam">
+    <meta name="description" content="集合这里只介绍常用的一些集合及方法 存储数据的容器 可以存储多种类型的数据，可以随着集合的大小动态增加和缩小 集合的分类 定义集合的方式Collection1Collection collection &#x3D; new ArraList();  ArrayList1ArrayList&lt;泛型&gt; list &#x3D; new ArrayList();  ArrayList&lt;泛型&gt;常用的方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对象数组">
-<meta property="og:url" content="https://zhaoci1.github.io/2023/07/28/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/index.html">
+<meta property="og:title" content="集合">
+<meta property="og:url" content="https://zhaoci1.github.io/2022/08/12/%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="朝辞">
-<meta property="og:description" content="对象数组字面意思来说就是一个类型为对象的数组，然后这个数组里面每一个元素都是实例对象 java用的还是不太熟，这里用js的对象数组来理解就方便些 js和java对象数组比较JS定义对象数组1234data &#x3D; [  &amp;#123;name: &quot;n1&quot;, &quot;email&quot;: &quot;zhang@email.com&quot;&amp;#125;,  &amp;#123;nam">
+<meta property="og:description" content="集合这里只介绍常用的一些集合及方法 存储数据的容器 可以存储多种类型的数据，可以随着集合的大小动态增加和缩小 集合的分类 定义集合的方式Collection1Collection collection &#x3D; new ArraList();  ArrayList1ArrayList&lt;泛型&gt; list &#x3D; new ArrayList();  ArrayList&lt;泛型&gt;常用的方法">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-07-28T11:58:23.000Z">
-<meta property="article:modified_time" content="2023-07-28T13:12:26.250Z">
+<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/%E9%9B%86%E5%90%88/%E9%9B%86%E5%90%88%E5%88%86%E7%B1%BB.png">
+<meta property="og:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/%E9%9B%86%E5%90%88/HashMap.png">
+<meta property="article:published_time" content="2022-08-12T01:26:17.000Z">
+<meta property="article:modified_time" content="2023-12-04T09:33:41.993Z">
 <meta property="article:author" content="朝辞">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://zhaoci1.github.io/.io//Users/zzz/Desktop/blog/source_posts/%E9%9B%86%E5%90%88/%E9%9B%86%E5%90%88%E5%88%86%E7%B1%BB.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>对象数组 - 朝辞</title>
+  <title>集合 - 朝辞</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="对象数组"></span>
+            <span id="subtitle" data-typed-text="集合"></span>
           
         </div>
 
@@ -211,8 +214,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-07-28 19:58" pubdate>
-          2023年7月28日 晚上
+        <time datetime="2022-08-12 09:26" pubdate>
+          2022年8月12日 上午
         </time>
       </span>
     
@@ -223,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          483 字
+          1.8k 字
         
       </span>
     
@@ -234,7 +237,7 @@
         
         
         
-          5 分钟
+          15 分钟
         
       </span>
     
@@ -271,24 +274,52 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">对象数组</h1>
+            <h1 id="seo-header">集合</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="对象数组"><a href="#对象数组" class="headerlink" title="对象数组"></a>对象数组</h1><p>字面意思来说就是一个类型为对象的数组，然后这个数组里面每一个元素都是实例对象</p>
-<p>java用的还是不太熟，这里用js的对象数组来理解就方便些</p>
-<h2 id="js和java对象数组比较"><a href="#js和java对象数组比较" class="headerlink" title="js和java对象数组比较"></a>js和java对象数组比较</h2><h3 id="JS定义对象数组"><a href="#JS定义对象数组" class="headerlink" title="JS定义对象数组"></a>JS定义对象数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript">data = [<br>  &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">&quot;n1&quot;</span>, <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;zhang@email.com&quot;</span>&#125;,<br>  &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">&quot;n2&quot;</span>,   <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;jiang@email.com&quot;</span>&#125;<br>];<br></code></pre></td></tr></table></figure>
+                <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>这里只介绍常用的一些集合及方法</p>
+<p>存储数据的容器</p>
+<p>可以存储多种类型的数据，可以随着集合的大小动态增加和缩小</p>
+<h1 id="集合的分类"><a href="#集合的分类" class="headerlink" title="集合的分类"></a>集合的分类</h1><p><img src="/.io//Users\zzz\Desktop\blog\source_posts\集合\集合分类.png" srcset="/img/loading.gif" lazyload></p>
+<h1 id="定义集合的方式"><a href="#定义集合的方式" class="headerlink" title="定义集合的方式"></a>定义集合的方式</h1><h2 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h2><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">Collection collection <span class="hljs-operator">=</span> new ArraList()<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="java定义对象数组"><a href="#java定义对象数组" class="headerlink" title="java定义对象数组"></a>java定义对象数组</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">car[] data = <span class="hljs-keyword">new</span> <span class="hljs-title class_">car</span>[]&#123;<br>            <span class="hljs-keyword">new</span> <span class="hljs-title class_">car</span>(<span class="hljs-string">&quot;n1&quot;</span>, <span class="hljs-string">&quot;zhang@email.com&quot;</span>),<br>            <span class="hljs-keyword">new</span> <span class="hljs-title class_">car</span>(<span class="hljs-string">&quot;n2&quot;</span>, <span class="hljs-string">&quot;zhang@email.com&quot;</span>)<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h2><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs abnf">ArrayList&lt;泛型&gt; list <span class="hljs-operator">=</span> new ArrayList()<span class="hljs-comment">;</span><br></code></pre></td></tr></table></figure>
 
-<p>两者定义的区别还是很明显的，但是作用没太大差别</p>
-<h3 id="JS对象数组取数据"><a href="#JS对象数组取数据" class="headerlink" title="JS对象数组取数据"></a>JS对象数组取数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs js">data[<span class="hljs-number">0</span>].<span class="hljs-property">name</span>;<br></code></pre></td></tr></table></figure>
+<h1 id="ArrayList-lt-泛型-gt"><a href="#ArrayList-lt-泛型-gt" class="headerlink" title="ArrayList&lt;泛型&gt;"></a>ArrayList&lt;泛型&gt;</h1><p>常用的方法</p>
+<h2 id="add"><a href="#add" class="headerlink" title="add"></a>add</h2><p>向集合里面添加数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">ArrayList&lt;数据类型&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Arraylist</span>();<br>list.add(数据);<br></code></pre></td></tr></table></figure>
 
-<h3 id="Java对象数组取数据"><a href="#Java对象数组取数据" class="headerlink" title="Java对象数组取数据"></a>Java对象数组取数据</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">data[<span class="hljs-number">0</span>]name<br></code></pre></td></tr></table></figure>
+<h2 id="isEmpty"><a href="#isEmpty" class="headerlink" title="isEmpty"></a>isEmpty</h2><p>判断集合是否为空，返回布尔类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">list.isEmpty()<br></code></pre></td></tr></table></figure>
 
-<p>取数据倒是没啥差别</p>
+<h2 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h2><p>移除元素，如果参数为对象，则返回布尔类型，如果参数为下标或者索引，返回值则为删除的元素</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">list.<span class="hljs-built_in">remove</span>(参数)<br></code></pre></td></tr></table></figure>
 
+<h2 id="addAll"><a href="#addAll" class="headerlink" title="addAll"></a>addAll</h2><p>添加多个元素，返回值为boolean，参数为一个集合，将集合展开添加至list，如果使用add添加集合，add会将一整个集合当作一个元素添加进去.</p>
+<p>参数1为添加的位置，参数2为要添加的集合</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">list</span>.addAll(参数<span class="hljs-number">1</span>，参数<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="set"><a href="#set" class="headerlink" title="set"></a>set</h2><p>根据index的值来修改指定位置的对象为参数，返回值为修改之前的对象</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs delphi">list.<span class="hljs-keyword">set</span>(<span class="hljs-keyword">index</span>,参数);<br></code></pre></td></tr></table></figure>
+
+<h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><p>根据index来查找对象</p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs delphi">list.<span class="hljs-keyword">set</span>(<span class="hljs-keyword">index</span>)<br></code></pre></td></tr></table></figure>
+
+<h2 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h2><p>根据对象查找该索引</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs arcade">list.<span class="hljs-built_in">indexOf</span>(参数)<br></code></pre></td></tr></table></figure>
+
+<h2 id="size"><a href="#size" class="headerlink" title="size"></a>size</h2><p>返回集合的长度</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs fortran">list.<span class="hljs-built_in">size</span>()<br></code></pre></td></tr></table></figure>
+
+<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><h2 id="HasMap"><a href="#HasMap" class="headerlink" title="HasMap"></a>HasMap</h2><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs lsl">HashMap&lt;String, Object&gt; <span class="hljs-type">list</span> = new HashMap&lt;&gt;();<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;name2&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack2&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack3&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack4&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        <span class="hljs-type">list</span>.put(<span class="hljs-string">&quot;jack5&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);<br><br><span class="hljs-comment">//        返回对应key的value，如果key不存在，则返回默认值</span><br>        System.out.println(<span class="hljs-string">&quot;getOrDefault返回对应的key<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>.getOrDefault(<span class="hljs-string">&quot;javase&quot;</span>, <span class="hljs-string">&quot;javasm&quot;</span>));<br><span class="hljs-comment">//        添加数据，如果该key存在，则不添加，如果不存在，则添加</span><br>        <span class="hljs-type">list</span>.putIfAbsent(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;java&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;putIfAbsent添加数据<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>);<br>        <br><span class="hljs-comment">//        根据键值对进行删除操作，键值对与map里面的键值对匹配才会删除</span><br>        <span class="hljs-type">list</span>.remove(<span class="hljs-string">&quot;name&quot;</span>, <span class="hljs-string">&quot;cat&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;remove删除数据<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>);<br>        <br><span class="hljs-comment">//        替换操作，根据对应的key去替换value</span><br>        <span class="hljs-type">list</span>.replace(<span class="hljs-string">&quot;name2&quot;</span>, <span class="hljs-string">&quot;jack&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;replace替换<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>);<br>        <br><span class="hljs-comment">//        通过匹配键值对，来对其进行替换</span><br>        <span class="hljs-type">list</span>.replace(<span class="hljs-string">&quot;jack3&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>, <span class="hljs-string">&quot;王五&quot;</span>);<br>        System.out.println(<span class="hljs-string">&quot;replace匹配键值对<span class="hljs-subst">\t</span><span class="hljs-subst">\t</span>&quot;</span>+<span class="hljs-type">list</span>);<br></code></pre></td></tr></table></figure>
+
+<p><img src="/.io//Users\zzz\Desktop\blog\source_posts\集合\HashMap.png" srcset="/img/loading.gif" lazyload></p>
+<p>定义的方式</p>
+<p>HashMap&lt;键的类型，值的类型&gt;</p>
+<p>键值的类型可以是任意类型</p>
+<h1 id="Stream流"><a href="#Stream流" class="headerlink" title="Stream流"></a>Stream流</h1>
                 
               </div>
             
@@ -333,8 +364,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>对象数组</div>
-      <div>https://zhaoci1.github.io/2023/07/28/对象数组/</div>
+      <div>集合</div>
+      <div>https://zhaoci1.github.io/2022/08/12/集合/</div>
     </div>
     <div class="license-meta">
       
@@ -346,7 +377,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年7月28日</div>
+          <div>2022年8月12日</div>
         </div>
       
       
@@ -378,9 +409,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/07/28/%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1/" title="对象与对象">
+                      <a href="/2023/07/24/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-static/" title="静态字段和静态方法(static)">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">对象与对象</span>
+                        <span class="hidden-mobile">静态字段和静态方法(static)</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -388,8 +419,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/07/24/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-static/" title="静态字段和静态方法(static)">
-                        <span class="hidden-mobile">静态字段和静态方法(static)</span>
+                      <a href="/2022/08/07/java%E5%BC%82%E5%B8%B8/" title="java异常">
+                        <span class="hidden-mobile">java异常</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
