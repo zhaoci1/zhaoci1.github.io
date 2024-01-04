@@ -30,17 +30,6 @@
       </tags>
   </entry>
   <entry>
-    <title>DOM</title>
-    <url>/2021/06/28/DOM/</url>
-    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
-<p>DOM 允许我们操作 HTML 元素</p>
-<p>DOm 连接 HTML 与 JS 交互</p>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JS函数</title>
     <url>/2021/06/24/JS%E5%87%BD%E6%95%B0/</url>
     <content><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="声明函数"><a href="#声明函数" class="headerlink" title="声明函数"></a>声明函数</h2><p>可以全局使用</p>
@@ -59,6 +48,17 @@
       </tags>
   </entry>
   <entry>
+    <title>DOM</title>
+    <url>/2021/06/28/DOM/</url>
+    <content><![CDATA[<h1 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h1><p>DOM 代表文档对象模型</p>
+<p>DOM 允许我们操作 HTML 元素</p>
+<p>DOm 连接 HTML 与 JS 交互</p>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>async/await操作</title>
     <url>/2021/06/24/async-await%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h2 id="async-x2F-await-操作"><a href="#async-x2F-await-操作" class="headerlink" title="async&#x2F;await 操作"></a>async&#x2F;await 操作</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">async</span> <span class="hljs-keyword">function</span> (<span class="hljs-params"></span>)&#123;<br>    ...<br>    ...<br>    <span class="hljs-keyword">let</span> 结果=<span class="hljs-keyword">await</span> 异步操作-promise，generator，另一个<span class="hljs-keyword">async</span>函数<br>    <span class="hljs-keyword">let</span> 结果=<span class="hljs-keyword">await</span> 异步操作-promise，generator，另一个<span class="hljs-keyword">async</span>函数<br>    <span class="hljs-keyword">let</span> 结果=<span class="hljs-keyword">await</span> 异步操作-promise，generator，另一个<span class="hljs-keyword">async</span>函数<br>    <span class="hljs-comment">//和generator用法类似,可以处理多个异步请求，可以不用前面的premise.all</span><br>&#125;<br></code></pre></td></tr></table></figure>
@@ -69,7 +69,7 @@
   </entry>
   <entry>
     <title>java方法</title>
-    <url>/2022/02/21/java-%E6%96%B9%E6%B3%95/</url>
+    <url>/2021/09/18/java-%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="java-方法"><a href="#java-方法" class="headerlink" title="java 方法"></a>java 方法</h1><h2 id="方法的定义"><a href="#方法的定义" class="headerlink" title="方法的定义"></a>方法的定义</h2><figure class="highlight kotlin"><table><tr><td class="code"><pre><code class="hljs kotlin">修饰符 方法返回类型 方法名(参数列表&#125;&#123;<br>    代码块<br>    <span class="hljs-keyword">return</span> 返回值<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>如果没有返回值，返回值类型可以设置为 void</p>
@@ -102,7 +102,7 @@
   </entry>
   <entry>
     <title>java异常</title>
-    <url>/2022/07/07/java%E5%BC%82%E5%B8%B8/</url>
+    <url>/2021/10/26/java%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<h1 id="什么是异常"><a href="#什么是异常" class="headerlink" title="什么是异常"></a>什么是异常</h1><p>我们在编写程序的时候，难免会出现Bug，这些bug就是异常。这些异常的发生往往会中断程序的运行。</p>
 <h1 id="异常的分类-Exception"><a href="#异常的分类-Exception" class="headerlink" title="异常的分类(Exception)"></a>异常的分类(Exception)</h1><h2 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h2><p>在编译器编辑的时候就发现的异常，通常编译器会会报红</p>
 <p><img src="/.io//Users\zzz\Desktop\blog\source_posts\java异常\编译时异常.png"></p>
@@ -393,7 +393,7 @@
   </entry>
   <entry>
     <title>单例模式</title>
-    <url>/2022/03/12/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
+    <url>/2021/10/28/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<h1 id="什么是单例模式"><a href="#什么是单例模式" class="headerlink" title="什么是单例模式"></a>什么是单例模式</h1><ul>
 <li>最简单的设计模式之一</li>
 <li>单个实例&#x2F;单个对象，最终只会产生一个对象</li>
@@ -465,37 +465,8 @@
       </tags>
   </entry>
   <entry>
-    <title>对象</title>
-    <url>/2021/07/25/%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> 对象名 = &#123;属性<span class="hljs-number">1</span>，属性<span class="hljs-number">2</span>，属性<span class="hljs-number">3.</span>..&#125;<br></code></pre></td></tr></table></figure>
-
-<p>数组通过下标访问数据，对象通过属性名访问数据</p>
-<h2 id="访问数据的方法"><a href="#访问数据的方法" class="headerlink" title="访问数据的方法"></a>访问数据的方法</h2><ol>
-<li>对象名.属性名</li>
-<li>对象名[‘属性名’] (可以用一个变量来存储属性名)</li>
-</ol>
-<p>对面里面也可以存函数，这个函数叫做这个对象的方法</p>
-<h2 id="方法里面的-this-指向"><a href="#方法里面的-this-指向" class="headerlink" title="方法里面的 this 指向"></a>方法里面的 this 指向</h2><p>谁调用方法，this 就代表哪个对象</p>
-<p>数组实际上是一种特殊的对象，它们有自己的方法<br>例如：push,unshift</p>
-<p>一个对象的方法如果被赋值给了其他变量，则这个变量获得的值只是一个全局的函数，并不是对象的方法本身</p>
-<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><p>手动并明确的设置 this 关键字</p>
-<p>call(需要指向的 this,调用方法时的参数)</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 初始化两个对象</span><br><span class="hljs-keyword">const</span> name = &#123;<br>  <span class="hljs-attr">namne</span>: <span class="hljs-string">&quot;张三&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>  <span class="hljs-attr">arr</span>: [],<br>  <span class="hljs-title function_">show</span>(<span class="hljs-params">name, sex</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">arr</span>.<span class="hljs-title function_">push</span>(&#123; <span class="hljs-attr">name</span>: name, <span class="hljs-attr">sex</span>: sex &#125;);<br>  &#125;,<br>&#125;;<br><br><span class="hljs-keyword">const</span> name2 = &#123;<br>  <span class="hljs-attr">namne2</span>: <span class="hljs-string">&quot;小A&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>  <span class="hljs-attr">arr</span>: [],<br>&#125;;<br><br><span class="hljs-comment">// 把name里面的函数提出来</span><br><span class="hljs-keyword">const</span> show2 = name.<span class="hljs-property">show</span>;<br><br><span class="hljs-comment">//调用show2，并使用call将show方法里面的this指向name2和name</span><br><span class="hljs-comment">// 后面的参数是方法接收的参数</span><br>show2.<span class="hljs-title function_">call</span>(name, <span class="hljs-string">&quot;小南&quot;</span>, <span class="hljs-string">&quot;女&quot;</span>);<br><br>show2.<span class="hljs-title function_">call</span>(name2, <span class="hljs-string">&quot;小A&quot;</span>, <span class="hljs-string">&quot;男&quot;</span>);<br><br>name.<span class="hljs-title function_">show</span>(<span class="hljs-string">&quot;小王&quot;</span>, <span class="hljs-string">&quot;男&quot;</span>);<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name2);<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://s1.328888.xyz/2022/05/22/dR9Jv.png" alt="dR9Jv.png"></p>
-<p>可以看见这里 name,和 name2 对象里面 arr 数组通过 show2 的方法添加了元素</p>
-<p>通过 call，能够使用另一个对象里面的方法</p>
-<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>bind 方法创建一个新的函数</p>
-<p>在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> show = name.<span class="hljs-property">show</span>.<span class="hljs-title function_">bind</span>(name, <span class="hljs-string">&quot;小南&quot;</span>);<br><span class="hljs-comment">//此时show等同于name对象里面的show,this会指向name对象,而后面的参数会变成新函数的参数</span><br></code></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>多态，抽象，接口</title>
-    <url>/2022/03/24/%E5%A4%9A%E6%80%81%EF%BC%8C%E6%8A%BD%E8%B1%A1%EF%BC%8C%E6%8E%A5%E5%8F%A3/</url>
+    <url>/2021/11/05/%E5%A4%9A%E6%80%81%EF%BC%8C%E6%8A%BD%E8%B1%A1%EF%BC%8C%E6%8E%A5%E5%8F%A3/</url>
     <content><![CDATA[<h1 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h1><ol>
 <li>多态的弊端，不能使用子类特有的内容</li>
 <li>多态前提<ol>
@@ -634,8 +605,37 @@
       </tags>
   </entry>
   <entry>
+    <title>对象</title>
+    <url>/2021/07/25/%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="定义对象"><a href="#定义对象" class="headerlink" title="定义对象"></a>定义对象</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> 对象名 = &#123;属性<span class="hljs-number">1</span>，属性<span class="hljs-number">2</span>，属性<span class="hljs-number">3.</span>..&#125;<br></code></pre></td></tr></table></figure>
+
+<p>数组通过下标访问数据，对象通过属性名访问数据</p>
+<h2 id="访问数据的方法"><a href="#访问数据的方法" class="headerlink" title="访问数据的方法"></a>访问数据的方法</h2><ol>
+<li>对象名.属性名</li>
+<li>对象名[‘属性名’] (可以用一个变量来存储属性名)</li>
+</ol>
+<p>对面里面也可以存函数，这个函数叫做这个对象的方法</p>
+<h2 id="方法里面的-this-指向"><a href="#方法里面的-this-指向" class="headerlink" title="方法里面的 this 指向"></a>方法里面的 this 指向</h2><p>谁调用方法，this 就代表哪个对象</p>
+<p>数组实际上是一种特殊的对象，它们有自己的方法<br>例如：push,unshift</p>
+<p>一个对象的方法如果被赋值给了其他变量，则这个变量获得的值只是一个全局的函数，并不是对象的方法本身</p>
+<h2 id="call"><a href="#call" class="headerlink" title="call"></a>call</h2><p>手动并明确的设置 this 关键字</p>
+<p>call(需要指向的 this,调用方法时的参数)</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 初始化两个对象</span><br><span class="hljs-keyword">const</span> name = &#123;<br>  <span class="hljs-attr">namne</span>: <span class="hljs-string">&quot;张三&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>  <span class="hljs-attr">arr</span>: [],<br>  <span class="hljs-title function_">show</span>(<span class="hljs-params">name, sex</span>) &#123;<br>    <span class="hljs-variable language_">this</span>.<span class="hljs-property">arr</span>.<span class="hljs-title function_">push</span>(&#123; <span class="hljs-attr">name</span>: name, <span class="hljs-attr">sex</span>: sex &#125;);<br>  &#125;,<br>&#125;;<br><br><span class="hljs-keyword">const</span> name2 = &#123;<br>  <span class="hljs-attr">namne2</span>: <span class="hljs-string">&quot;小A&quot;</span>,<br>  <span class="hljs-attr">sex</span>: <span class="hljs-string">&quot;男&quot;</span>,<br>  <span class="hljs-attr">arr</span>: [],<br>&#125;;<br><br><span class="hljs-comment">// 把name里面的函数提出来</span><br><span class="hljs-keyword">const</span> show2 = name.<span class="hljs-property">show</span>;<br><br><span class="hljs-comment">//调用show2，并使用call将show方法里面的this指向name2和name</span><br><span class="hljs-comment">// 后面的参数是方法接收的参数</span><br>show2.<span class="hljs-title function_">call</span>(name, <span class="hljs-string">&quot;小南&quot;</span>, <span class="hljs-string">&quot;女&quot;</span>);<br><br>show2.<span class="hljs-title function_">call</span>(name2, <span class="hljs-string">&quot;小A&quot;</span>, <span class="hljs-string">&quot;男&quot;</span>);<br><br>name.<span class="hljs-title function_">show</span>(<span class="hljs-string">&quot;小王&quot;</span>, <span class="hljs-string">&quot;男&quot;</span>);<br><br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name);<br><span class="hljs-variable language_">console</span>.<span class="hljs-title function_">log</span>(name2);<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s1.328888.xyz/2022/05/22/dR9Jv.png" alt="dR9Jv.png"></p>
+<p>可以看见这里 name,和 name2 对象里面 arr 数组通过 show2 的方法添加了元素</p>
+<p>通过 call，能够使用另一个对象里面的方法</p>
+<h2 id="bind"><a href="#bind" class="headerlink" title="bind()"></a>bind()</h2><p>bind 方法创建一个新的函数</p>
+<p>在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> show = name.<span class="hljs-property">show</span>.<span class="hljs-title function_">bind</span>(name, <span class="hljs-string">&quot;小南&quot;</span>);<br><span class="hljs-comment">//此时show等同于name对象里面的show,this会指向name对象,而后面的参数会变成新函数的参数</span><br></code></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>对象与对象</title>
-    <url>/2022/02/28/%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1/</url>
+    <url>/2021/09/28/%E5%AF%B9%E8%B1%A1%E4%B8%8E%E5%AF%B9%E8%B1%A1/</url>
     <content><![CDATA[<h1 id="对象与对象"><a href="#对象与对象" class="headerlink" title="对象与对象"></a>对象与对象</h1><h2 id="对象里面添加一个对象作为属性"><a href="#对象里面添加一个对象作为属性" class="headerlink" title="对象里面添加一个对象作为属性"></a>对象里面添加一个对象作为属性</h2><p>一个学生类里面，添加一个电脑类，作为它的属性</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java">学生类<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">student</span> &#123;<br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> comper cer; <span class="hljs-comment">//电脑类</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -664,19 +664,8 @@
       </tags>
   </entry>
   <entry>
-    <title>拓展运算符</title>
-    <url>/2021/07/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="在右边时：…变量名"><a href="#在右边时：…变量名" class="headerlink" title="在右边时：…变量名"></a>在右边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];<br><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, ...arr];<br><span class="hljs-comment">//arr1 = [1,2,3,1,2,3,4]</span><br>...arr把整个arr的数组解构成一个个的元素，这个也可以用于解构对象<br><br></code></pre></td></tr></table></figure>
-
-<h2 id="在左边时：…变量名"><a href="#在左边时：…变量名" class="headerlink" title="在左边时：…变量名"></a>在左边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>];<br><span class="hljs-keyword">const</span> [a, b, c, ...arr2] = arr;<br><span class="hljs-comment">//arr2 = [4,5,6,7]</span><br>在左边时将剩余的数组元素合并成一个数组;<br>当作为函数的参数使用时，会将传递的实参全部存入，和<span class="hljs-variable language_">arguments</span>类似<br></code></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>对象数组</title>
-    <url>/2022/03/28/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/</url>
+    <url>/2021/11/10/%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84/</url>
     <content><![CDATA[<h1 id="对象数组"><a href="#对象数组" class="headerlink" title="对象数组"></a>对象数组</h1><p>字面意思来说就是一个类型为对象的数组，然后这个数组里面每一个元素都是实例对象</p>
 <p>java用的还是不太熟，这里用js的对象数组来理解就方便些</p>
 <h2 id="js和java对象数组比较"><a href="#js和java对象数组比较" class="headerlink" title="js和java对象数组比较"></a>js和java对象数组比较</h2><h3 id="JS定义对象数组"><a href="#JS定义对象数组" class="headerlink" title="JS定义对象数组"></a>JS定义对象数组</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><code class="hljs javascript">data = [<br>  &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">&quot;n1&quot;</span>, <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;zhang@email.com&quot;</span>&#125;,<br>  &#123;<span class="hljs-attr">name</span>: <span class="hljs-string">&quot;n2&quot;</span>,   <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;jiang@email.com&quot;</span>&#125;<br>];<br></code></pre></td></tr></table></figure>
@@ -695,6 +684,17 @@
       </categories>
       <tags>
         <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拓展运算符</title>
+    <url>/2021/07/08/%E6%8B%93%E5%B1%95%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="在右边时：…变量名"><a href="#在右边时：…变量名" class="headerlink" title="在右边时：…变量名"></a>在右边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];<br><span class="hljs-keyword">const</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, ...arr];<br><span class="hljs-comment">//arr1 = [1,2,3,1,2,3,4]</span><br>...arr把整个arr的数组解构成一个个的元素，这个也可以用于解构对象<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="在左边时：…变量名"><a href="#在左边时：…变量名" class="headerlink" title="在左边时：…变量名"></a>在左边时：…变量名</h2><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> arr = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>];<br><span class="hljs-keyword">const</span> [a, b, c, ...arr2] = arr;<br><span class="hljs-comment">//arr2 = [4,5,6,7]</span><br>在左边时将剩余的数组元素合并成一个数组;<br>当作为函数的参数使用时，会将传递的实参全部存入，和<span class="hljs-variable language_">arguments</span>类似<br></code></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -733,7 +733,7 @@
   </entry>
   <entry>
     <title>深拷贝和浅拷贝</title>
-    <url>/2022/03/04/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
+    <url>/2021/10/04/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/</url>
     <content><![CDATA[<h1 id="Java中拷贝问题"><a href="#Java中拷贝问题" class="headerlink" title="Java中拷贝问题"></a>Java中拷贝问题</h1><p>除了String类型，其他的引用类型在使用&#x3D;号赋值的时候，会将地址传给&#x3D;号左侧</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-type">User</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">User</span>();<br><span class="hljs-type">User</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> a;<br><span class="hljs-comment">//这里的b其实是获得了a的地址，后面继续操作b的话，相当于操作a</span><br></code></pre></td></tr></table></figure>
 
@@ -763,22 +763,8 @@
       </tags>
   </entry>
   <entry>
-    <title>遍历数组和对象</title>
-    <url>/2021/07/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> 变量名||&#123;变量<span class="hljs-number">1</span>，变量<span class="hljs-number">2</span>&#125; <span class="hljs-keyword">of</span> 数组名||数组名.<span class="hljs-title function_">entries</span>())&#123;<br><span class="hljs-number">1</span>：下标<br><span class="hljs-number">2</span>：下标对应的元素<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Object</span>.<span class="hljs-property">keys</span><br>	只获取对象中属性的名称，也就是键名<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">values</span><br>	把对象的格式转成数组的格式，第一层的属性名被替换成下标<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">entries</span><br>	将全部对象全部转换成数组<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://s1.328888.xyz/2022/05/10/HULz4.png" alt="HULz4.png"><br><img src="https://s1.328888.xyz/2022/05/10/HUJJ3.png" alt="HUJJ3.png"></p>
-]]></content>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>继承</title>
-    <url>/2022/02/23/%E7%BB%A7%E6%89%BF/</url>
+    <url>/2021/11/23/%E7%BB%A7%E6%89%BF/</url>
     <content><![CDATA[<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><p>我们定义了两个类</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br>    String name;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String name)</span>&#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>    &#125;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name);<br>    &#125;<br>&#125;<br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person2</span>&#123;<br>    String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String name)</span>&#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>    &#125;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span>&#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
@@ -817,8 +803,33 @@
       </tags>
   </entry>
   <entry>
+    <title>遍历数组和对象</title>
+    <url>/2021/07/09/%E9%81%8D%E5%8E%86%E6%95%B0%E7%BB%84%E5%92%8C%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h2 id="For-of"><a href="#For-of" class="headerlink" title="For-of"></a>For-of</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">for</span>(<span class="hljs-keyword">const</span> 变量名||&#123;变量<span class="hljs-number">1</span>，变量<span class="hljs-number">2</span>&#125; <span class="hljs-keyword">of</span> 数组名||数组名.<span class="hljs-title function_">entries</span>())&#123;<br><span class="hljs-number">1</span>：下标<br><span class="hljs-number">2</span>：下标对应的元素<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>把对象先转换成数组的形式，然后进行遍历</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><code class="hljs js"><span class="hljs-title class_">Object</span>.<span class="hljs-property">keys</span><br>	只获取对象中属性的名称，也就是键名<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">values</span><br>	把对象的格式转成数组的格式，第一层的属性名被替换成下标<br><span class="hljs-title class_">Object</span>.<span class="hljs-property">entries</span><br>	将全部对象全部转换成数组<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://s1.328888.xyz/2022/05/10/HULz4.png" alt="HULz4.png"><br><img src="https://s1.328888.xyz/2022/05/10/HUJJ3.png" alt="HUJJ3.png"></p>
+]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>静态字段和静态方法(static)</title>
+    <url>/2021/09/24/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-static/</url>
+    <content><![CDATA[<h1 id="静态字段和静态方法"><a href="#静态字段和静态方法" class="headerlink" title="静态字段和静态方法"></a>静态字段和静态方法</h1>]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>集合</title>
-    <url>/2022/03/12/%E9%9B%86%E5%90%88/</url>
+    <url>/2021/10/12/%E9%9B%86%E5%90%88/</url>
     <content><![CDATA[<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p>这里只介绍常用的一些集合及方法</p>
 <p>存储数据的容器</p>
 <p>可以存储多种类型的数据，可以随着集合的大小动态增加和缩小</p>
@@ -860,17 +871,6 @@
 <p>HashMap&lt;键的类型，值的类型&gt;</p>
 <p>键值的类型可以是任意类型</p>
 <h1 id="Stream流"><a href="#Stream流" class="headerlink" title="Stream流"></a>Stream流</h1>]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>静态字段和静态方法(static)</title>
-    <url>/2022/02/24/%E9%9D%99%E6%80%81%E5%AD%97%E6%AE%B5%E5%92%8C%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95-static/</url>
-    <content><![CDATA[<h1 id="静态字段和静态方法"><a href="#静态字段和静态方法" class="headerlink" title="静态字段和静态方法"></a>静态字段和静态方法</h1>]]></content>
       <categories>
         <category>java</category>
       </categories>
